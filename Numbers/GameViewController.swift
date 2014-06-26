@@ -10,7 +10,8 @@ import UIKit
 
 class GameViewController: UIViewController {
 
-    @IBOutlet var counterLabel: UILabel!
+    @IBOutlet var counterLabel : UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
