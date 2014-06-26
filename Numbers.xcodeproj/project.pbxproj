@@ -62,6 +62,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FCB26135195CC2E9003C6DB5 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				FCC2B5C4195CB3AE00FC83E4 /* media-playback-pause-2.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		FCC2B590195CAC9900FC83E4 = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +95,7 @@
 				FCC2B5A3195CAC9900FC83E4 /* ViewController.swift */,
 				FCC2B5BE195CAE0A00FC83E4 /* GameViewController.swift */,
 				FCC2B5C0195CAE8E00FC83E4 /* OptionsViewController.swift */,
+				FCB26135195CC2E9003C6DB5 /* Images */,
 				FCC2B5A5195CAC9900FC83E4 /* Main.storyboard */,
 				FCC2B5A8195CAC9900FC83E4 /* Images.xcassets */,
 				FCC2B5A0195CAC9900FC83E4 /* Numbers.xcdatamodeld */,
@@ -98,7 +107,6 @@
 		FCC2B59C195CAC9900FC83E4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				FCC2B5C4195CB3AE00FC83E4 /* media-playback-pause-2.png */,
 				FCC2B59D195CAC9900FC83E4 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -413,6 +421,7 @@
 				FCC2B5BA195CAC9900FC83E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FCC2B5BB195CAC9900FC83E4 /* Build configuration list for PBXNativeTarget "NumbersTests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +430,7 @@
 				FCC2B5BD195CAC9900FC83E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
