@@ -25,7 +25,7 @@ class GameViewController: UIViewController {
     }
 
     func update() {
-        // Something cool
+        counterLabel.text = TimeRecord()
     }
     
     

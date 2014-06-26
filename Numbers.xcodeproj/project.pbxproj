@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FCB26137195CC3DC003C6DB5 /* media-playback-pause-2.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB26136195CC3DC003C6DB5 /* media-playback-pause-2.png */; };
+		FCB26139195CC4C5003C6DB5 /* media-playback-pause-2.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB26138195CC4C5003C6DB5 /* media-playback-pause-2.png */; };
 		FCC2B59F195CAC9900FC83E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC2B59E195CAC9900FC83E4 /* AppDelegate.swift */; };
 		FCC2B5A2195CAC9900FC83E4 /* Numbers.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FCC2B5A0195CAC9900FC83E4 /* Numbers.xcdatamodeld */; };
 		FCC2B5A4195CAC9900FC83E4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC2B5A3195CAC9900FC83E4 /* ViewController.swift */; };
@@ -29,7 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		FCB26136195CC3DC003C6DB5 /* media-playback-pause-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "media-playback-pause-2.png"; sourceTree = "<group>"; };
+		FCB26138195CC4C5003C6DB5 /* media-playback-pause-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "media-playback-pause-2.png"; path = "Images/media-playback-pause-2.png"; sourceTree = "<group>"; };
 		FCC2B599195CAC9900FC83E4 /* Numbers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Numbers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCC2B59D195CAC9900FC83E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCC2B59E195CAC9900FC83E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -65,7 +65,7 @@
 		FCB26135195CC2E9003C6DB5 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				FCB26136195CC3DC003C6DB5 /* media-playback-pause-2.png */,
+				FCB26138195CC4C5003C6DB5 /* media-playback-pause-2.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -211,7 +211,7 @@
 			files = (
 				FCC2B5A7195CAC9900FC83E4 /* Main.storyboard in Resources */,
 				FCC2B5A9195CAC9900FC83E4 /* Images.xcassets in Resources */,
-				FCB26137195CC3DC003C6DB5 /* media-playback-pause-2.png in Resources */,
+				FCB26139195CC4C5003C6DB5 /* media-playback-pause-2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
