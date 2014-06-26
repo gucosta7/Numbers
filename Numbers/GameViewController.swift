@@ -11,12 +11,17 @@ import UIKit
 class GameViewController: UIViewController {
 
     @IBOutlet var counterLabel : UILabel!
+
+    
+    //var timer : NSTimer = NSTimer.init()
+        
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //timer.fire()
 
-        var timer = NSTimer.scheduledTimerWithTimeInterval(0.4, target: self, selector: Selector("update"), userInfo: nil, repeats: true)
     }
 
     override func didReceiveMemoryWarning() {
@@ -25,7 +30,9 @@ class GameViewController: UIViewController {
     }
 
     func update() {
-        counterLabel.text = TimeRecord()
+        
+        //counterLabel.text = timer.timeInterval
+        
     }
     
     
