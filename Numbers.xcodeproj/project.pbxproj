@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FCB26137195CC3DC003C6DB5 /* media-playback-pause-2.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB26136195CC3DC003C6DB5 /* media-playback-pause-2.png */; };
 		FCC2B59F195CAC9900FC83E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC2B59E195CAC9900FC83E4 /* AppDelegate.swift */; };
 		FCC2B5A2195CAC9900FC83E4 /* Numbers.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FCC2B5A0195CAC9900FC83E4 /* Numbers.xcdatamodeld */; };
 		FCC2B5A4195CAC9900FC83E4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC2B5A3195CAC9900FC83E4 /* ViewController.swift */; };
@@ -15,7 +16,6 @@
 		FCC2B5B5195CAC9900FC83E4 /* NumbersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC2B5B4195CAC9900FC83E4 /* NumbersTests.swift */; };
 		FCC2B5BF195CAE0A00FC83E4 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC2B5BE195CAE0A00FC83E4 /* GameViewController.swift */; };
 		FCC2B5C1195CAE8E00FC83E4 /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC2B5C0195CAE8E00FC83E4 /* OptionsViewController.swift */; };
-		FCC2B5C5195CB3AE00FC83E4 /* media-playback-pause-2.png in Resources */ = {isa = PBXBuildFile; fileRef = FCC2B5C4195CB3AE00FC83E4 /* media-playback-pause-2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FCB26136195CC3DC003C6DB5 /* media-playback-pause-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "media-playback-pause-2.png"; sourceTree = "<group>"; };
 		FCC2B599195CAC9900FC83E4 /* Numbers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Numbers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCC2B59D195CAC9900FC83E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCC2B59E195CAC9900FC83E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -41,7 +42,6 @@
 		FCC2B5B4195CAC9900FC83E4 /* NumbersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersTests.swift; sourceTree = "<group>"; };
 		FCC2B5BE195CAE0A00FC83E4 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		FCC2B5C0195CAE8E00FC83E4 /* OptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsViewController.swift; sourceTree = "<group>"; };
-		FCC2B5C4195CB3AE00FC83E4 /* media-playback-pause-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "media-playback-pause-2.png"; path = "../../../../Downloads/media-playback-pause-2.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +65,7 @@
 		FCB26135195CC2E9003C6DB5 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				FCC2B5C4195CB3AE00FC83E4 /* media-playback-pause-2.png */,
+				FCB26136195CC3DC003C6DB5 /* media-playback-pause-2.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -95,8 +95,8 @@
 				FCC2B5A3195CAC9900FC83E4 /* ViewController.swift */,
 				FCC2B5BE195CAE0A00FC83E4 /* GameViewController.swift */,
 				FCC2B5C0195CAE8E00FC83E4 /* OptionsViewController.swift */,
-				FCB26135195CC2E9003C6DB5 /* Images */,
 				FCC2B5A5195CAC9900FC83E4 /* Main.storyboard */,
+				FCB26135195CC2E9003C6DB5 /* Images */,
 				FCC2B5A8195CAC9900FC83E4 /* Images.xcassets */,
 				FCC2B5A0195CAC9900FC83E4 /* Numbers.xcdatamodeld */,
 				FCC2B59C195CAC9900FC83E4 /* Supporting Files */,
@@ -211,7 +211,7 @@
 			files = (
 				FCC2B5A7195CAC9900FC83E4 /* Main.storyboard in Resources */,
 				FCC2B5A9195CAC9900FC83E4 /* Images.xcassets in Resources */,
-				FCC2B5C5195CB3AE00FC83E4 /* media-playback-pause-2.png in Resources */,
+				FCB26137195CC3DC003C6DB5 /* media-playback-pause-2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
