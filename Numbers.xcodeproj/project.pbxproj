@@ -13,6 +13,9 @@
 		FCC2B5A7195CAC9900FC83E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCC2B5A5195CAC9900FC83E4 /* Main.storyboard */; };
 		FCC2B5A9195CAC9900FC83E4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCC2B5A8195CAC9900FC83E4 /* Images.xcassets */; };
 		FCC2B5B5195CAC9900FC83E4 /* NumbersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC2B5B4195CAC9900FC83E4 /* NumbersTests.swift */; };
+		FCC2B5BF195CAE0A00FC83E4 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC2B5BE195CAE0A00FC83E4 /* GameViewController.swift */; };
+		FCC2B5C1195CAE8E00FC83E4 /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC2B5C0195CAE8E00FC83E4 /* OptionsViewController.swift */; };
+		FCC2B5C5195CB3AE00FC83E4 /* media-playback-pause-2.png in Resources */ = {isa = PBXBuildFile; fileRef = FCC2B5C4195CB3AE00FC83E4 /* media-playback-pause-2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,9 @@
 		FCC2B5AE195CAC9900FC83E4 /* NumbersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NumbersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCC2B5B3195CAC9900FC83E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCC2B5B4195CAC9900FC83E4 /* NumbersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersTests.swift; sourceTree = "<group>"; };
+		FCC2B5BE195CAE0A00FC83E4 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		FCC2B5C0195CAE8E00FC83E4 /* OptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsViewController.swift; sourceTree = "<group>"; };
+		FCC2B5C4195CB3AE00FC83E4 /* media-playback-pause-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "media-playback-pause-2.png"; path = "../../../../Downloads/media-playback-pause-2.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +85,8 @@
 			children = (
 				FCC2B59E195CAC9900FC83E4 /* AppDelegate.swift */,
 				FCC2B5A3195CAC9900FC83E4 /* ViewController.swift */,
+				FCC2B5BE195CAE0A00FC83E4 /* GameViewController.swift */,
+				FCC2B5C0195CAE8E00FC83E4 /* OptionsViewController.swift */,
 				FCC2B5A5195CAC9900FC83E4 /* Main.storyboard */,
 				FCC2B5A8195CAC9900FC83E4 /* Images.xcassets */,
 				FCC2B5A0195CAC9900FC83E4 /* Numbers.xcdatamodeld */,
@@ -90,6 +98,7 @@
 		FCC2B59C195CAC9900FC83E4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FCC2B5C4195CB3AE00FC83E4 /* media-playback-pause-2.png */,
 				FCC2B59D195CAC9900FC83E4 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -194,6 +203,7 @@
 			files = (
 				FCC2B5A7195CAC9900FC83E4 /* Main.storyboard in Resources */,
 				FCC2B5A9195CAC9900FC83E4 /* Images.xcassets in Resources */,
+				FCC2B5C5195CB3AE00FC83E4 /* media-playback-pause-2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,9 +221,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCC2B5BF195CAE0A00FC83E4 /* GameViewController.swift in Sources */,
 				FCC2B5A4195CAC9900FC83E4 /* ViewController.swift in Sources */,
 				FCC2B5A2195CAC9900FC83E4 /* Numbers.xcdatamodeld in Sources */,
 				FCC2B59F195CAC9900FC83E4 /* AppDelegate.swift in Sources */,
+				FCC2B5C1195CAE8E00FC83E4 /* OptionsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
