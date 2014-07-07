@@ -27,13 +27,15 @@ class GameViewController: UIViewController {
     @IBOutlet var btnGrid41 : UIButton!
 
     
-    var randNumbers: Int[] = [0]
+    var randNumbers: Int[] = []
+    var RoundsCounter: Int = 1;
     
     //Initializing random sequence and grid
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        numberLabel.text = String(arc4random_uniform(10))
+        randNumbers.append(Int(arc4random_uniform(10)))
+        numberLabel.text = String(randNumbers[randNumbers.count - 1])
         
         btnGrid11.setTitle("1", forState: UIControlState.Normal)
         btnGrid12.setTitle("2", forState: UIControlState.Normal)
@@ -109,14 +111,26 @@ class GameViewController: UIViewController {
     //Updating grid and score
     func updateGrid (btnNumber : Int){
         
-        
-        if (btnNumber == numberLabel.text.toInt()) {
-            testResult.text = "Correct"
+        if (RoundsCounter >= 10){
+            
+            testResult.text = "End of game - Rounds: " + String(randNumbers.count)
+            
         } else {
-           testResult.text = "Error"
+            
+            if (btnNumber == numberLabel.text.toInt()) {
+                testResult.text = "Correct"
+                randNumbers.append(Int(arc4random_uniform(10)))
+                numberLabel.text = String(randNumbers[randNumbers.count - 1])
+                
+                RoundsCounter  = RoundsCounter + 1
+            } else {
+                testResult.text = "Error"
+            }
+            
+            
         }
         
-        numberLabel.text = String(arc4random_uniform(10))
+        
     }
     
     
