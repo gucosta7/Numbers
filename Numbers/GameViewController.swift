@@ -11,6 +11,7 @@ import AVFoundation
 
 
 class GameViewController: UIViewController {
+    
     //Creating Sound Variables
     var audioPlayer = AVAudioPlayer()
     
@@ -126,6 +127,7 @@ class GameViewController: UIViewController {
                 numberLabel.text = String(randNumbers[randNumbers.count - 1])
                 
                 RoundsCounter  = RoundsCounter + 1
+                
                 //Correct Answer Sound
                 Music("button-4", Format:"wav")
             } else {
