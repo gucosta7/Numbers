@@ -8,12 +8,18 @@
 //
 
 import UIKit
+import AVFoundation
+//Creating Sound Variables
+var BGaudioPlayer = AVAudioPlayer() // BackGround Audio Player
+
 
 class ViewController: UIViewController {
-                            
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        //BackGround Sound
+        BackGroundMusic("WahWah", Format: "wav")
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,5 +28,14 @@ class ViewController: UIViewController {
     }
 
 
+    func BackGroundMusic(Name: String,  Format:String){
+        var MainSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource(Name , ofType: Format))
+        BGaudioPlayer = AVAudioPlayer(contentsOfURL: MainSound, error: nil)
+        BGaudioPlayer.numberOfLoops = -1
+        if(BGaudioPlayer.playing == false){
+            BGaudioPlayer.play()
+        }
+        
+    }
 }
 
