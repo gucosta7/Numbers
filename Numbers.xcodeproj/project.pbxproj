@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BFB687CB196C096800F34637 /* beep-02.wav in Resources */ = {isa = PBXBuildFile; fileRef = BFB687CA196C096800F34637 /* beep-02.wav */; };
+		BFF4F22E196C391C000D3A63 /* button-4.wav in Resources */ = {isa = PBXBuildFile; fileRef = BFF4F22D196C391C000D3A63 /* button-4.wav */; };
 		FCAF38FB196B569300AAB0B1 /* facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = FCAF38F9196B569300AAB0B1 /* facebook.png */; };
 		FCAF38FC196B569300AAB0B1 /* twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = FCAF38FA196B569300AAB0B1 /* twitter.png */; };
 		FCAF38FE196B57F800AAB0B1 /* sound.png in Resources */ = {isa = PBXBuildFile; fileRef = FCAF38FD196B57F800AAB0B1 /* sound.png */; };
@@ -34,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BFB687CA196C096800F34637 /* beep-02.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "beep-02.wav"; sourceTree = "<group>"; };
+		BFF4F22D196C391C000D3A63 /* button-4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "button-4.wav"; sourceTree = "<group>"; };
 		FCAF38F9196B569300AAB0B1 /* facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = facebook.png; path = Images/facebook.png; sourceTree = "<group>"; };
 		FCAF38FA196B569300AAB0B1 /* twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = twitter.png; path = Images/twitter.png; sourceTree = "<group>"; };
 		FCAF38FD196B57F800AAB0B1 /* sound.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sound.png; path = Images/sound.png; sourceTree = "<group>"; };
@@ -122,6 +126,8 @@
 		FCC2B59C195CAC9900FC83E4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BFB687CA196C096800F34637 /* beep-02.wav */,
+				BFF4F22D196C391C000D3A63 /* button-4.wav */,
 				FCC2B59D195CAC9900FC83E4 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -231,7 +237,9 @@
 				FCAF3900196B58A200AAB0B1 /* back.png in Resources */,
 				FCC2B5A9195CAC9900FC83E4 /* Images.xcassets in Resources */,
 				FCB26139195CC4C5003C6DB5 /* media-playback-pause-2.png in Resources */,
+				BFB687CB196C096800F34637 /* beep-02.wav in Resources */,
 				FCAF3902196B59B800AAB0B1 /* blending_polygon_shapes.jpg in Resources */,
+				BFF4F22E196C391C000D3A63 /* button-4.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

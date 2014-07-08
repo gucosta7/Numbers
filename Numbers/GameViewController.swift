@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import AVFoundation
 
 
 class GameViewController: UIViewController {
+    //Creating Sound Variables
+    var audioPlayer = AVAudioPlayer()
     
     //Creating outlets for buttons and labels
     @IBOutlet var numberLabel : UILabel!
@@ -27,7 +30,7 @@ class GameViewController: UIViewController {
     @IBOutlet var btnGrid41 : UIButton!
 
     
-    var randNumbers: Int[] = []
+    var randNumbers: [Int] = []
     var RoundsCounter: Int = 1;
     
     //Initializing random sequence and grid
@@ -123,21 +126,28 @@ class GameViewController: UIViewController {
                 numberLabel.text = String(randNumbers[randNumbers.count - 1])
                 
                 RoundsCounter  = RoundsCounter + 1
+                //Correct Answer Sound
+                Music("button-4", Format:"wav")
             } else {
                 testResult.text = "Error"
+                
+                //Error Sound Effect
+                Music("beep-02", Format:"wav")
+                
             }
             
             
         }
         
-        
     }
     
+    //Function to generate sounds
+    func Music(Name: String,  Format:String){
+        var MainSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource(Name , ofType: Format))
+        audioPlayer = AVAudioPlayer(contentsOfURL: MainSound, error: nil)
+        audioPlayer.play()
     
-    
-    
-    
-    
+    }
     
     
 }
