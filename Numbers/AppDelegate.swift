@@ -10,12 +10,6 @@ import UIKit
 import CoreData
 import AVFoundation
 
-//Creating Sound Variables
-
-
-var BGaudioPlayer = AVAudioPlayer() // BackGround Audio Player
-var audioPlayer = AVAudioPlayer()
-
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

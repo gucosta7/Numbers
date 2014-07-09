@@ -32,11 +32,13 @@ UIViewController {
     //Function for the Effect Button
     @IBAction func EffectsSwitch(sender: AnyObject){
         audioPlayer.volume = 0
+        firstTime = false
     }
     
     //Function for the Volume Button
     @IBAction func Volume(sender: AnyObject){
-        BGaudioPlayer.volume = Float(Volume.value)/10
+        BGaudioPlayer.volume = Float(Volume.value)
+        firstTime = false
     }
     
 }

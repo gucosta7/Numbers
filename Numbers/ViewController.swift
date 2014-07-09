@@ -10,10 +10,13 @@
 import UIKit
 import AVFoundation
 
-
-
+//Creating Sound Variables
+var BGaudioPlayer = AVAudioPlayer() // BackGround Audio Player
+var audioPlayer = AVAudioPlayer()
+var firstTime = true
 
 class ViewController: UIViewController {
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +37,9 @@ class ViewController: UIViewController {
         BGaudioPlayer.numberOfLoops = -1
         BGaudioPlayer.volume = 0.5
         if(BGaudioPlayer.playing == false){
+            if(firstTime==true){
+                BGaudioPlayer.volume = 0.5
+            }
             BGaudioPlayer.play()
         }
         
