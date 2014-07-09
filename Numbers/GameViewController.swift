@@ -10,10 +10,12 @@ import UIKit
 import AVFoundation
 
 
+
+
+
 class GameViewController: UIViewController {
     
-    //Creating Sound Variables
-    var audioPlayer = AVAudioPlayer()
+
     
     //Creating outlets for buttons and labels
     @IBOutlet var numberLabel : UILabel!

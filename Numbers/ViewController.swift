@@ -9,8 +9,8 @@
 
 import UIKit
 import AVFoundation
-//Creating Sound Variables
-var BGaudioPlayer = AVAudioPlayer() // BackGround Audio Player
+
+
 
 
 class ViewController: UIViewController {
@@ -32,6 +32,7 @@ class ViewController: UIViewController {
         var MainSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource(Name , ofType: Format))
         BGaudioPlayer = AVAudioPlayer(contentsOfURL: MainSound, error: nil)
         BGaudioPlayer.numberOfLoops = -1
+        BGaudioPlayer.volume = 0.5
         if(BGaudioPlayer.playing == false){
             BGaudioPlayer.play()
         }

@@ -8,8 +8,16 @@
 
 import UIKit
 
-class OptionsViewController: UIViewController {
+class OptionsViewController:
 
+UIViewController {
+
+    //Creating Outlets for the Effect and Volume Buttons
+    @IBOutlet var Effects: UISwitch
+    @IBOutlet var Volume: UISlider
+
+    
+    //Default Functions
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,6 +28,15 @@ class OptionsViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    //Function for the Effect Button
+    @IBAction func EffectsSwitch(sender: AnyObject){
+        audioPlayer.volume = 0
+    }
+    
+    //Function for the Volume Button
+    @IBAction func Volume(sender: AnyObject){
+        BGaudioPlayer.volume = Float(Volume.value)/10
+    }
+    
 }
