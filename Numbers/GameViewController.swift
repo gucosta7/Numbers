@@ -31,10 +31,16 @@ class GameViewController: UIViewController {
     @IBOutlet var btnGrid32 : UIButton!
     @IBOutlet var btnGrid33 : UIButton!
     @IBOutlet var btnGrid41 : UIButton!
+    
+    @IBOutlet var counterLabel: UILabel!
 
     
     var randNumbers: [Int] = []
-    var RoundsCounter: Int = 1;
+    var RoundsCounter: Int = 1
+    var timer = NSTimer()
+    var counter = 0
+    var min = 0
+    var hor = 0
     
     //Initializing random sequence and grid
     override func viewDidLoad() {
@@ -53,7 +59,41 @@ class GameViewController: UIViewController {
         btnGrid32.setTitle("8", forState: UIControlState.Normal)
         btnGrid33.setTitle("9", forState: UIControlState.Normal)
         btnGrid41.setTitle("0", forState: UIControlState.Normal)
-
+        
+        //counterLabel.text = String(hor) + ":" + String(min) + ":" + String(counter)
+        timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateTimer"), userInfo: nil, repeats: true)
+        
+    }
+    
+    func updateTimer(){
+        counter++
+        if (counter == 60){
+            if (min == 60){
+                hor++
+                min = 0
+                counter = 0
+                
+            } else {
+                min++
+                counter = 0
+            }
+            
+        }
+        if (hor < 10){
+            if (min < 10){
+                if(counter < 10){
+                        counterLabel.text = "0" + String(hor) + ":0" + String(min) + ":0" + String(counter)
+                } else{
+                    counterLabel.text = "0" + String(hor) + ":0" + String(min) + ":" + String(counter)
+                }
+            } else {
+                counterLabel.text = "0" + String(hor) + ":" + String(min) + ":" + String(counter)
+            }
+            
+        } else {
+            counterLabel.text = String(hor) + ":" + String(min) + ":" + String(counter)
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -120,6 +160,7 @@ class GameViewController: UIViewController {
         if (RoundsCounter >= 10){
             
             testResult.text = "End of game - Rounds: " + String(randNumbers.count)
+            timer.invalidate()
             
         } else {
             
