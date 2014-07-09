@@ -105,57 +105,57 @@ class GameViewController: UIViewController {
     //Grid Buttons being pressed
     @IBAction func btnGrid11_click(sender: UIButton){
         
-        updateGrid(btnGrid11.titleLabel.text.toInt()!)
+        btnPressed(btnGrid11.titleLabel.text.toInt()!)
     }
     
     @IBAction func btnGrid12_click(sender: UIButton){
         
-        updateGrid(btnGrid12.titleLabel.text.toInt()!)
+        btnPressed(btnGrid12.titleLabel.text.toInt()!)
     }
     
     @IBAction func btnGrid13_click(sender: UIButton){
 
-        updateGrid(btnGrid13.titleLabel.text.toInt()!)
+        btnPressed(btnGrid13.titleLabel.text.toInt()!)
     }
     
     @IBAction func btnGrid21_click(sender: UIButton){
         
-        updateGrid(btnGrid21.titleLabel.text.toInt()!)
+        btnPressed(btnGrid21.titleLabel.text.toInt()!)
     }
     
     @IBAction func btnGrid22_click(sender: UIButton){
         
-        updateGrid(btnGrid22.titleLabel.text.toInt()!)
+        btnPressed(btnGrid22.titleLabel.text.toInt()!)
     }
     
     @IBAction func btnGrid23_click(sender: UIButton){
         
-        updateGrid(btnGrid23.titleLabel.text.toInt()!)
+        btnPressed(btnGrid23.titleLabel.text.toInt()!)
     }
     
     @IBAction func btnGrid31_click(sender: UIButton){
         
-        updateGrid(btnGrid31.titleLabel.text.toInt()!)
+        btnPressed(btnGrid31.titleLabel.text.toInt()!)
     }
     
     @IBAction func btnGrid32_click(sender: UIButton){
         
-        updateGrid(btnGrid32.titleLabel.text.toInt()!)
+        btnPressed(btnGrid32.titleLabel.text.toInt()!)
     }
     
     @IBAction func btnGrid33_click(sender: UIButton){
         
-        updateGrid(btnGrid33.titleLabel.text.toInt()!)
+        btnPressed(btnGrid33.titleLabel.text.toInt()!)
     }
     
     @IBAction func btnGrid41_click(sender: UIButton){
         
-        updateGrid(btnGrid41.titleLabel.text.toInt()!)
+        btnPressed(btnGrid41.titleLabel.text.toInt()!)
     }
     
     
     //Updating grid and score
-    func updateGrid (btnNumber : Int){
+    func btnPressed (btnNumber : Int){
         
         if (RoundsCounter >= 10){
             
@@ -192,6 +192,20 @@ class GameViewController: UIViewController {
         audioPlayer = AVAudioPlayer(contentsOfURL: MainSound, error: nil)
         audioPlayer.play()
     
+    }
+    
+    func updateGrid (){
+        var sequence: [Int] = []
+        var anterior: Int!
+        var atual: Int!
+        anterior = Int(arc4random_uniform(10))
+        sequence.append(anterior)
+        
+        for (var i = 0; i<9;++i){
+            atual = Int(arc4random_uniform(10))
+        }
+        
+        
     }
     
     
