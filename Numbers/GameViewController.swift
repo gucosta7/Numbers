@@ -10,12 +10,8 @@ import UIKit
 import AVFoundation
 
 
-
-
-
 class GameViewController: UIViewController {
     
-
     
     //Creating outlets for buttons and labels
     @IBOutlet var numberLabel : UILabel!
@@ -67,6 +63,7 @@ class GameViewController: UIViewController {
     
     func updateTimer(){
         counter++
+        
         if (counter == 60){
             if (min == 60){
                 hor++
@@ -173,13 +170,22 @@ class GameViewController: UIViewController {
                 
                 //Correct Answer Sound
                 Music("button-4", Format:"wav")
+                self.view.backgroundColor = UIColor.greenColor()
+                
+                NSThread.sleepForTimeInterval(1)
+                
+                self.view.backgroundColor = UIColor.whiteColor()
+                
             } else {
                 testResult.text = "Error"
                 
                 //Error Sound Effect
                 Music("beep-02", Format:"wav")
+                self.view.backgroundColor = UIColor.redColor()
                 
             }
+            
+            updateGrid()
             
             
         }
@@ -194,18 +200,27 @@ class GameViewController: UIViewController {
     
     }
     
-    func updateGrid (){
+    //Generate random keyboard
+    func updateGrid () -> [Int]{
         var sequence: [Int] = []
         var anterior: Int!
         var atual: Int!
         anterior = Int(arc4random_uniform(10))
+        println(anterior)
         sequence.append(anterior)
         
         for (var i = 0; i<9;++i){
             atual = Int(arc4random_uniform(10))
+            while (atual == anterior){
+                    atual = Int(arc4random_uniform(10))
+                
+            }
+            anterior = atual
+            println(atual)
+            sequence.append(atual)
         }
         
-        
+       return sequence
     }
     
     
