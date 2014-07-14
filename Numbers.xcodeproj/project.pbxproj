@@ -10,6 +10,17 @@
 		BFB687CB196C096800F34637 /* beep-02.wav in Resources */ = {isa = PBXBuildFile; fileRef = BFB687CA196C096800F34637 /* beep-02.wav */; };
 		BFF4F22E196C391C000D3A63 /* button-4.wav in Resources */ = {isa = PBXBuildFile; fileRef = BFF4F22D196C391C000D3A63 /* button-4.wav */; };
 		BFF6BB18196C459200118366 /* WahWah.wav in Resources */ = {isa = PBXBuildFile; fileRef = BFF6BB17196C459200118366 /* WahWah.wav */; };
+		FC40150F1974612000B21748 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC40150E1974612000B21748 /* Parse.framework */; };
+		FC4015111974616B00B21748 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC4015101974616B00B21748 /* AudioToolbox.framework */; };
+		FC4015131974617300B21748 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC4015121974617300B21748 /* CFNetwork.framework */; };
+		FC4015151974617E00B21748 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC4015141974617E00B21748 /* CoreGraphics.framework */; };
+		FC4015171974618C00B21748 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC4015161974618C00B21748 /* CoreLocation.framework */; };
+		FC4015191974619A00B21748 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FC4015181974619A00B21748 /* libz.dylib */; };
+		FC40151B197461A300B21748 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC40151A197461A300B21748 /* MobileCoreServices.framework */; };
+		FC40151D197461AD00B21748 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC40151C197461AD00B21748 /* QuartzCore.framework */; };
+		FC40151F197461B700B21748 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC40151E197461B700B21748 /* Security.framework */; };
+		FC401521197461C000B21748 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC401520197461C000B21748 /* StoreKit.framework */; };
+		FC401523197461CC00B21748 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC401522197461CC00B21748 /* SystemConfiguration.framework */; };
 		FCAF38FB196B569300AAB0B1 /* facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = FCAF38F9196B569300AAB0B1 /* facebook.png */; };
 		FCAF38FC196B569300AAB0B1 /* twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = FCAF38FA196B569300AAB0B1 /* twitter.png */; };
 		FCAF38FE196B57F800AAB0B1 /* sound.png in Resources */ = {isa = PBXBuildFile; fileRef = FCAF38FD196B57F800AAB0B1 /* sound.png */; };
@@ -40,6 +51,18 @@
 		BFB687CA196C096800F34637 /* beep-02.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "beep-02.wav"; sourceTree = "<group>"; };
 		BFF4F22D196C391C000D3A63 /* button-4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "button-4.wav"; sourceTree = "<group>"; };
 		BFF6BB17196C459200118366 /* WahWah.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = WahWah.wav; sourceTree = "<group>"; };
+		FC40150E1974612000B21748 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		FC4015101974616B00B21748 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		FC4015121974617300B21748 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		FC4015141974617E00B21748 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		FC4015161974618C00B21748 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		FC4015181974619A00B21748 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		FC40151A197461A300B21748 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		FC40151C197461AD00B21748 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		FC40151E197461B700B21748 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		FC401520197461C000B21748 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		FC401522197461CC00B21748 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		FC401525197462AF00B21748 /* Numbers-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Numbers-Bridging-Header.h"; sourceTree = "<group>"; };
 		FCAF38F9196B569300AAB0B1 /* facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = facebook.png; path = Images/facebook.png; sourceTree = "<group>"; };
 		FCAF38FA196B569300AAB0B1 /* twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = twitter.png; path = Images/twitter.png; sourceTree = "<group>"; };
 		FCAF38FD196B57F800AAB0B1 /* sound.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sound.png; path = Images/sound.png; sourceTree = "<group>"; };
@@ -65,6 +88,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC401523197461CC00B21748 /* SystemConfiguration.framework in Frameworks */,
+				FC401521197461C000B21748 /* StoreKit.framework in Frameworks */,
+				FC40151F197461B700B21748 /* Security.framework in Frameworks */,
+				FC40151D197461AD00B21748 /* QuartzCore.framework in Frameworks */,
+				FC40151B197461A300B21748 /* MobileCoreServices.framework in Frameworks */,
+				FC4015191974619A00B21748 /* libz.dylib in Frameworks */,
+				FC4015171974618C00B21748 /* CoreLocation.framework in Frameworks */,
+				FC4015151974617E00B21748 /* CoreGraphics.framework in Frameworks */,
+				FC4015131974617300B21748 /* CFNetwork.framework in Frameworks */,
+				FC4015111974616B00B21748 /* AudioToolbox.framework in Frameworks */,
+				FC40150F1974612000B21748 /* Parse.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +112,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FC401524197461E500B21748 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FC401522197461CC00B21748 /* SystemConfiguration.framework */,
+				FC401520197461C000B21748 /* StoreKit.framework */,
+				FC40151E197461B700B21748 /* Security.framework */,
+				FC40151C197461AD00B21748 /* QuartzCore.framework */,
+				FC40151A197461A300B21748 /* MobileCoreServices.framework */,
+				FC4015181974619A00B21748 /* libz.dylib */,
+				FC4015161974618C00B21748 /* CoreLocation.framework */,
+				FC4015141974617E00B21748 /* CoreGraphics.framework */,
+				FC4015121974617300B21748 /* CFNetwork.framework */,
+				FC4015101974616B00B21748 /* AudioToolbox.framework */,
+				FC40150E1974612000B21748 /* Parse.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FCB26135195CC2E9003C6DB5 /* Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -94,9 +146,11 @@
 		FCC2B590195CAC9900FC83E4 = {
 			isa = PBXGroup;
 			children = (
+				FC401524197461E500B21748 /* Frameworks */,
 				FCC2B59B195CAC9900FC83E4 /* Numbers */,
 				FCC2B5B1195CAC9900FC83E4 /* NumbersTests */,
 				FCC2B59A195CAC9900FC83E4 /* Products */,
+				FC401525197462AF00B21748 /* Numbers-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -381,9 +435,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Numbers/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Numbers-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -392,9 +453,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Numbers/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Numbers-Bridging-Header.h";
 			};
 			name = Release;
 		};
