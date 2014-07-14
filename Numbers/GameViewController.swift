@@ -29,38 +29,45 @@ class GameViewController: UIViewController {
     @IBOutlet var btnGrid41 : UIButton!
     
     @IBOutlet var counterLabel: UILabel!
-
     
+    //Loading button images
+    let number0 = UIImage(named: "0.png") as UIImage
+    let number1 = UIImage(named: "1.png") as UIImage
+    let number2 = UIImage(named: "2.png") as UIImage
+    let number3 = UIImage(named: "3.png") as UIImage
+    let number4 = UIImage(named: "4.png") as UIImage
+    let number5 = UIImage(named: "5.png") as UIImage
+    let number6 = UIImage(named: "6.png") as UIImage
+    let number7 = UIImage(named: "7.png") as UIImage
+    let number8 = UIImage(named: "8.png") as UIImage
+    let number9 = UIImage(named: "9.png") as UIImage
+
+    //Sequence of numbers that the user will type
     var randNumbers: [Int] = []
+    //Sequence of numbers for the keypad
+    var keypadNumbers: [Int] = []
+    
+    //number of rounds
     var RoundsCounter: Int = 1
     var timer = NSTimer()
     var counter = 0
     var min = 0
     var hor = 0
     
-    //Initializing random sequence and grid
+    //Initializing random sequence and keypad
     override func viewDidLoad() {
         super.viewDidLoad()
 
         randNumbers.append(Int(arc4random_uniform(10)))
         numberLabel.text = String(randNumbers[randNumbers.count - 1])
         
-        btnGrid11.setTitle("1", forState: UIControlState.Normal)
-        btnGrid12.setTitle("2", forState: UIControlState.Normal)
-        btnGrid13.setTitle("3", forState: UIControlState.Normal)
-        btnGrid21.setTitle("4", forState: UIControlState.Normal)
-        btnGrid22.setTitle("5", forState: UIControlState.Normal)
-        btnGrid23.setTitle("6", forState: UIControlState.Normal)
-        btnGrid31.setTitle("7", forState: UIControlState.Normal)
-        btnGrid32.setTitle("8", forState: UIControlState.Normal)
-        btnGrid33.setTitle("9", forState: UIControlState.Normal)
-        btnGrid41.setTitle("0", forState: UIControlState.Normal)
+        keypadNumbers = updateKeyPad()
         
-        //counterLabel.text = String(hor) + ":" + String(min) + ":" + String(counter)
         timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateTimer"), userInfo: nil, repeats: true)
         
     }
     
+    //Function to update the timer on the screen and to paint the background
     func updateTimer(){
         counter++
         
@@ -91,6 +98,8 @@ class GameViewController: UIViewController {
             counterLabel.text = String(hor) + ":" + String(min) + ":" + String(counter)
         }
         
+        self.view.backgroundColor = UIColor.whiteColor()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -99,59 +108,59 @@ class GameViewController: UIViewController {
     }
     
     
-    //Grid Buttons being pressed
+    //Keypad Buttons being pressed
     @IBAction func btnGrid11_click(sender: UIButton){
         
-        btnPressed(btnGrid11.titleLabel.text.toInt()!)
+        btnPressed(keypadNumbers[0])
     }
     
     @IBAction func btnGrid12_click(sender: UIButton){
         
-        btnPressed(btnGrid12.titleLabel.text.toInt()!)
+        btnPressed(keypadNumbers[1])
     }
     
     @IBAction func btnGrid13_click(sender: UIButton){
 
-        btnPressed(btnGrid13.titleLabel.text.toInt()!)
+        btnPressed(keypadNumbers[2])
     }
     
     @IBAction func btnGrid21_click(sender: UIButton){
         
-        btnPressed(btnGrid21.titleLabel.text.toInt()!)
+        btnPressed(keypadNumbers[3])
     }
     
     @IBAction func btnGrid22_click(sender: UIButton){
         
-        btnPressed(btnGrid22.titleLabel.text.toInt()!)
+        btnPressed(keypadNumbers[4])
     }
     
     @IBAction func btnGrid23_click(sender: UIButton){
         
-        btnPressed(btnGrid23.titleLabel.text.toInt()!)
+        btnPressed(keypadNumbers[5])
     }
     
     @IBAction func btnGrid31_click(sender: UIButton){
         
-        btnPressed(btnGrid31.titleLabel.text.toInt()!)
+        btnPressed(keypadNumbers[6])
     }
     
     @IBAction func btnGrid32_click(sender: UIButton){
         
-        btnPressed(btnGrid32.titleLabel.text.toInt()!)
+        btnPressed(keypadNumbers[7])
     }
     
     @IBAction func btnGrid33_click(sender: UIButton){
         
-        btnPressed(btnGrid33.titleLabel.text.toInt()!)
+        btnPressed(keypadNumbers[8])
     }
     
     @IBAction func btnGrid41_click(sender: UIButton){
         
-        btnPressed(btnGrid41.titleLabel.text.toInt()!)
+        btnPressed(keypadNumbers[9])
     }
     
     
-    //Updating grid and score
+    //Updating keypad and score
     func btnPressed (btnNumber : Int){
         
         if (RoundsCounter >= 10){
@@ -166,15 +175,14 @@ class GameViewController: UIViewController {
                 randNumbers.append(Int(arc4random_uniform(10)))
                 numberLabel.text = String(randNumbers[randNumbers.count - 1])
                 
-                RoundsCounter  = RoundsCounter + 1
+                RoundsCounter++
                 
                 //Correct Answer Sound
                 Music("button-4", Format:"wav")
                 self.view.backgroundColor = UIColor.greenColor()
                 
-                NSThread.sleepForTimeInterval(1)
                 
-                self.view.backgroundColor = UIColor.whiteColor()
+                //self.view.backgroundColor = UIColor.whiteColor()
                 
             } else {
                 testResult.text = "Error"
@@ -185,7 +193,8 @@ class GameViewController: UIViewController {
                 
             }
             
-            updateGrid()
+            //updating the numbers of the keypad
+            keypadNumbers = updateKeyPad()
             
             
         }
@@ -200,27 +209,68 @@ class GameViewController: UIViewController {
     
     }
     
-    //Generate random keyboard
-    func updateGrid () -> [Int]{
+    //Generate random keyboard and set the correct image to the buttons
+    func updateKeyPad () -> [Int]{
         var sequence: [Int] = []
-        var anterior: Int!
-        var atual: Int!
-        anterior = Int(arc4random_uniform(10))
-        println(anterior)
-        sequence.append(anterior)
+        var finalSequence: [Int] = []
+        var images: [UIImage] = []
+
+        var number: Int!
         
-        for (var i = 0; i<9;++i){
-            atual = Int(arc4random_uniform(10))
-            while (atual == anterior){
-                    atual = Int(arc4random_uniform(10))
-                
-            }
-            anterior = atual
-            println(atual)
-            sequence.append(atual)
+        sequence.append(0)
+        sequence.append(1)
+        sequence.append(2)
+        sequence.append(3)
+        sequence.append(4)
+        sequence.append(5)
+        sequence.append(6)
+        sequence.append(7)
+        sequence.append(8)
+        sequence.append(9)
+        
+        for (var i:UInt32 = 10; i>0;--i){
+            number = Int(arc4random_uniform(i))
+            finalSequence.append(sequence[number])
+            sequence.removeAtIndex(number)
+            
         }
         
-       return sequence
+        println(finalSequence)
+        
+        for number in finalSequence {
+            switch number {
+                
+            case 0 : images.append(number0)
+            case 1 : images.append(number1)
+            case 2 : images.append(number2)
+            case 3 : images.append(number3)
+            case 4 : images.append(number4)
+            case 5 : images.append(number5)
+            case 6 : images.append(number6)
+            case 7 : images.append(number7)
+            case 8 : images.append(number8)
+            case 9 : images.append(number9)
+                
+            default : println("error")
+            }
+        }
+        
+        btnGrid11.setBackgroundImage(images[0], forState: UIControlState.Normal)
+        btnGrid12.setBackgroundImage(images[1], forState: UIControlState.Normal)
+        btnGrid13.setBackgroundImage(images[2], forState: UIControlState.Normal)
+        
+        btnGrid21.setBackgroundImage(images[3], forState: UIControlState.Normal)
+        btnGrid22.setBackgroundImage(images[4], forState: UIControlState.Normal)
+        btnGrid23.setBackgroundImage(images[5], forState: UIControlState.Normal)
+        
+        btnGrid31.setBackgroundImage(images[6], forState: UIControlState.Normal)
+        btnGrid32.setBackgroundImage(images[7], forState: UIControlState.Normal)
+        btnGrid33.setBackgroundImage(images[8], forState: UIControlState.Normal)
+        
+        btnGrid41.setBackgroundImage(images[9], forState: UIControlState.Normal)
+
+        
+       return finalSequence
     }
     
     
