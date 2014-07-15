@@ -100,7 +100,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="vXZ-lx-hvc" kind="modal" id="09C-tO-P4v"/>
+                                    <action selector="showOkayCancelAlert" destination="KgB-DI-I3G" eventType="touchUpInside" id="StS-CG-z08"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="IpP-7j-tiq">
@@ -243,6 +243,7 @@
                         <outlet property="numberLabel" destination="y7h-KS-bD3" id="5iC-Pn-xew"/>
                         <outlet property="testResult" destination="m4c-4q-CPj" id="81R-BB-BMj"/>
                         <segue destination="X02-w0-opW" kind="modal" identifier="Win" id="sYz-A5-Ajc"/>
+                        <segue destination="vXZ-lx-hvc" kind="modal" identifier="MainScreen" modalTransitionStyle="flipHorizontal" id="pcb-Ag-sUR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N9C-Xt-8cK" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -283,7 +284,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="OTX-5z-4Ls">
-                                <rect key="frame" x="122" y="208" width="76" height="30"/>
+                                <rect key="frame" x="122" y="220" width="76" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Next Level">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -299,6 +300,7 @@
                     <navigationItem key="navigationItem" id="L0A-A9-7MS"/>
                     <connections>
                         <outlet property="MainMenu" destination="uq9-p7-3PN" id="rm8-Ud-k9G"/>
+                        <outlet property="YouWon" destination="9Zr-Um-8VV" id="38B-xf-ZCC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0rn-iJ-eem" userLabel="First Responder" sceneMemberID="firstResponder"/>

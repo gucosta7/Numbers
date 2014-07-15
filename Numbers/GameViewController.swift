@@ -11,8 +11,42 @@ import AVFoundation
 
 
 class GameViewController: UIViewController {
+    //Creating outlets to quit game button
+    @IBOutlet var QuitGame: UIButton!
     
     
+    //Creating function for the quit button
+    
+    
+    @IBAction func showOkayCancelAlert() {
+        //Stop Timer
+        timer.invalidate()
+        //Create alert
+        let title = NSLocalizedString("Quit", comment: "")
+        let message = NSLocalizedString("Are you sure you want to quit?", comment: "")
+        let cancelButtonTitle = NSLocalizedString("Cancel", comment: "")
+        let otherButtonTitle = NSLocalizedString("OK", comment: "")
+        
+        let alertCotroller = UIAlertController(title: title, message: message, preferredStyle: .Alert)
+        
+        // Create the actions.
+        //Create action of the cancel button
+        let cancelAction = UIAlertAction(title: cancelButtonTitle, style: .Cancel) { action in
+            NSLog("The \"Okay/Cancel\" alert's cancel action occured.")
+            self.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateTimer"), userInfo: nil, repeats: true)
+        }
+        //Create action of the OK button
+        let OKAction = UIAlertAction(title: otherButtonTitle, style: .Default) { action in
+            NSLog("The \"Okay/Cancel\" alert's other action occured.")
+            self.performSegueWithIdentifier("MainScreen", sender: UIButton())
+        }
+        
+        // Add the actions.
+        alertCotroller.addAction(cancelAction)
+        alertCotroller.addAction(OKAction)
+        
+        presentViewController(alertCotroller, animated: true, completion: nil)
+    }
     //Creating outlets for buttons and labels
     @IBOutlet var numberLabel : UILabel!
     @IBOutlet var testResult : UILabel!
@@ -182,6 +216,7 @@ class GameViewController: UIViewController {
                     NSLog("%@", error)
                 }
             }
+            
             //Go to the YouWon view
             self.performSegueWithIdentifier("Win", sender: UIButton())
             
