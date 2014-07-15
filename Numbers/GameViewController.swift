@@ -182,6 +182,8 @@ class GameViewController: UIViewController {
                     NSLog("%@", error)
                 }
             }
+            //Go to the YouWon view
+            self.performSegueWithIdentifier("Win", sender: UIButton())
             
         } else {
             
