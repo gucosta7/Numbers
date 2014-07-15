@@ -50,10 +50,10 @@
             </objects>
             <point key="canvasLocation" x="-262" y="-15"/>
         </scene>
-        <!--View Controller-->
+        <!--Leaderboard View Controller-->
         <scene sceneID="JFe-4a-ocr">
             <objects>
-                <viewController id="LgX-HB-lEr" sceneMemberID="viewController">
+                <viewController id="LgX-HB-lEr" customClass="LeaderboardViewController" customModule="Numbers" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LCt-iL-qG3">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -81,7 +81,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QuP-V4-mpW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="-773"/>
+            <point key="canvasLocation" x="261" y="-803"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="4Yd-Ea-fxB">
@@ -244,7 +244,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N9C-Xt-8cK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="632" y="2"/>
+            <point key="canvasLocation" x="404" y="-32"/>
         </scene>
         <!--Options View Controller-->
         <scene sceneID="Kgu-EZ-e1A">
@@ -345,6 +345,6 @@
         </simulatedScreenMetrics>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="h9E-Jv-KGi"/>
+        <segue reference="09C-tO-P4v"/>
     </inferredMetricsTieBreakers>
 </document>

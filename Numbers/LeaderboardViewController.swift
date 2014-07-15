@@ -6,13 +6,10 @@
 //  Copyright (c) 2014 Gustavo Arthur da Costa. All rights reserved.
 //
 
-import Cocoa
+import UIKit
 
-class LeaderboardViewController: NSViewController {
+class LeaderboardViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do view setup here.
-    }
+    
     
 }

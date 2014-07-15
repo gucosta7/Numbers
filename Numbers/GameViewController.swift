@@ -54,6 +54,8 @@ class GameViewController: UIViewController {
     var min = 0
     var hor = 0
     
+    var level = 1
+    
     //Initializing random sequence and keypad
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -167,6 +169,19 @@ class GameViewController: UIViewController {
             
             testResult.text = "End of game - Rounds: " + String(randNumbers.count)
             timer.invalidate()
+            
+            var gameScore = PFObject(className: "GameScore")
+            gameScore.setObject(counterLabel.text, forKey: "Score")
+            gameScore.setObject("Gustavo", forKey: "playerName")
+            gameScore.setObject(level, forKey: "Level")
+            gameScore.saveInBackgroundWithBlock {
+                (success: Bool!, error: NSError!) -> Void in
+                if success {
+                    NSLog("Object created with id: \(gameScore.objectId)")
+                } else {
+                    NSLog("%@", error)
+                }
+            }
             
         } else {
             
