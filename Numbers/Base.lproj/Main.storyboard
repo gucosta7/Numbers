@@ -49,7 +49,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-250" y="3"/>
+            <point key="canvasLocation" x="-334" y="3"/>
         </scene>
         <!--Leaderboard View Controller-->
         <scene sceneID="JFe-4a-ocr">
@@ -279,8 +279,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="startGameButtonTapped:" destination="X02-w0-opW" eventType="touchUpInside" id="Gt7-P9-ix2"/>
-                                    <segue destination="vXZ-lx-hvc" kind="modal" id="ttO-yI-hPr"/>
+                                    <segue destination="vXZ-lx-hvc" kind="modal" id="IuG-CQ-ppA"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="OTX-5z-4Ls">
@@ -299,7 +298,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="L0A-A9-7MS"/>
                     <connections>
-                        <outlet property="MainMenu" destination="uq9-p7-3PN" id="rm8-Ud-k9G"/>
                         <outlet property="YouWon" destination="9Zr-Um-8VV" id="38B-xf-ZCC"/>
                     </connections>
                 </viewController>
@@ -377,7 +375,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dsz-og-OAn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="147" y="810"/>
+            <point key="canvasLocation" x="234" y="754"/>
         </scene>
     </scenes>
     <resources>
@@ -406,7 +404,7 @@
         </simulatedScreenMetrics>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="ttO-yI-hPr"/>
-        <segue reference="odc-WL-p6N"/>
+        <segue reference="hfC-Z2-2zd"/>
+        <segue reference="NJN-dg-kc8"/>
     </inferredMetricsTieBreakers>
 </document>

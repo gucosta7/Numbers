@@ -21,6 +21,8 @@ class GameViewController: UIViewController {
     @IBAction func showOkayCancelAlert() {
         //Stop Timer
         timer.invalidate()
+        //Make BackGround Black
+        self.view.backgroundColor = UIColor.blackColor()
         //Create alert
         let title = NSLocalizedString("Quit", comment: "")
         let message = NSLocalizedString("Are you sure you want to quit?", comment: "")
@@ -34,6 +36,7 @@ class GameViewController: UIViewController {
         let cancelAction = UIAlertAction(title: cancelButtonTitle, style: .Cancel) { action in
             NSLog("The \"Okay/Cancel\" alert's cancel action occured.")
             self.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateTimer"), userInfo: nil, repeats: true)
+            self.view.backgroundColor = UIColor.whiteColor()
         }
         //Create action of the OK button
         let OKAction = UIAlertAction(title: otherButtonTitle, style: .Default) { action in

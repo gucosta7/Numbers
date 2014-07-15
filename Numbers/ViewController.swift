@@ -23,7 +23,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         //BackGround Sound
         BackGroundMusic("WahWah", Format: "wav")
-        
+
         var testObject = PFObject(className:"TestObject")
         testObject["foo"] = "bar"
         testObject.saveInBackground()    }
