@@ -207,18 +207,7 @@ class GameViewController: UIViewController {
             testResult.text = "End of game - Rounds: " + String(randNumbers.count)
             timer.invalidate()
             
-            var gameScore = PFObject(className: "GameScore")
-            gameScore.setObject(counterLabel.text, forKey: "Score")
-            gameScore.setObject("Gustavo", forKey: "playerName")
-            gameScore.setObject(level, forKey: "Level")
-            gameScore.saveInBackgroundWithBlock {
-                (success: Bool!, error: NSError!) -> Void in
-                if success {
-                    NSLog("Object created with id: \(gameScore.objectId)")
-                } else {
-                    NSLog("%@", error)
-                }
-            }
+          
             
             //Go to the YouWon view
             self.performSegueWithIdentifier("Win", sender: UIButton())
