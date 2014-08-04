@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6185.7" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6185.11" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6181.2"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6190.4"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -12,34 +12,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Hf2-2b-hcI">
-                                <rect key="frame" x="127" y="315" width="66" height="30"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="R4background" id="V5D-iR-9ts">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Options">
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ac6-GH-yAx">
+                                <rect key="frame" x="112" y="81" width="90" height="89"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="user">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="XCr-tS-ZSz">
+                                <rect key="frame" x="118" y="375" width="85" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="engrenagem">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="GJe-8V-x6p" kind="modal" id="TUn-2r-kcy"/>
+                                    <segue destination="GJe-8V-x6p" kind="modal" id="FlN-bn-Cs3"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Hq4-wZ-dWd">
-                                <rect key="frame" x="110" y="199" width="100" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="l76-qy-ZvM">
+                                <rect key="frame" x="112" y="230" width="90" height="84"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Single Player">
+                                <state key="normal" backgroundImage="leaderboard">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="KgB-DI-I3G" kind="modal" id="hfC-Z2-2zd"/>
+                                    <segue destination="LgX-HB-lEr" kind="modal" id="zMs-a3-bSK"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="KbW-AH-NbM">
-                                <rect key="frame" x="102" y="258" width="117" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="x6u-Dh-f70">
+                                <rect key="frame" x="115" y="81" width="90" height="89"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Leaderboard">
+                                <state key="normal" backgroundImage="user">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="LgX-HB-lEr" kind="modal" id="dUZ-u7-LiO"/>
+                                    <segue destination="KgB-DI-I3G" kind="modal" id="sNu-e0-fOA"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -389,11 +400,15 @@
         <image name="7" width="150" height="150"/>
         <image name="8" width="150" height="150"/>
         <image name="9" width="150" height="150"/>
+        <image name="R4background" width="320" height="568"/>
         <image name="back.png" width="64" height="64"/>
+        <image name="engrenagem" width="80" height="80"/>
         <image name="facebook.png" width="64" height="64"/>
+        <image name="leaderboard" width="88" height="88"/>
         <image name="media-playback-pause-2.png" width="300" height="300"/>
         <image name="sound.png" width="64" height="64"/>
         <image name="twitter.png" width="64" height="64"/>
+        <image name="user" width="88" height="88"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
@@ -404,7 +419,7 @@
         </simulatedScreenMetrics>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="hfC-Z2-2zd"/>
-        <segue reference="NJN-dg-kc8"/>
+        <segue reference="h9E-Jv-KGi"/>
+        <segue reference="sNu-e0-fOA"/>
     </inferredMetricsTieBreakers>
 </document>

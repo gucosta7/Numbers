@@ -9,17 +9,15 @@
 
 import UIKit
 
-class YouWonViewController:
-    
-UIViewController {
+class YouWonViewController: UIViewController {
     
     //Creating Outlets for the 3 buttons
-    @IBOutlet var NextLevel: UIButton
-    @IBOutlet var Challenge: UIButton
-    @IBOutlet var MainMenu: UIButton
+    //@IBOutlet var NextLevel: UIButton
+    //@IBOutlet var Challenge: UIButton
+   // @IBOutlet var MainMenu: UIButton
     
     //Outlet for the Label
-    @IBOutlet var YouWon: UILabel
+    //@IBOutlet var YouWon: UILabel
         //Default Functions
     override func viewDidLoad() {
         super.viewDidLoad()
