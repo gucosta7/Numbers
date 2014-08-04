@@ -8,13 +8,11 @@
 
 import UIKit
 
-class OptionsViewController:
-
-UIViewController {
+class OptionsViewController: UIViewController {
 
     //Creating Outlets for the Effect and Volume Buttons
-    @IBOutlet var Effects: UISwitch
-    @IBOutlet var Volume: UISlider
+    @IBOutlet var Effects: UISwitch!
+    @IBOutlet var Volume: UISlider!
 
     
     //Default Functions

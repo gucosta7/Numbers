@@ -52,7 +52,8 @@ class GameViewController: UIViewController {
     }
     //Creating outlets for buttons and labels
     @IBOutlet var numberLabel : UILabel!
-    @IBOutlet var testResult : UILabel!
+    
+    @IBOutlet var progressView : UIProgressView!
     
     @IBOutlet var btnGrid11 : UIButton!
     @IBOutlet var btnGrid12 : UIButton!
@@ -92,6 +93,7 @@ class GameViewController: UIViewController {
     var hor = 0
     
     var level = 1
+    var progress :Float = 0.0
     
     //Initializing random sequence and keypad
     override func viewDidLoad() {
@@ -103,6 +105,8 @@ class GameViewController: UIViewController {
         keypadNumbers = updateKeyPad()
         
         timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateTimer"), userInfo: nil, repeats: true)
+        
+        progressView.setProgress(progress, animated: true)
         
     }
     
@@ -203,22 +207,7 @@ class GameViewController: UIViewController {
     func btnPressed (btnNumber : Int){
         
         if (RoundsCounter >= 10){
-            
-            testResult.text = "End of game - Rounds: " + String(randNumbers.count)
             timer.invalidate()
-            
-            var gameScore = PFObject(className: "GameScore")
-            gameScore.setObject(counterLabel.text, forKey: "Score")
-            gameScore.setObject("Gustavo", forKey: "playerName")
-            gameScore.setObject(level, forKey: "Level")
-            gameScore.saveInBackgroundWithBlock {
-                (success: Bool!, error: NSError!) -> Void in
-                if success {
-                    NSLog("Object created with id: \(gameScore.objectId)")
-                } else {
-                    NSLog("%@", error)
-                }
-            }
             
             //Go to the YouWon view
             self.performSegueWithIdentifier("Win", sender: UIButton())
@@ -226,7 +215,6 @@ class GameViewController: UIViewController {
         } else {
             
             if (btnNumber == numberLabel.text.toInt()) {
-                testResult.text = "Correct"
                 randNumbers.append(Int(arc4random_uniform(10)))
                 numberLabel.text = String(randNumbers[randNumbers.count - 1])
                 
@@ -236,12 +224,11 @@ class GameViewController: UIViewController {
                 Music("button-4", Format:"wav")
                 self.view.backgroundColor = UIColor.greenColor()
                 
+                progress = progress + 0.1
                 
-                //self.view.backgroundColor = UIColor.whiteColor()
+                progressView.setProgress(progress, animated: true)
                 
             } else {
-                testResult.text = "Error"
-                
                 //Error Sound Effect
                 Music("beep-02", Format:"wav")
                 self.view.backgroundColor = UIColor.redColor()
