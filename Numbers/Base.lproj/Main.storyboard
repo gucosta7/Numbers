@@ -335,7 +335,7 @@
                                 <rect key="frame" x="227" y="86" width="51" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <action selector="EffectsSwitch:" destination="GJe-8V-x6p" eventType="valueChanged" id="XhX-gF-puh"/>
+                                    <action selector="EffectsSwitch:" destination="GJe-8V-x6p" eventType="valueChanged" id="aZp-cv-1JZ"/>
                                 </connections>
                             </switch>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="eaa-yd-sFZ">
@@ -369,19 +369,11 @@
                                     <segue destination="vXZ-lx-hvc" kind="modal" id="NJN-dg-kc8"/>
                                 </connections>
                             </button>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="XBg-I9-VpR">
-                                <rect key="frame" x="176" y="163" width="118" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <action selector="Volume:" destination="GJe-8V-x6p" eventType="valueChanged" id="ewk-oR-prB"/>
-                                </connections>
-                            </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="Effects" destination="v8h-Uk-yue" id="gwu-1f-7Rq"/>
-                        <outlet property="Volume" destination="XBg-I9-VpR" id="04R-kA-tAa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dsz-og-OAn" userLabel="First Responder" sceneMemberID="firstResponder"/>

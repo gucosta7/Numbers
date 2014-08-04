@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BF93B2B119759BF5007AE2CE /* YouWonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF93B2B019759BF5007AE2CE /* YouWonViewController.swift */; };
+		BFAA325E198FD49A00E2AC23 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFAA325D198FD49A00E2AC23 /* FacebookSDK.framework */; };
 		BFB687CB196C096800F34637 /* beep-02.wav in Resources */ = {isa = PBXBuildFile; fileRef = BFB687CA196C096800F34637 /* beep-02.wav */; };
 		BFF4F22E196C391C000D3A63 /* button-4.wav in Resources */ = {isa = PBXBuildFile; fileRef = BFF4F22D196C391C000D3A63 /* button-4.wav */; };
 		BFF6BB18196C459200118366 /* WahWah.wav in Resources */ = {isa = PBXBuildFile; fileRef = BFF6BB17196C459200118366 /* WahWah.wav */; };
@@ -51,6 +52,7 @@
 
 /* Begin PBXFileReference section */
 		BF93B2B019759BF5007AE2CE /* YouWonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YouWonViewController.swift; sourceTree = "<group>"; };
+		BFAA325D198FD49A00E2AC23 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		BFB687CA196C096800F34637 /* beep-02.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "beep-02.wav"; sourceTree = "<group>"; };
 		BFF4F22D196C391C000D3A63 /* button-4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "button-4.wav"; sourceTree = "<group>"; };
 		BFF6BB17196C459200118366 /* WahWah.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = WahWah.wav; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 				FC40151F197461B700B21748 /* Security.framework in Frameworks */,
 				FC40151D197461AD00B21748 /* QuartzCore.framework in Frameworks */,
 				FC40151B197461A300B21748 /* MobileCoreServices.framework in Frameworks */,
+				BFAA325E198FD49A00E2AC23 /* FacebookSDK.framework in Frameworks */,
 				FC4015191974619A00B21748 /* libz.dylib in Frameworks */,
 				FC4015171974618C00B21748 /* CoreLocation.framework in Frameworks */,
 				FC4015151974617E00B21748 /* CoreGraphics.framework in Frameworks */,
@@ -119,6 +122,7 @@
 		FC401524197461E500B21748 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BFAA325D198FD49A00E2AC23 /* FacebookSDK.framework */,
 				FC401522197461CC00B21748 /* SystemConfiguration.framework */,
 				FC401520197461C000B21748 /* StoreKit.framework */,
 				FC40151E197461B700B21748 /* Security.framework */,
