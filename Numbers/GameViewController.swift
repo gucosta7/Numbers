@@ -98,13 +98,27 @@ class GameViewController: UIViewController {
     //Initializing random sequence and keypad
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        if (level == 1) {
+            randNumbers.append(Int(arc4random_uniform(10)))
+            numberLabel.text = String(randNumbers[randNumbers.count - 1])
+            
+            timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateTimer"), userInfo: nil, repeats: true)
 
-        randNumbers.append(Int(arc4random_uniform(10)))
-        numberLabel.text = String(randNumbers[randNumbers.count - 1])
+        } else {
+            
+            //for (var i:Int = 1; i>level;++i) {
+//randNumbers.append(Int(arc4random_uniform(10)))
+           //     numberLabel.text = String(randNumbers[randNumbers.count - 1])
+           // }
+            
+           // timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateTimer"), userInfo: nil, //repeats: true)
+        }
         
+        
+
         keypadNumbers = updateKeyPad()
-        
-        timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateTimer"), userInfo: nil, repeats: true)
         
         progressView.setProgress(progress, animated: true)
         
