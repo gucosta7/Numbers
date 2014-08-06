@@ -23,13 +23,19 @@ class GameViewController: UIViewController {
         timer.invalidate()
         //Make BackGround Black
         self.view.backgroundColor = UIColor.blackColor()
+        
+        
+        
         //Create alert
         let title = NSLocalizedString("Quit", comment: "")
         let message = NSLocalizedString("Are you sure you want to quit?", comment: "")
         let cancelButtonTitle = NSLocalizedString("Cancel", comment: "")
         let otherButtonTitle = NSLocalizedString("OK", comment: "")
         
-        let alertCotroller = UIAlertController(title: title, message: message, preferredStyle: .Alert)
+        
+        
+        /*
+        var alertCotroller = UIAlertController(title: title, message: message, preferredStyle: .Alert)
         
         // Create the actions.
         //Create action of the cancel button
@@ -49,6 +55,8 @@ class GameViewController: UIViewController {
         alertCotroller.addAction(OKAction)
         
         presentViewController(alertCotroller, animated: true, completion: nil)
+
+        */
     }
     //Creating outlets for buttons and labels
     @IBOutlet var numberLabel : UILabel!
@@ -98,13 +106,27 @@ class GameViewController: UIViewController {
     //Initializing random sequence and keypad
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        if (level == 1) {
+            randNumbers.append(Int(arc4random_uniform(10)))
+            numberLabel.text = String(randNumbers[randNumbers.count - 1])
+            
+            timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateTimer"), userInfo: nil, repeats: true)
 
-        randNumbers.append(Int(arc4random_uniform(10)))
-        numberLabel.text = String(randNumbers[randNumbers.count - 1])
+        } else {
+            
+            //for (var i:Int = 1; i>level;++i) {
+//randNumbers.append(Int(arc4random_uniform(10)))
+           //     numberLabel.text = String(randNumbers[randNumbers.count - 1])
+           // }
+            
+           // timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateTimer"), userInfo: nil, //repeats: true)
+        }
         
+        
+
         keypadNumbers = updateKeyPad()
-        
-        timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateTimer"), userInfo: nil, repeats: true)
         
         progressView.setProgress(progress, animated: true)
         
