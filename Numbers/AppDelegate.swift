@@ -20,17 +20,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: NSDictionary?) -> Bool {
         // Override point for customization after application launch.
         
-        Parse.setApplicationId("lhfeUvalHfVtXR8nxEKJ4ZHi9P7CzhahGqEa8Nqo", clientKey: "WuE5iEdSFUVPRloyOWXPqZFcNQ4i0EDv34Y2BtIH")
-        PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
-        
-        PFUser.enableAutomaticUser()
-        
         //var defaultACL = PFACL.ACL()
         // If you would like all objects to be private by default, remove this line.
         //defaultACL.setPublicReadAccess(true)
         //PFACL.setDefaultACL(defaultACL, withAccessForCurrentUser: true)
         
+        FBLoginView.self
+        FBProfilePictureView.self
+
         return true
+    }
+
+    func application(application: UIApplication, openURL url: NSURL, sourceApplication: NSString?, annotation: AnyObject) -> Bool {
+        var wasHandled:Bool = FBAppCall.handleOpenURL(url, sourceApplication: sourceApplication)
+        return wasHandled
     }
 
     func applicationWillResignActive(application: UIApplication) {
