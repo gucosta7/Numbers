@@ -22,7 +22,7 @@ class GameViewController: UIViewController {
         //Stop Timer
         timer.invalidate()
         //Make BackGround Black
-        self.view.backgroundColor = UIColor.blackColor()
+        
         
         
         
@@ -32,31 +32,50 @@ class GameViewController: UIViewController {
         let cancelButtonTitle = NSLocalizedString("Cancel", comment: "")
         let otherButtonTitle = NSLocalizedString("OK", comment: "")
         
+        var versao = UIDevice.currentDevice().systemVersion;
         
-        
-        /*
-        var alertCotroller = UIAlertController(title: title, message: message, preferredStyle: .Alert)
-        
-        // Create the actions.
-        //Create action of the cancel button
-        let cancelAction = UIAlertAction(title: cancelButtonTitle, style: .Cancel) { action in
-            NSLog("The \"Okay/Cancel\" alert's cancel action occured.")
-            self.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateTimer"), userInfo: nil, repeats: true)
-            self.view.backgroundColor = UIColor.whiteColor()
+        if (versao == "8.0"){
+            
+            self.view.backgroundColor = UIColor.blackColor()
+            
+            var alertCotroller = UIAlertController(title: title, message: message, preferredStyle: .Alert)
+            
+            // Create the actions.
+            //Create action of the cancel button
+            let cancelAction = UIAlertAction(title: cancelButtonTitle, style: .Cancel) { action in
+                NSLog("The \"Okay/Cancel\" alert's cancel action occured.")
+                self.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateTimer"), userInfo: nil, repeats: true)
+                self.view.backgroundColor = UIColor.whiteColor()
+            }
+            //Create action of the OK button
+            let OKAction = UIAlertAction(title: otherButtonTitle, style: .Default) { action in
+                NSLog("The \"Okay/Cancel\" alert's other action occured.")
+                self.performSegueWithIdentifier("MainScreen", sender: UIButton())
+            }
+            
+            // Add the actions.
+            alertCotroller.addAction(cancelAction)
+            alertCotroller.addAction(OKAction)
+            
+            presentViewController(alertCotroller, animated: true, completion: nil)
+            
+        } else {
+            let cancelAction = UIAlertAction(title: cancelButtonTitle, style: .Cancel) { action in
+                NSLog("The \"Okay/Cancel\" alert's cancel action occured.")
+                self.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateTimer"), userInfo: nil, repeats: true)
+                self.view.backgroundColor = UIColor.whiteColor()
+            }
+            //Create action of the OK button
+            let OKAction = UIAlertAction(title: otherButtonTitle, style: .Default) { action in
+                NSLog("The \"Okay/Cancel\" alert's other action occured.")
+                self.performSegueWithIdentifier("MainScreen", sender: UIButton())
+            }
+            var alerView = UIAlertView (title: title, message: message, delegate: OKAction, cancelButtonTitle: cancelButtonTitle)
+            
+            self.view.backgroundColor = UIColor.blackColor()
+                
         }
-        //Create action of the OK button
-        let OKAction = UIAlertAction(title: otherButtonTitle, style: .Default) { action in
-            NSLog("The \"Okay/Cancel\" alert's other action occured.")
-            self.performSegueWithIdentifier("MainScreen", sender: UIButton())
-        }
         
-        // Add the actions.
-        alertCotroller.addAction(cancelAction)
-        alertCotroller.addAction(OKAction)
-        
-        presentViewController(alertCotroller, animated: true, completion: nil)
-
-        */
     }
     //Creating outlets for buttons and labels
     @IBOutlet var numberLabel : UILabel!
