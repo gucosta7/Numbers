@@ -23,13 +23,19 @@ class GameViewController: UIViewController {
         timer.invalidate()
         //Make BackGround Black
         self.view.backgroundColor = UIColor.blackColor()
+        
+        
+        
         //Create alert
         let title = NSLocalizedString("Quit", comment: "")
         let message = NSLocalizedString("Are you sure you want to quit?", comment: "")
         let cancelButtonTitle = NSLocalizedString("Cancel", comment: "")
         let otherButtonTitle = NSLocalizedString("OK", comment: "")
         
-        let alertCotroller = UIAlertController(title: title, message: message, preferredStyle: .Alert)
+        
+        
+        /*
+        var alertCotroller = UIAlertController(title: title, message: message, preferredStyle: .Alert)
         
         // Create the actions.
         //Create action of the cancel button
@@ -49,6 +55,8 @@ class GameViewController: UIViewController {
         alertCotroller.addAction(OKAction)
         
         presentViewController(alertCotroller, animated: true, completion: nil)
+
+        */
     }
     //Creating outlets for buttons and labels
     @IBOutlet var numberLabel : UILabel!
