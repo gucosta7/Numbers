@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF7375071992C2B8005FA646 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF7375061992C2B8005FA646 /* GameKit.framework */; };
+		BF7D3D2319917584004C23DB /* FBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7D3D2219917584004C23DB /* FBViewController.swift */; };
+		BF7D3D2519917D26004C23DB /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF7D3D2419917D26004C23DB /* FacebookSDK.framework */; };
 		BF93B2B119759BF5007AE2CE /* YouWonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF93B2B019759BF5007AE2CE /* YouWonViewController.swift */; };
-		BFAA325E198FD49A00E2AC23 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFAA325D198FD49A00E2AC23 /* FacebookSDK.framework */; };
 		BFB687CB196C096800F34637 /* beep-02.wav in Resources */ = {isa = PBXBuildFile; fileRef = BFB687CA196C096800F34637 /* beep-02.wav */; };
 		BFF4F22E196C391C000D3A63 /* button-4.wav in Resources */ = {isa = PBXBuildFile; fileRef = BFF4F22D196C391C000D3A63 /* button-4.wav */; };
 		BFF6BB18196C459200118366 /* WahWah.wav in Resources */ = {isa = PBXBuildFile; fileRef = BFF6BB17196C459200118366 /* WahWah.wav */; };
@@ -51,8 +53,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BF7375061992C2B8005FA646 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		BF7D3D21199174CF004C23DB /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		BF7D3D2219917584004C23DB /* FBViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBViewController.swift; sourceTree = "<group>"; };
+		BF7D3D2419917D26004C23DB /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		BF93B2B019759BF5007AE2CE /* YouWonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YouWonViewController.swift; sourceTree = "<group>"; };
-		BFAA325D198FD49A00E2AC23 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		BFB687CA196C096800F34637 /* beep-02.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "beep-02.wav"; sourceTree = "<group>"; };
 		BFF4F22D196C391C000D3A63 /* button-4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "button-4.wav"; sourceTree = "<group>"; };
 		BFF6BB17196C459200118366 /* WahWah.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = WahWah.wav; sourceTree = "<group>"; };
@@ -98,8 +103,9 @@
 				FC401521197461C000B21748 /* StoreKit.framework in Frameworks */,
 				FC40151F197461B700B21748 /* Security.framework in Frameworks */,
 				FC40151D197461AD00B21748 /* QuartzCore.framework in Frameworks */,
+				BF7375071992C2B8005FA646 /* GameKit.framework in Frameworks */,
 				FC40151B197461A300B21748 /* MobileCoreServices.framework in Frameworks */,
-				BFAA325E198FD49A00E2AC23 /* FacebookSDK.framework in Frameworks */,
+				BF7D3D2519917D26004C23DB /* FacebookSDK.framework in Frameworks */,
 				FC4015191974619A00B21748 /* libz.dylib in Frameworks */,
 				FC4015171974618C00B21748 /* CoreLocation.framework in Frameworks */,
 				FC4015151974617E00B21748 /* CoreGraphics.framework in Frameworks */,
@@ -122,7 +128,8 @@
 		FC401524197461E500B21748 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				BFAA325D198FD49A00E2AC23 /* FacebookSDK.framework */,
+				BF7375061992C2B8005FA646 /* GameKit.framework */,
+				BF7D3D2419917D26004C23DB /* FacebookSDK.framework */,
 				FC401522197461CC00B21748 /* SystemConfiguration.framework */,
 				FC401520197461C000B21748 /* StoreKit.framework */,
 				FC40151E197461B700B21748 /* Security.framework */,
@@ -175,11 +182,13 @@
 			isa = PBXGroup;
 			children = (
 				FCC2B59E195CAC9900FC83E4 /* AppDelegate.swift */,
+				BF7D3D2219917584004C23DB /* FBViewController.swift */,
 				BF93B2B019759BF5007AE2CE /* YouWonViewController.swift */,
 				FCC2B5A3195CAC9900FC83E4 /* ViewController.swift */,
 				FCC2B5BE195CAE0A00FC83E4 /* GameViewController.swift */,
 				FCC2B5C0195CAE8E00FC83E4 /* OptionsViewController.swift */,
 				FC05E4CE1974ABE7002C9B7A /* LeaderboardViewController.swift */,
+				BF7D3D21199174CF004C23DB /* Bridging-Header.h */,
 				FCC2B5A5195CAC9900FC83E4 /* Main.storyboard */,
 				FCB26135195CC2E9003C6DB5 /* Images */,
 				FCC2B5A8195CAC9900FC83E4 /* Images.xcassets */,
@@ -266,6 +275,12 @@
 				TargetAttributes = {
 					FCC2B598195CAC9900FC83E4 = {
 						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = 5H4D3TN267;
+						SystemCapabilities = {
+							com.apple.GameCenter = {
+								enabled = 1;
+							};
+						};
 					};
 					FCC2B5AD195CAC9900FC83E4 = {
 						CreatedOnToolsVersion = 6.0;
@@ -325,6 +340,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF7D3D2319917584004C23DB /* FBViewController.swift in Sources */,
 				FCC2B5BF195CAE0A00FC83E4 /* GameViewController.swift in Sources */,
 				FCC2B5A4195CAC9900FC83E4 /* ViewController.swift in Sources */,
 				BF93B2B119759BF5007AE2CE /* YouWonViewController.swift in Sources */,
@@ -455,7 +471,7 @@
 				INFOPLIST_FILE = Numbers/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Numbers-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Numbers/Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -473,7 +489,7 @@
 				INFOPLIST_FILE = Numbers/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Numbers-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Numbers/Bridging-Header.h";
 			};
 			name = Release;
 		};

@@ -24,9 +24,6 @@ class ViewController: UIViewController {
         BackGroundMusic("WahWah", Format: "wav")
         InitialSound("button-4", Format:"wav")
 
-        var testObject = PFObject(className:"TestObject")
-        testObject["foo"] = "bar"
-        testObject.saveInBackground()
     
     
     }
