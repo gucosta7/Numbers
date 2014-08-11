@@ -9,19 +9,57 @@
 
 import UIKit
 import AVFoundation
+import CoreData
 
 //Creating Sound Variables
 var BGaudioPlayer = AVAudioPlayer() // BackGround Audio Player
 var audioPlayer = AVAudioPlayer()
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIApplicationDelegate {
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        var musicOn: Bool
         // Do any additional setup after loading the view, typically from a nib.
         //BackGround Sound
-        BackGroundMusic("WahWah", Format: "wav")
+        
+        var appDel:AppDelegate = (UIApplication.sharedApplication().delegate as AppDelegate)
+        var context:NSManagedObjectContext = appDel.managedObjectContext!
+        
+        var request = NSFetchRequest(entityName: "Settings")
+        request.returnsObjectsAsFaults = false
+        
+        var results:NSArray = context.executeFetchRequest(request, error: nil)
+        
+        if (results.count > 0){
+           var res = results[results.count - 1] as NSManagedObject
+           musicOn = res.valueForKey("music") as Bool
+            
+            if (musicOn == true){
+                    BackGroundMusic("WahWah", Format: "wav", Volume: 0.5)
+            } else {
+                BackGroundMusic("WahWah", Format: "wav", Volume: 0.0)
+
+            }
+            
+        } else {
+            
+            var appDel:AppDelegate = (UIApplication.sharedApplication().delegate as AppDelegate)
+            var context:NSManagedObjectContext = appDel.managedObjectContext!
+            
+            
+            var settings = NSEntityDescription.insertNewObjectForEntityForName("Settings", inManagedObjectContext: context) as NSManagedObject
+            
+            settings.setValue(true, forKey: "music")
+            settings.setValue(1, forKey: "level")
+            
+            context.save(nil)
+
+            
+        }
+        
+        
         InitialSound("button-4", Format:"wav")
 
     
@@ -36,11 +74,11 @@ class ViewController: UIViewController {
     //Two functions that initialise the sound variables as soon as the program starts
 
     //Initialise BackGroundMusic
-    func BackGroundMusic(Name: String,  Format:String){
+    func BackGroundMusic(Name: String,  Format:String, Volume: Float){
         var MainSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource(Name , ofType: Format))
         BGaudioPlayer = AVAudioPlayer(contentsOfURL: MainSound, error: nil)
         BGaudioPlayer.numberOfLoops = -1
-        BGaudioPlayer.volume = 0.5
+        BGaudioPlayer.volume = Volume
         BGaudioPlayer.play()
         
     }
