@@ -146,155 +146,160 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="IpP-7j-tiq">
-                                <rect key="frame" x="15" y="91" width="80" height="80"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WhiteBackground" id="gno-nB-k3C">
+                                <rect key="frame" x="-2" y="-2" width="322" height="570"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" progress="0.5" id="tMd-de-Dbn">
+                                <rect key="frame" x="-1" y="462" width="321" height="3"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="progressTintColor" red="0.68627452850341797" green="0.0" blue="0.85490202903747559" alpha="1" colorSpace="deviceRGB"/>
+                            </progressView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" id="0ur-tu-ct2">
+                                <rect key="frame" x="102" y="20" width="114" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Efg-Tc-Zox">
+                                <rect key="frame" x="30" y="103" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="1">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="btnGrid11_click:" destination="KgB-DI-I3G" eventType="touchUpInside" id="e1K-AI-0r6"/>
+                                    <action selector="btnGrid11_click:" destination="KgB-DI-I3G" eventType="touchUpInside" id="yaU-Np-3Vk"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="QXg-LS-sLM">
-                                <rect key="frame" x="115" y="91" width="80" height="80"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="8YW-LY-NEu">
+                                <rect key="frame" x="119" y="103" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="2">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="btnGrid12_click:" destination="KgB-DI-I3G" eventType="touchUpInside" id="kYk-Uo-igf"/>
+                                    <action selector="btnGrid12_click:" destination="KgB-DI-I3G" eventType="touchUpInside" id="RVM-GO-ZAY"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="zzQ-Xe-Eto">
-                                <rect key="frame" x="215" y="91" width="80" height="80"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="j1b-Fk-Dge">
+                                <rect key="frame" x="210" y="103" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="3">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="btnGrid13_click:" destination="KgB-DI-I3G" eventType="touchUpInside" id="tLt-nt-juy"/>
+                                    <action selector="btnGrid13_click:" destination="KgB-DI-I3G" eventType="touchUpInside" id="QEh-4J-PKp"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="lgf-hr-iju">
-                                <rect key="frame" x="15" y="179" width="80" height="80"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="gZ8-Rz-puZ">
+                                <rect key="frame" x="30" y="191" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="4">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="btnGrid21_click:" destination="KgB-DI-I3G" eventType="touchUpInside" id="auG-cz-MwG"/>
+                                    <action selector="btnGrid21_click:" destination="KgB-DI-I3G" eventType="touchUpInside" id="Px0-rW-TRM"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="sDm-ad-ANu">
-                                <rect key="frame" x="115" y="179" width="80" height="80"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="QkW-4v-sn2">
+                                <rect key="frame" x="119" y="191" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="5">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="btnGrid22_click:" destination="KgB-DI-I3G" eventType="touchUpInside" id="dhJ-eY-L0l"/>
+                                    <action selector="btnGrid22_click:" destination="KgB-DI-I3G" eventType="touchUpInside" id="pWf-JY-wTC"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="e7V-XU-s9i">
-                                <rect key="frame" x="215" y="179" width="80" height="80"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="J0s-yq-QQx">
+                                <rect key="frame" x="210" y="191" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="6">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="btnGrid23_click:" destination="KgB-DI-I3G" eventType="touchUpInside" id="iZf-us-1oh"/>
+                                    <action selector="btnGrid23_click:" destination="KgB-DI-I3G" eventType="touchUpInside" id="AXt-CY-Hhy"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="cWX-2z-kg0">
-                                <rect key="frame" x="15" y="267" width="80" height="80"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="tTd-Jh-0KD">
+                                <rect key="frame" x="30" y="279" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="7">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="btnGrid31_click:" destination="KgB-DI-I3G" eventType="touchUpInside" id="iDv-lb-op3"/>
+                                    <action selector="btnGrid31_click:" destination="KgB-DI-I3G" eventType="touchUpInside" id="xWD-tl-X0w"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="p7a-j1-qPf">
-                                <rect key="frame" x="115" y="267" width="80" height="80"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="7ko-we-6IH">
+                                <rect key="frame" x="119" y="279" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="8">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="btnGrid32_click:" destination="KgB-DI-I3G" eventType="touchUpInside" id="QoN-xF-VHM"/>
+                                    <action selector="btnGrid32_click:" destination="KgB-DI-I3G" eventType="touchUpInside" id="vym-tR-fBb"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ZMp-B7-W4h">
-                                <rect key="frame" x="215" y="267" width="80" height="80"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="zDk-FB-HfO">
+                                <rect key="frame" x="210" y="279" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="9">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="btnGrid33_click:" destination="KgB-DI-I3G" eventType="touchUpInside" id="KRF-CK-07D"/>
+                                    <action selector="btnGrid33_click:" destination="KgB-DI-I3G" eventType="touchUpInside" id="zUf-hc-WvU"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="JD4-TQ-L7i">
-                                <rect key="frame" x="115" y="355" width="80" height="80"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="kc6-Xr-xN8">
+                                <rect key="frame" x="119" y="367" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="0">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="btnGrid41_click:" destination="KgB-DI-I3G" eventType="touchUpInside" id="h5r-OP-0lJ"/>
+                                    <action selector="btnGrid41_click:" destination="KgB-DI-I3G" eventType="touchUpInside" id="kOK-d5-02K"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3Sc-5g-1Po">
-                                <rect key="frame" x="102" y="450" width="107" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kbD-aW-0YN">
+                                <rect key="frame" x="102" y="486" width="107" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" id="bXI-yK-OPR">
-                                <rect key="frame" x="7" y="490" width="297" height="2"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="progressTintColor" red="0.0" green="0.58431375029999999" blue="0.87058830259999997" alpha="1" colorSpace="deviceRGB"/>
-                            </progressView>
-                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="FdJ-Zc-HTj">
-                                <rect key="frame" x="15" y="505" width="53" height="51"/>
+                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="VaX-G4-z6w">
+                                <rect key="frame" x="16" y="503" width="53" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <state key="normal" image="Back button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="showOkayCancelAlert" destination="KgB-DI-I3G" eventType="touchUpInside" id="StS-CG-z08"/>
+                                    <action selector="showOkayCancelAlert" destination="KgB-DI-I3G" eventType="touchUpInside" id="Wmx-Lf-xk4"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" id="y7h-KS-bD3">
-                                <rect key="frame" x="98" y="15" width="114" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="40"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="LpQ-md-FqF"/>
                     <nil key="simulatedStatusBarMetrics"/>
                     <connections>
-                        <outlet property="btnGrid11" destination="IpP-7j-tiq" id="rTA-CF-PKi"/>
-                        <outlet property="btnGrid12" destination="QXg-LS-sLM" id="ObX-Wz-QHu"/>
-                        <outlet property="btnGrid13" destination="zzQ-Xe-Eto" id="iBc-Uh-cZo"/>
-                        <outlet property="btnGrid21" destination="lgf-hr-iju" id="ji8-nZ-OJw"/>
-                        <outlet property="btnGrid22" destination="sDm-ad-ANu" id="Pg9-1i-edC"/>
-                        <outlet property="btnGrid23" destination="e7V-XU-s9i" id="FzQ-YX-t0z"/>
-                        <outlet property="btnGrid31" destination="cWX-2z-kg0" id="lKW-xx-Wd8"/>
-                        <outlet property="btnGrid32" destination="p7a-j1-qPf" id="VnA-j0-qE4"/>
-                        <outlet property="btnGrid33" destination="ZMp-B7-W4h" id="741-F9-4V9"/>
-                        <outlet property="btnGrid41" destination="JD4-TQ-L7i" id="lJ9-gn-Mee"/>
-                        <outlet property="counterLabel" destination="3Sc-5g-1Po" id="6tF-4H-e07"/>
-                        <outlet property="numberLabel" destination="y7h-KS-bD3" id="5iC-Pn-xew"/>
-                        <outlet property="progressView" destination="bXI-yK-OPR" id="zee-zH-BgP"/>
+                        <outlet property="QuitGame" destination="VaX-G4-z6w" id="hVw-Y8-IqY"/>
+                        <outlet property="btnGrid11" destination="Efg-Tc-Zox" id="KF1-bd-V1E"/>
+                        <outlet property="btnGrid12" destination="8YW-LY-NEu" id="9fq-Qy-SpH"/>
+                        <outlet property="btnGrid13" destination="j1b-Fk-Dge" id="EmY-Oh-gsd"/>
+                        <outlet property="btnGrid21" destination="gZ8-Rz-puZ" id="7tr-US-aV4"/>
+                        <outlet property="btnGrid22" destination="QkW-4v-sn2" id="AJy-Fb-s3Y"/>
+                        <outlet property="btnGrid23" destination="J0s-yq-QQx" id="x9L-Zj-1Kk"/>
+                        <outlet property="btnGrid31" destination="tTd-Jh-0KD" id="DTy-eT-n24"/>
+                        <outlet property="btnGrid32" destination="7ko-we-6IH" id="Lpe-Va-j62"/>
+                        <outlet property="btnGrid33" destination="zDk-FB-HfO" id="Eey-zL-pCj"/>
+                        <outlet property="btnGrid41" destination="kc6-Xr-xN8" id="OMV-su-tBS"/>
+                        <outlet property="counterLabel" destination="kbD-aW-0YN" id="xjJ-Co-KlJ"/>
+                        <outlet property="numberLabel" destination="0ur-tu-ct2" id="n3L-JT-otO"/>
+                        <outlet property="progressView" destination="tMd-de-Dbn" id="hNe-Wv-XFY"/>
                         <segue destination="vXZ-lx-hvc" kind="modal" identifier="MainScreen" id="pcb-Ag-sUR"/>
                         <segue destination="Nhj-XE-KAE" kind="modal" identifier="Win" id="vug-sb-sRp"/>
                     </connections>
@@ -419,6 +424,7 @@
         <image name="Back button" width="54" height="54"/>
         <image name="Background-1" width="320" height="568"/>
         <image name="R4background" width="320" height="568"/>
+        <image name="WhiteBackground" width="320" height="568"/>
         <image name="engrenagem" width="80" height="80"/>
         <image name="leaderboard" width="88" height="88"/>
         <image name="off" width="45" height="25"/>
@@ -435,7 +441,7 @@
         </simulatedScreenMetrics>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="xvD-vm-Zwq"/>
+        <segue reference="pcb-Ag-sUR"/>
         <segue reference="sNu-e0-fOA"/>
     </inferredMetricsTieBreakers>
 </document>
