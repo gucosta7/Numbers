@@ -361,13 +361,6 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="k5i-NN-L4k">
-                                <rect key="frame" x="21" y="281" width="119" height="64"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="Facebook">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="J3k-KS-zci">
                                 <rect key="frame" x="0.0" y="498" width="106" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -394,11 +387,17 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <view contentMode="scaleToFill" id="43g-u6-bOo" customClass="FBLoginView">
+                                <rect key="frame" x="48" y="305" width="215" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="Effects" destination="FnN-8X-f26" id="HTE-XD-cMg"/>
+                        <outlet property="fbLoginView" destination="43g-u6-bOo" id="Jyw-qD-H1w"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dsz-og-OAn" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -419,7 +418,6 @@
         <image name="9" width="150" height="150"/>
         <image name="Back button" width="54" height="54"/>
         <image name="Background-1" width="320" height="568"/>
-        <image name="Facebook" width="43" height="42"/>
         <image name="R4background" width="320" height="568"/>
         <image name="engrenagem" width="80" height="80"/>
         <image name="leaderboard" width="88" height="88"/>
@@ -437,7 +435,7 @@
         </simulatedScreenMetrics>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="xvD-vm-Zwq"/>
         <segue reference="sNu-e0-fOA"/>
-        <segue reference="pcb-Ag-sUR"/>
     </inferredMetricsTieBreakers>
 </document>

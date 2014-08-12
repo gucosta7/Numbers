@@ -9,8 +9,12 @@
 import UIKit
 import CoreData
 
-class OptionsViewController: UIViewController, UIApplicationDelegate {
+class OptionsViewController: UIViewController, UIApplicationDelegate, FBLoginViewDelegate {
 
+    
+    //Creating Outlet for facebook login/logout
+ 
+    @IBOutlet var fbLoginView: FBLoginView!
     //Creating Outlets for the Effect and Volume Buttons
     @IBOutlet var Effects: UISwitch!
     var musicOn:Bool!
@@ -38,8 +42,33 @@ class OptionsViewController: UIViewController, UIApplicationDelegate {
             Effects.setOn(musicOn, animated: true)
             
         }
+        //Facebook Login
+        self.fbLoginView.delegate = self
+        self.fbLoginView.readPermissions = ["public_profile", "email", "user_friends"]
     }
 
+    //Facebook Functions
+    func loginViewShowingLoggedInUser(loginView : FBLoginView!) {
+        println("User Logged In")
+    }
+    
+    func loginViewFetchedUserInfo(loginView : FBLoginView!, user: FBGraphUser) {
+        println("User: \(user)")
+        println("User ID: \(user.objectID)")
+        println("User Name: \(user.name)")
+        var userEmail = user.objectForKey("email") as String
+        println("User Email: \(userEmail)")
+    }
+    
+    func loginViewShowingLoggedOutUser(loginView : FBLoginView!) {
+        println("User Logged Out")
+    }
+    
+    func loginView(loginView : FBLoginView!, handleError:NSError) {
+        println("Error: \(handleError.localizedDescription)")
+    }
+    
+    //End of Facebook functions
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
