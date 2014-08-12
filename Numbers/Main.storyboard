@@ -60,7 +60,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-626.25" y="3.169014084507042"/>
+            <point key="canvasLocation" x="-627" y="33"/>
         </scene>
         <!--Leaderboard View Controller-->
         <scene sceneID="JFe-4a-ocr">
@@ -109,6 +109,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p3O-Y7-BJk" customClass="FBLoginView">
+                                <rect key="frame" x="25" y="131" width="278" height="69"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cyh-IC-4RL">
+                                        <rect key="frame" x="-549" y="-240" width="600" height="600"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6bZ-S4-cMr">
                                 <rect key="frame" x="141" y="402" width="46" height="30"/>
                                 <state key="normal" title="Skip">
@@ -118,19 +128,10 @@
                                     <segue destination="vXZ-lx-hvc" kind="presentation" id="HXN-Kj-wn9"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p3O-Y7-BJk" customClass="FBLoginView">
-                                <rect key="frame" x="25" y="132" width="278" height="69"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cyh-IC-4RL">
-                                        <rect key="frame" x="-549" y="-240" width="600" height="600"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    </view>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Gry-il-wnM"/>
                     <connections>
                         <outlet property="fbLoginView" destination="p3O-Y7-BJk" id="crO-93-tJs"/>
                     </connections>
@@ -285,68 +286,63 @@
                         <outlet property="counterLabel" destination="3Sc-5g-1Po" id="6tF-4H-e07"/>
                         <outlet property="numberLabel" destination="y7h-KS-bD3" id="5iC-Pn-xew"/>
                         <outlet property="progressView" destination="bXI-yK-OPR" id="zee-zH-BgP"/>
-                        <segue destination="X02-w0-opW" kind="presentation" identifier="Win" id="sYz-A5-Ajc"/>
                         <segue destination="vXZ-lx-hvc" kind="presentation" identifier="MainScreen" modalTransitionStyle="flipHorizontal" id="pcb-Ag-sUR"/>
+                        <segue destination="QSJ-1l-OUN" kind="presentation" identifier="Won" id="wB9-jf-YhU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N9C-Xt-8cK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="438.75" y="3.169014084507042"/>
+            <point key="canvasLocation" x="224" y="33"/>
         </scene>
         <!--You Won View Controller-->
-        <scene sceneID="ZEC-lL-Djh">
+        <scene sceneID="Emw-1J-HUz">
             <objects>
-                <viewController storyboardIdentifier="NextLevel" useStoryboardIdentifierAsRestorationIdentifier="YES" id="X02-w0-opW" customClass="YouWonViewController" customModule="Numbers" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="QSJ-1l-OUN" customClass="YouWonViewController" customModule="Numbers" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="hEh-B9-bpo"/>
-                        <viewControllerLayoutGuide type="bottom" id="Sox-9z-fwp"/>
+                        <viewControllerLayoutGuide type="top" id="34m-Es-Pvb"/>
+                        <viewControllerLayoutGuide type="bottom" id="6fW-Ob-ney"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="qfd-D9-g3u">
+                    <view key="view" contentMode="scaleToFill" id="Ydb-wO-JbJ">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You Won" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Zr-Um-8VV">
-                                <rect key="frame" x="113" y="114" width="91" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You Won" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cdp-D7-z04">
+                                <rect key="frame" x="116" y="93" width="91" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                                 <color key="textColor" red="1" green="0.2304520736" blue="0.20663938379999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5W0-Rz-vU2">
-                                <rect key="frame" x="120" y="274" width="77" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sfr-GE-A9d">
+                                <rect key="frame" x="123" y="253" width="77" height="30"/>
                                 <state key="normal" title="Challenge!">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uq9-p7-3PN">
-                                <rect key="frame" x="119" y="330" width="83" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2da-gX-bE0">
+                                <rect key="frame" x="122" y="309" width="83" height="30"/>
                                 <state key="normal" title="Main Menu">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="vXZ-lx-hvc" kind="presentation" id="IuG-CQ-ppA"/>
+                                    <segue destination="vXZ-lx-hvc" kind="presentation" id="fdN-NH-f1J"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OTX-5z-4Ls">
-                                <rect key="frame" x="122" y="220" width="76" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qCj-dL-bC2">
+                                <rect key="frame" x="125" y="199" width="76" height="30"/>
                                 <state key="normal" title="Next Level">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="startGameButtonTapped:" destination="X02-w0-opW" eventType="touchUpInside" id="nz4-WG-NLF"/>
-                                    <segue destination="KgB-DI-I3G" kind="presentation" id="odc-WL-p6N"/>
+                                    <segue destination="KgB-DI-I3G" kind="presentation" id="9lO-QP-S6U"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="L0A-A9-7MS"/>
-                    <connections>
-                        <outlet property="YouWon" destination="9Zr-Um-8VV" id="38B-xf-ZCC"/>
-                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0rn-iJ-eem" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yqF-Ug-Wmo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1500" y="3.169014084507042"/>
+            <point key="canvasLocation" x="903" y="33"/>
         </scene>
         <!--Options View Controller-->
         <scene sceneID="Kgu-EZ-e1A">
@@ -396,7 +392,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="vXZ-lx-hvc" kind="presentation" id="NJN-dg-kc8"/>
+                                    <segue destination="vXZ-lx-hvc" kind="presentation" identifier="" id="NJN-dg-kc8"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -433,7 +429,7 @@
         <image name="user" width="88" height="88"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="sNu-e0-fOA"/>
-        <segue reference="HXN-Kj-wn9"/>
+        <segue reference="fdN-NH-f1J"/>
+        <segue reference="9lO-QP-S6U"/>
     </inferredMetricsTieBreakers>
 </document>

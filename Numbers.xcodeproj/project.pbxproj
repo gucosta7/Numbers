@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF20DA0119992C6C00FD4B75 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF20DA0019992C6C00FD4B75 /* Main.storyboard */; };
 		BF7D3D2319917584004C23DB /* FBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7D3D2219917584004C23DB /* FBViewController.swift */; };
 		BF7D3D2519917D26004C23DB /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF7D3D2419917D26004C23DB /* FacebookSDK.framework */; };
 		BF93B2B119759BF5007AE2CE /* YouWonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF93B2B019759BF5007AE2CE /* YouWonViewController.swift */; };
+		BFB09BD91992E31C00BD3BB8 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFB09BD81992E31C00BD3BB8 /* GameKit.framework */; };
 		BFB687CB196C096800F34637 /* beep-02.wav in Resources */ = {isa = PBXBuildFile; fileRef = BFB687CA196C096800F34637 /* beep-02.wav */; };
 		BFF4F22E196C391C000D3A63 /* button-4.wav in Resources */ = {isa = PBXBuildFile; fileRef = BFF4F22D196C391C000D3A63 /* button-4.wav */; };
 		BFF6BB18196C459200118366 /* WahWah.wav in Resources */ = {isa = PBXBuildFile; fileRef = BFF6BB17196C459200118366 /* WahWah.wav */; };
@@ -22,7 +24,6 @@
 		FC40151B197461A300B21748 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC40151A197461A300B21748 /* MobileCoreServices.framework */; };
 		FC40151D197461AD00B21748 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC40151C197461AD00B21748 /* QuartzCore.framework */; };
 		FC40151F197461B700B21748 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC40151E197461B700B21748 /* Security.framework */; };
-		FC401521197461C000B21748 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC401520197461C000B21748 /* StoreKit.framework */; };
 		FC401523197461CC00B21748 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC401522197461CC00B21748 /* SystemConfiguration.framework */; };
 		FC6FA2141992D344002B6971 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC6FA2131992D344002B6971 /* Foundation.framework */; };
 		FC6FA2151992D34D002B6971 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC4015121974617300B21748 /* CFNetwork.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -37,7 +38,6 @@
 		FCC2B59F195CAC9900FC83E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC2B59E195CAC9900FC83E4 /* AppDelegate.swift */; };
 		FCC2B5A2195CAC9900FC83E4 /* Numbers.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FCC2B5A0195CAC9900FC83E4 /* Numbers.xcdatamodeld */; };
 		FCC2B5A4195CAC9900FC83E4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC2B5A3195CAC9900FC83E4 /* ViewController.swift */; };
-		FCC2B5A7195CAC9900FC83E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCC2B5A5195CAC9900FC83E4 /* Main.storyboard */; };
 		FCC2B5A9195CAC9900FC83E4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCC2B5A8195CAC9900FC83E4 /* Images.xcassets */; };
 		FCC2B5B5195CAC9900FC83E4 /* NumbersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC2B5B4195CAC9900FC83E4 /* NumbersTests.swift */; };
 		FCC2B5BF195CAE0A00FC83E4 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC2B5BE195CAE0A00FC83E4 /* GameViewController.swift */; };
@@ -55,10 +55,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BF20DA0019992C6C00FD4B75 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		BF7D3D21199174CF004C23DB /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		BF7D3D2219917584004C23DB /* FBViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBViewController.swift; sourceTree = "<group>"; };
 		BF7D3D2419917D26004C23DB /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		BF93B2B019759BF5007AE2CE /* YouWonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YouWonViewController.swift; sourceTree = "<group>"; };
+		BFB09BD81992E31C00BD3BB8 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		BFB687CA196C096800F34637 /* beep-02.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "beep-02.wav"; sourceTree = "<group>"; };
 		BFF4F22D196C391C000D3A63 /* button-4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "button-4.wav"; sourceTree = "<group>"; };
 		BFF6BB17196C459200118366 /* WahWah.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = WahWah.wav; sourceTree = "<group>"; };
@@ -72,7 +74,6 @@
 		FC40151A197461A300B21748 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		FC40151C197461AD00B21748 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		FC40151E197461B700B21748 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		FC401520197461C000B21748 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		FC401522197461CC00B21748 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		FC401525197462AF00B21748 /* Numbers-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Numbers-Bridging-Header.h"; sourceTree = "<group>"; };
 		FC6FA2131992D344002B6971 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -89,7 +90,6 @@
 		FCC2B59E195CAC9900FC83E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCC2B5A1195CAC9900FC83E4 /* Numbers.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Numbers.xcdatamodel; sourceTree = "<group>"; };
 		FCC2B5A3195CAC9900FC83E4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		FCC2B5A6195CAC9900FC83E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FCC2B5A8195CAC9900FC83E4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FCC2B5AE195CAC9900FC83E4 /* NumbersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NumbersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCC2B5B3195CAC9900FC83E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -108,7 +108,6 @@
 				FC6FA2151992D34D002B6971 /* CFNetwork.framework in Frameworks */,
 				FC6FA2141992D344002B6971 /* Foundation.framework in Frameworks */,
 				FC401523197461CC00B21748 /* SystemConfiguration.framework in Frameworks */,
-				FC401521197461C000B21748 /* StoreKit.framework in Frameworks */,
 				FC40151F197461B700B21748 /* Security.framework in Frameworks */,
 				FC40151D197461AD00B21748 /* QuartzCore.framework in Frameworks */,
 				FC40151B197461A300B21748 /* MobileCoreServices.framework in Frameworks */,
@@ -118,6 +117,7 @@
 				FC4015151974617E00B21748 /* CoreGraphics.framework in Frameworks */,
 				FC4015111974616B00B21748 /* AudioToolbox.framework in Frameworks */,
 				FC40150F1974612000B21748 /* Parse.framework in Frameworks */,
+				BFB09BD91992E31C00BD3BB8 /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,12 +134,12 @@
 		FC401524197461E500B21748 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BFB09BD81992E31C00BD3BB8 /* GameKit.framework */,
 				FC6FA2181992D432002B6971 /* AVFoundation.framework */,
 				FC6FA2161992D39C002B6971 /* UIKit.framework */,
 				FC6FA2131992D344002B6971 /* Foundation.framework */,
 				BF7D3D2419917D26004C23DB /* FacebookSDK.framework */,
 				FC401522197461CC00B21748 /* SystemConfiguration.framework */,
-				FC401520197461C000B21748 /* StoreKit.framework */,
 				FC40151E197461B700B21748 /* Security.framework */,
 				FC40151C197461AD00B21748 /* QuartzCore.framework */,
 				FC40151A197461A300B21748 /* MobileCoreServices.framework */,
@@ -189,6 +189,7 @@
 		FCC2B59B195CAC9900FC83E4 /* Numbers */ = {
 			isa = PBXGroup;
 			children = (
+				BF20DA0019992C6C00FD4B75 /* Main.storyboard */,
 				FCC2B59E195CAC9900FC83E4 /* AppDelegate.swift */,
 				BF7D3D2219917584004C23DB /* FBViewController.swift */,
 				BF93B2B019759BF5007AE2CE /* YouWonViewController.swift */,
@@ -197,7 +198,6 @@
 				FCC2B5C0195CAE8E00FC83E4 /* OptionsViewController.swift */,
 				FC05E4CE1974ABE7002C9B7A /* LeaderboardViewController.swift */,
 				BF7D3D21199174CF004C23DB /* Bridging-Header.h */,
-				FCC2B5A5195CAC9900FC83E4 /* Main.storyboard */,
 				FCB26135195CC2E9003C6DB5 /* Images */,
 				FCC2B5A8195CAC9900FC83E4 /* Images.xcassets */,
 				FCC2B5A0195CAC9900FC83E4 /* Numbers.xcdatamodeld */,
@@ -286,6 +286,9 @@
 						DevelopmentTeam = F5UXBY5S62;
 						SystemCapabilities = {
 							com.apple.GameCenter = {
+								enabled = 1;
+							};
+							com.apple.InAppPurchase = {
 								enabled = 0;
 							};
 						};
@@ -320,12 +323,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FCC2B5A7195CAC9900FC83E4 /* Main.storyboard in Resources */,
 				FCAF38FE196B57F800AAB0B1 /* sound.png in Resources */,
 				BFF6BB18196C459200118366 /* WahWah.wav in Resources */,
 				FCAF38FB196B569300AAB0B1 /* facebook.png in Resources */,
 				FCAF38FC196B569300AAB0B1 /* twitter.png in Resources */,
 				FCAF3900196B58A200AAB0B1 /* back.png in Resources */,
+				BF20DA0119992C6C00FD4B75 /* Main.storyboard in Resources */,
 				FCC2B5A9195CAC9900FC83E4 /* Images.xcassets in Resources */,
 				FCB26139195CC4C5003C6DB5 /* media-playback-pause-2.png in Resources */,
 				BFB687CB196C096800F34637 /* beep-02.wav in Resources */,
@@ -376,17 +379,6 @@
 			targetProxy = FCC2B5AF195CAC9900FC83E4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		FCC2B5A5195CAC9900FC83E4 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FCC2B5A6195CAC9900FC83E4 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		FCC2B5B6195CAC9900FC83E4 /* Debug */ = {

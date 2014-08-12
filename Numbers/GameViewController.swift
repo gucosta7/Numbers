@@ -21,7 +21,7 @@ class GameViewController: UIViewController {
     @IBAction func showOkayCancelAlert() {
         //Stop Timer
         timer.invalidate()
-        //Make BackGround Black
+        
         
         
         
@@ -36,9 +36,10 @@ class GameViewController: UIViewController {
         
         if (versao == "8.0"){
             
+            
             self.view.backgroundColor = UIColor.blackColor()
             
-            var alertCotroller = UIAlertController(title: title, message: message, preferredStyle: .Alert)
+            var alertController = UIAlertController(title: title, message: message, preferredStyle: .Alert)
             
             // Create the actions.
             //Create action of the cancel button
@@ -54,29 +55,41 @@ class GameViewController: UIViewController {
             }
             
             // Add the actions.
-            alertCotroller.addAction(cancelAction)
-            alertCotroller.addAction(OKAction)
+            alertController.addAction(cancelAction)
+            alertController.addAction(OKAction)
             
-            presentViewController(alertCotroller, animated: true, completion: nil)
+            presentViewController(alertController, animated: true, completion: nil)
             
         } else {
-            let cancelAction = UIAlertAction(title: cancelButtonTitle, style: .Cancel) { action in
-                NSLog("The \"Okay/Cancel\" alert's cancel action occured.")
-                self.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateTimer"), userInfo: nil, repeats: true)
-                self.view.backgroundColor = UIColor.whiteColor()
-            }
-            //Create action of the OK button
-            let OKAction = UIAlertAction(title: otherButtonTitle, style: .Default) { action in
-                NSLog("The \"Okay/Cancel\" alert's other action occured.")
-                self.performSegueWithIdentifier("MainScreen", sender: UIButton())
-            }
-            var alerView = UIAlertView (title: title, message: message, delegate: OKAction, cancelButtonTitle: cancelButtonTitle)
-            
             self.view.backgroundColor = UIColor.blackColor()
-                
+            var alert: UIAlertView = UIAlertView (title: title, message: message, delegate: self, cancelButtonTitle: cancelButtonTitle)
+            alert.addButtonWithTitle("OK")
+            alert.show()
+            alert.delegate = self
+
         }
         
     }
+    //Creating function for alert iOS - 7
+    func alertView(view :UIAlertView, clickedButtonAtIndex :Int) -> Void {
+        switch clickedButtonAtIndex {
+            
+        case 0:
+            self.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateTimer"), userInfo: nil, repeats: true)
+            self.view.backgroundColor = UIColor.whiteColor()
+            break;
+        case 1:
+            NSLog("Dismiss");
+            self.performSegueWithIdentifier("MainScreen", sender: UIButton())
+            break;
+        default:
+            NSLog("Default");
+            self.view.backgroundColor = UIColor.blackColor()
+            break;
+            //Some code here..
+        }
+    }
+
     //Creating outlets for buttons and labels
     @IBOutlet var numberLabel : UILabel!
     
@@ -251,7 +264,7 @@ class GameViewController: UIViewController {
             timer.invalidate()
             
             //Go to the YouWon view
-            self.performSegueWithIdentifier("Win", sender: UIButton())
+            self.performSegueWithIdentifier("Won", sender: UIButton())
             
         } else {
             
