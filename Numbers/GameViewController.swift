@@ -264,7 +264,7 @@ class GameViewController: UIViewController {
             timer.invalidate()
             
             //Go to the YouWon view
-            self.performSegueWithIdentifier("Won", sender: UIButton())
+            self.performSegueWithIdentifier("Win", sender: UIButton())
             
         } else {
             
