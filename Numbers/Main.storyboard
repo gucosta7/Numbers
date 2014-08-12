@@ -295,7 +295,7 @@
                         <outlet property="counterLabel" destination="3Sc-5g-1Po" id="6tF-4H-e07"/>
                         <outlet property="numberLabel" destination="y7h-KS-bD3" id="5iC-Pn-xew"/>
                         <outlet property="progressView" destination="bXI-yK-OPR" id="zee-zH-BgP"/>
-                        <segue destination="vXZ-lx-hvc" kind="presentation" identifier="MainScreen" modalTransitionStyle="flipHorizontal" id="pcb-Ag-sUR"/>
+                        <segue destination="vXZ-lx-hvc" kind="modal" identifier="MainScreen" id="pcb-Ag-sUR"/>
                         <segue destination="Nhj-XE-KAE" kind="modal" identifier="Win" id="vug-sb-sRp"/>
                     </connections>
                 </viewController>
@@ -437,7 +437,7 @@
         </simulatedScreenMetrics>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="J2Q-IX-mPo"/>
-        <segue reference="xvD-vm-Zwq"/>
+        <segue reference="sNu-e0-fOA"/>
+        <segue reference="pcb-Ag-sUR"/>
     </inferredMetricsTieBreakers>
 </document>
