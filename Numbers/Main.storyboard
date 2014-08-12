@@ -325,15 +325,12 @@
                                 <state key="normal" title="Main Menu">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="zc8-jK-1vN">
-                                <rect key="frame" x="122" y="302" width="76" height="30"/>
-                                <state key="normal" title="Next Level">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                                <connections>
+                                    <segue destination="vXZ-lx-hvc" kind="modal" id="M3G-RE-pew"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="GfW-5X-xhz">
-                                <rect key="frame" x="117" y="355" width="77" height="30"/>
+                                <rect key="frame" x="124" y="355" width="77" height="30"/>
                                 <state key="normal" title="Challenge!">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -344,6 +341,15 @@
                                 <color key="textColor" red="1" green="0.2304520736" blue="0.20663938379999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="zc8-jK-1vN">
+                                <rect key="frame" x="124" y="302" width="76" height="30"/>
+                                <state key="normal" title="Next Level">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="KgB-DI-I3G" kind="modal" id="rgs-Fr-kl8"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -440,6 +446,7 @@
         </simulatedScreenMetrics>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="pcb-Ag-sUR"/>
+        <segue reference="rgs-Fr-kl8"/>
+        <segue reference="M3G-RE-pew"/>
     </inferredMetricsTieBreakers>
 </document>
