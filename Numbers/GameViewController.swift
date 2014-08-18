@@ -15,6 +15,8 @@ var level : CGFloat = 1
 class GameViewController: UIViewController {
     //Creating outlets to quit game button
     @IBOutlet var QuitGame: UIButton!
+    @IBOutlet var PunishLabel: UILabel!
+    var punish = 0
     
     
     //Creating function for the quit button
@@ -141,8 +143,7 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
+        PunishLabel.text = " "
         randNumbers.append(Int(arc4random_uniform(10)))
         numberLabel.text = String(randNumbers[randNumbers.count - 1])
             
@@ -316,6 +317,7 @@ class GameViewController: UIViewController {
                 
                 
                 var increment = Float(rounds)
+                
                 progress = progress + 1/(increment)
                 
                 
@@ -325,6 +327,9 @@ class GameViewController: UIViewController {
                 //Error Sound Effect
                 Music("beep-02", Format:"wav")
                 self.view.backgroundColor = UIColor.redColor()
+                punish = punish + Int(level)
+                PunishLabel.text = "+ \(punish) sec"
+                
                 if(counter <= 60 - Int(level)){
                     counter = counter + Int(level)
                 }
