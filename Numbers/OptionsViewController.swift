@@ -11,7 +11,7 @@ import CoreData
 
 //levelmaximo - deletar depois
 
-var levelmax = 2
+var levelmax = 4
 class OptionsViewController: UIViewController, UIApplicationDelegate, FBLoginViewDelegate {
 
     
@@ -100,7 +100,7 @@ class OptionsViewController: UIViewController, UIApplicationDelegate, FBLoginVie
         
         
         //Create alert
-        let title = NSLocalizedString("Quit", comment: "")
+        let title = NSLocalizedString("Change Level - You are on level: \(Int(level))" , comment: "")
         let message = NSLocalizedString("Please, choose one level to play", comment: "")
         let level1 = NSLocalizedString("Level 1", comment: "")
         let level2 = NSLocalizedString("Level 2", comment: "")
@@ -159,7 +159,19 @@ class OptionsViewController: UIViewController, UIApplicationDelegate, FBLoginVie
         } else {
             self.view.backgroundColor = UIColor.blackColor()
             var alert: UIAlertView = UIAlertView (title: title, message: message, delegate: self, cancelButtonTitle: "Cancel")
-            alert.addButtonWithTitle("OK")
+            alert.addButtonWithTitle("Level 1")
+            if(levelmax>=2){
+                alert.addButtonWithTitle("Level 2")
+            }
+            if(levelmax>=3){
+                alert.addButtonWithTitle("Level 3")
+            }
+            if(levelmax>=4){
+                alert.addButtonWithTitle("Level 4")
+            }
+            if(levelmax>=5){
+                alert.addButtonWithTitle("Level 5")
+            }
             alert.show()
             alert.delegate = self
             
@@ -169,10 +181,20 @@ class OptionsViewController: UIViewController, UIApplicationDelegate, FBLoginVie
     //Creating function for alert iOS - 7
     func alertView(view :UIAlertView, clickedButtonAtIndex :Int) -> Void {
         switch clickedButtonAtIndex {
-            
-        case 0:
-            break;
         case 1:
+            level = 1
+            break;
+        case 2:
+            level = 2
+            break;
+        case 3:
+            level = 3
+            break;
+        case 4:
+            level = 4
+            break;
+        case 5:
+            level = 5
             break;
         default:
             break;

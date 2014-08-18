@@ -307,7 +307,13 @@ class GameViewController: UIViewController {
                 //Error Sound Effect
                 Music("beep-02", Format:"wav")
                 self.view.backgroundColor = UIColor.redColor()
-                
+                if(counter <= 60 - Int(level)){
+                    counter = counter + Int(level)
+                }
+                else{
+                    min++
+                    counter = counter - 60 + Int(level)
+                }
             }
             
             //updating the numbers of the keypad
