@@ -347,7 +347,8 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="KgB-DI-I3G" kind="modal" id="rgs-Fr-kl8"/>
+                                    <action selector="NextLevel:" destination="Nhj-XE-KAE" eventType="touchUpInside" id="pVH-2g-XBJ"/>
+                                    <segue destination="KgB-DI-I3G" kind="modal" identifier="NextLevel" id="rgs-Fr-kl8"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -386,25 +387,29 @@
                                 <color key="onTintColor" red="0.0" green="0.58431375029999999" blue="0.87058830259999997" alpha="1" colorSpace="deviceRGB"/>
                                 <color key="thumbTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <connections>
-                                    <action selector="EffectsSwitch:" destination="GJe-8V-x6p" eventType="valueChanged" id="hbB-T3-aoZ"/>
+                                    <action selector="EffectsSwitch:" destination="GJe-8V-x6p" eventType="valueChanged" id="SAl-CQ-qcP"/>
                                 </connections>
                             </switch>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="NDY-65-3qm">
-                                <rect key="frame" x="48" y="379" width="64" height="64"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="twitter">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                             <view contentMode="scaleToFill" id="43g-u6-bOo" customClass="FBLoginView">
                                 <rect key="frame" x="48" y="305" width="215" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="yWj-B8-kLt">
+                                <rect key="frame" x="16" y="398" width="106" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Change Level">
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="ChangeLevel:" destination="GJe-8V-x6p" eventType="touchUpInside" id="AD8-I7-s3k"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="ChangeLevel" destination="yWj-B8-kLt" id="HBR-h0-lap"/>
                         <outlet property="Effects" destination="FnN-8X-f26" id="HTE-XD-cMg"/>
                         <outlet property="fbLoginView" destination="43g-u6-bOo" id="Jyw-qD-H1w"/>
                     </connections>
@@ -434,7 +439,6 @@
         <image name="leaderboard" width="88" height="88"/>
         <image name="off" width="45" height="25"/>
         <image name="on" width="45" height="25"/>
-        <image name="twitter" width="39" height="32"/>
         <image name="user" width="88" height="88"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -447,6 +451,6 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="rgs-Fr-kl8"/>
-        <segue reference="pcb-Ag-sUR"/>
+        <segue reference="xvD-vm-Zwq"/>
     </inferredMetricsTieBreakers>
 </document>
