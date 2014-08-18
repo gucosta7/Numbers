@@ -132,7 +132,7 @@ class GameViewController: UIViewController {
     var min = 0
     var hor = 0
     
-    var level = 1
+    var level = 2
     var progress :Float = 0.0
     
     //Initializing random sequence and keypad
@@ -260,7 +260,10 @@ class GameViewController: UIViewController {
     //Updating keypad and score
     func btnPressed (btnNumber : Int){
         
-        if (RoundsCounter >= 10){
+        //Game Levels
+        
+        var rounds = level*5 + 5
+        if (RoundsCounter >= rounds){
             timer.invalidate()
             
             //Go to the YouWon view
@@ -278,7 +281,9 @@ class GameViewController: UIViewController {
                 Music("button-4", Format:"wav")
                 self.view.backgroundColor = UIColor.greenColor()
                 
+                
                 progress = progress + 0.1
+                
                 
                 progressView.setProgress(progress, animated: true)
                 
