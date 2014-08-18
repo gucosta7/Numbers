@@ -23,6 +23,10 @@ class ViewController: UIViewController, UIApplicationDelegate {
     
     @IBOutlet var image : UIImageView!
     
+    @IBOutlet var lblPlay : UILabel!
+    @IBOutlet var lblLeaderboard : UILabel!
+    @IBOutlet var lblOptions : UILabel!
+    
 
     
     override func viewDidLoad() {
@@ -44,6 +48,10 @@ class ViewController: UIViewController, UIApplicationDelegate {
             play.frame = CGRect(x: 113, y: 42 ,width: 90,height: 89);
             leaderboard.frame = CGRect(x: 113, y: 190 ,width: 90,height: 84);
             options.frame = CGRect(x: 114, y: 327 ,width: 90,height: 84);
+            
+            lblPlay.frame = CGRect(x: 0, y: 19 ,width: 320,height: 21);
+            lblLeaderboard.frame = CGRect(x: 0, y: 167 ,width: 320,height: 21);
+            lblOptions.frame = CGRect(x: 0, y: 307 ,width: 320,height: 21);
            
         } else {
             
