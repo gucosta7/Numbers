@@ -11,7 +11,7 @@ import CoreData
 
 //levelmaximo - deletar depois
 
-var levelmax = 4
+var levelmax = 5
 class OptionsViewController: UIViewController, UIApplicationDelegate, FBLoginViewDelegate {
 
     
@@ -118,6 +118,8 @@ class OptionsViewController: UIViewController, UIApplicationDelegate, FBLoginVie
             
             // Create the actions.
             //Create action of the cancel button
+            let cancel = UIAlertAction(title: "Cancel", style: .Cancel) { action in
+            }
             let level1action = UIAlertAction(title: level1, style: .Default) { action in
                 level = 1
             }
@@ -141,6 +143,8 @@ class OptionsViewController: UIViewController, UIApplicationDelegate, FBLoginVie
             }
             
             // Add the actions
+            alertController.addAction(cancel)
+
             alertController.addAction(level1action)
             if(levelmax>=2){
                 alertController.addAction(level2action)

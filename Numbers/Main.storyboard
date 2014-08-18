@@ -427,7 +427,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="ChangeLevel:" destination="GJe-8V-x6p" eventType="touchUpInside" id="CLj-Be-ydP"/>
+                                    <action selector="ChangeLevel:" destination="GJe-8V-x6p" eventType="touchUpInside" id="kWA-ef-OMr"/>
                                 </connections>
                             </button>
                         </subviews>
