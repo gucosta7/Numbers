@@ -105,6 +105,7 @@ class GameViewController: UIViewController {
     @IBOutlet var btnGrid32 : UIButton!
     @IBOutlet var btnGrid33 : UIButton!
     @IBOutlet var btnGrid41 : UIButton!
+
     
     @IBOutlet var counterLabel: UILabel!
     
@@ -156,7 +157,21 @@ class GameViewController: UIViewController {
            // timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateTimer"), userInfo: nil, //repeats: true)
         }
         
+        let screenSize: CGRect = UIScreen.mainScreen().bounds
         
+        let screenWidth = screenSize.width;
+        let screenHeight = screenSize.height;
+        
+        if (screenHeight < 500) {
+            
+            QuitGame.frame = CGRect(x: 16, y: 419 ,width: 53,height: 51);
+            
+        } else {
+            
+            QuitGame.frame = CGRect(x: 16, y: 503 ,width: 53,height: 51);
+
+        }
+
 
         keypadNumbers = updateKeyPad()
         

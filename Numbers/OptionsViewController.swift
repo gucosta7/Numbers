@@ -17,6 +17,7 @@ class OptionsViewController: UIViewController, UIApplicationDelegate, FBLoginVie
     @IBOutlet var fbLoginView: FBLoginView!
     //Creating Outlets for the Effect and Volume Buttons
     @IBOutlet var Effects: UISwitch!
+    @IBOutlet var backbutton: UIButton!
     var musicOn:Bool!
     
     
@@ -45,6 +46,21 @@ class OptionsViewController: UIViewController, UIApplicationDelegate, FBLoginVie
         //Facebook Login
         self.fbLoginView.delegate = self
         self.fbLoginView.readPermissions = ["public_profile", "email", "user_friends"]
+        
+        let screenSize: CGRect = UIScreen.mainScreen().bounds
+        
+        let screenWidth = screenSize.width;
+        let screenHeight = screenSize.height;
+        
+        if (screenHeight < 500) {
+            
+            backbutton.frame = CGRect(x: 14, y: 399 ,width: 106,height: 64);
+        } else {
+            
+            backbutton.frame = CGRect(x: 10, y: 484 ,width: 106,height: 64);
+            
+        }
+        
     }
 
     //Facebook Functions

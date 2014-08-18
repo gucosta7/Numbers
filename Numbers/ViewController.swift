@@ -16,12 +16,44 @@ var BGaudioPlayer = AVAudioPlayer() // BackGround Audio Player
 var audioPlayer = AVAudioPlayer()
 
 class ViewController: UIViewController, UIApplicationDelegate {
+    
+    @IBOutlet var play : UIButton!
+    @IBOutlet var leaderboard : UIButton!
+    @IBOutlet var options : UIButton!
+    
+    @IBOutlet var image : UIImageView!
+    
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
         var musicOn: Bool
         // Do any additional setup after loading the view, typically from a nib.
+        
+        let screenSize: CGRect = UIScreen.mainScreen().bounds
+        
+        let screenWidth = screenSize.width;
+        let screenHeight = screenSize.height;
+        
+        if (screenHeight < 500) {
+            
+            
+            image.frame = CGRect(x: 0, y: 0 ,width: 320,height: 480);
+            image.image = UIImage(named: "background.png")
+            
+            play.frame = CGRect(x: 113, y: 42 ,width: 90,height: 89);
+            leaderboard.frame = CGRect(x: 113, y: 190 ,width: 90,height: 84);
+            options.frame = CGRect(x: 114, y: 327 ,width: 90,height: 84);
+           
+        } else {
+            
+            image.frame = CGRect(x: 0, y: 0 ,width: 320,height: 568);
+            image.image = UIImage(named: "R4background.png")
+            
+            play.frame = CGRect(x: 113, y: 82 ,width: 90,height: 89);
+            leaderboard.frame = CGRect(x: 113, y: 230 ,width: 90,height: 84);
+            options.frame = CGRect(x: 114, y: 370 ,width: 90,height: 84);
+        }
         //BackGround Sound
         
         var appDel:AppDelegate = (UIApplication.sharedApplication().delegate as AppDelegate)
