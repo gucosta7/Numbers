@@ -29,6 +29,10 @@ class YouWonViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+    //other functions
+    @IBAction func NextLevel(sender: UIButton){
+        self.performSegueWithIdentifier("NextLevel", sender: UIButton())
+        level = level + 1
+    }
     
 }

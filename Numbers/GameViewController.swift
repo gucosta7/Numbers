@@ -10,6 +10,8 @@ import UIKit
 import AVFoundation
 
 
+var level : CGFloat = 1
+
 class GameViewController: UIViewController {
     //Creating outlets to quit game button
     @IBOutlet var QuitGame: UIButton!
@@ -86,7 +88,6 @@ class GameViewController: UIViewController {
             NSLog("Default");
             self.view.backgroundColor = UIColor.blackColor()
             break;
-            //Some code here..
         }
     }
 
@@ -127,13 +128,12 @@ class GameViewController: UIViewController {
     var keypadNumbers: [Int] = []
     
     //number of rounds
-    var RoundsCounter: Int = 1
+    var RoundsCounter: CGFloat = 1
     var timer = NSTimer()
     var counter = 0
     var min = 0
     var hor = 0
-    
-    var level = 2
+
     var progress :Float = 0.0
     
     //Initializing random sequence and keypad
@@ -141,13 +141,13 @@ class GameViewController: UIViewController {
         super.viewDidLoad()
         
         
-        if (level == 1) {
-            randNumbers.append(Int(arc4random_uniform(10)))
-            numberLabel.text = String(randNumbers[randNumbers.count - 1])
+        
+        randNumbers.append(Int(arc4random_uniform(10)))
+        numberLabel.text = String(randNumbers[randNumbers.count - 1])
             
-            timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateTimer"), userInfo: nil, repeats: true)
+        timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateTimer"), userInfo: nil, repeats: true)
 
-        } else {
+        //else {
             
             //for (var i:Int = 1; i>level;++i) {
 //randNumbers.append(Int(arc4random_uniform(10)))
@@ -155,7 +155,7 @@ class GameViewController: UIViewController {
            // }
             
            // timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateTimer"), userInfo: nil, //repeats: true)
-        }
+       // }
         
         let screenSize: CGRect = UIScreen.mainScreen().bounds
         
@@ -297,7 +297,8 @@ class GameViewController: UIViewController {
                 self.view.backgroundColor = UIColor.greenColor()
                 
                 
-                progress = progress + 0.1
+                var increment = Float(rounds)
+                progress = progress + 1/(increment)
                 
                 
                 progressView.setProgress(progress, animated: true)

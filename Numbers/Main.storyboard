@@ -330,7 +330,8 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="KgB-DI-I3G" kind="modal" id="rgs-Fr-kl8"/>
+                                    <action selector="NextLevel:" destination="Nhj-XE-KAE" eventType="touchUpInside" id="pVH-2g-XBJ"/>
+                                    <segue destination="KgB-DI-I3G" kind="modal" identifier="NextLevel" id="rgs-Fr-kl8"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7Qz-Fv-oBu">
@@ -368,7 +369,7 @@
                                 <color key="onTintColor" red="0.0" green="0.58431375029999999" blue="0.87058830259999997" alpha="1" colorSpace="deviceRGB"/>
                                 <color key="thumbTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <connections>
-                                    <action selector="EffectsSwitch:" destination="GJe-8V-x6p" eventType="valueChanged" id="hbB-T3-aoZ"/>
+                                    <action selector="EffectsSwitch:" destination="GJe-8V-x6p" eventType="valueChanged" id="SAl-CQ-qcP"/>
                                 </connections>
                             </switch>
                             <view contentMode="scaleToFill" id="43g-u6-bOo" customClass="FBLoginView">
@@ -390,6 +391,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="ChangeLevel" destination="yWj-B8-kLt" id="HBR-h0-lap"/>
                         <outlet property="Effects" destination="FnN-8X-f26" id="HTE-XD-cMg"/>
                         <outlet property="backbutton" destination="J3k-KS-zci" id="i7W-pL-dff"/>
                         <outlet property="fbLoginView" destination="43g-u6-bOo" id="Jyw-qD-H1w"/>

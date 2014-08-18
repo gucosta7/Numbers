@@ -9,6 +9,9 @@
 import UIKit
 import CoreData
 
+//levelmaximo - deletar depois
+
+var levelmax = 2
 class OptionsViewController: UIViewController, UIApplicationDelegate, FBLoginViewDelegate {
 
     
@@ -90,6 +93,93 @@ class OptionsViewController: UIViewController, UIApplicationDelegate, FBLoginVie
         // Dispose of any resources that can be recreated.
     }
     
+    //Function for Change Level Button
+    @IBAction func ChangeLevel(sender: UIButton){
+    
+    //Display Alert
+        
+        
+        //Create alert
+        let title = NSLocalizedString("Quit", comment: "")
+        let message = NSLocalizedString("Please, choose one level to play", comment: "")
+        let level1 = NSLocalizedString("Level 1", comment: "")
+        let level2 = NSLocalizedString("Level 2", comment: "")
+        let level3 = NSLocalizedString("Level 3", comment: "")
+        let level4 = NSLocalizedString("Level 4", comment: "")
+        let level5 = NSLocalizedString("Level 5", comment: "")
+        var versao = UIDevice.currentDevice().systemVersion;
+        
+        if (versao == "8.0"){
+            
+            
+            var alertController = UIAlertController(title: title, message: message, preferredStyle: .Alert)
+            
+            // Create the actions.
+            //Create action of the cancel button
+            let level1action = UIAlertAction(title: level1, style: .Default) { action in
+                level = 1
+            }
+            let level2action = UIAlertAction(title: level2, style: .Default) { action in
+                level = 2
+
+            }
+            let level3action = UIAlertAction(title: level3, style: .Default) { action in
+                level = 3
+
+            }
+            let level4action = UIAlertAction(title: level4, style: .Default) { action in
+                level = 4
+
+            }
+            let level5action = UIAlertAction(title: level5, style: .Default) { action in
+                level = 5
+            }
+            //Create action of the OK button
+            let OKAction = UIAlertAction(title: "Cancel", style: .Cancel) { action in
+            }
+            
+            // Add the actions
+            alertController.addAction(level1action)
+            if(levelmax>=2){
+                alertController.addAction(level2action)
+            }
+            if(levelmax>=3){
+                alertController.addAction(level3action)
+            }
+            if(levelmax>=4){
+                alertController.addAction(level4action)
+                }
+            if(levelmax>=5){
+                alertController.addAction(level5action)
+                }
+            
+            
+            presentViewController(alertController, animated: true, completion: nil)
+            
+        } else {
+            self.view.backgroundColor = UIColor.blackColor()
+            var alert: UIAlertView = UIAlertView (title: title, message: message, delegate: self, cancelButtonTitle: "Cancel")
+            alert.addButtonWithTitle("OK")
+            alert.show()
+            alert.delegate = self
+            
+        }
+    }
+
+    //Creating function for alert iOS - 7
+    func alertView(view :UIAlertView, clickedButtonAtIndex :Int) -> Void {
+        switch clickedButtonAtIndex {
+            
+        case 0:
+            break;
+        case 1:
+            break;
+        default:
+            break;
+        }
+    }
+    
+
     //Function for the Effect Button
     @IBAction func EffectsSwitch(sender: AnyObject){
         
