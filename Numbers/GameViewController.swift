@@ -330,13 +330,14 @@ class GameViewController: UIViewController {
                 punish = punish + Int(level)
                 PunishLabel.text = "+ \(punish) sec"
                 
-                if(counter <= 60 - Int(level)){
+               /* if(counter <= 60 - Int(level)){
                     counter = counter + Int(level)
                 }
                 else{
                     min++
                     counter = counter - 60 + Int(level)
                 }
+                */
             }
             
             //updating the numbers of the keypad

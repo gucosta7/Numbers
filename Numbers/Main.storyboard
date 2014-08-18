@@ -434,6 +434,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="ChangeLevel" destination="qBk-wJ-OMd" id="Ufm-wq-RP6"/>
                         <outlet property="Effects" destination="FnN-8X-f26" id="HTE-XD-cMg"/>
                         <outlet property="backbutton" destination="J3k-KS-zci" id="585-UQ-EaU"/>
                         <outlet property="fbLoginView" destination="43g-u6-bOo" id="Jyw-qD-H1w"/>
