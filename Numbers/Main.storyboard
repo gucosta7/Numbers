@@ -47,12 +47,36 @@
                                     <segue destination="LgX-HB-lEr" kind="modal" id="zMs-a3-bSK"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Play" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Zyz-xY-jgk">
+                                <rect key="frame" x="0.0" y="59" width="320" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.68627452850341797" green="0.0" blue="0.85490202903747559" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Results" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jcv-hp-jAM">
+                                <rect key="frame" x="0.0" y="207" width="320" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.027450982481241226" green="0.84313732385635376" blue="0.45490199327468872" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nyP-2w-TMd">
+                                <rect key="frame" x="0.0" y="347" width="320" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.58431375026702881" blue="0.87058830261230469" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="uRc-R3-8fs"/>
                     <connections>
                         <outlet property="image" destination="V5D-iR-9ts" id="oYd-Pm-c48"/>
+                        <outlet property="lblLeaderboard" destination="jcv-hp-jAM" id="u9E-0r-axt"/>
+                        <outlet property="lblOptions" destination="nyP-2w-TMd" id="Jpu-ap-yed"/>
+                        <outlet property="lblPlay" destination="Zyz-xY-jgk" id="Ogm-k0-i8G"/>
                         <outlet property="leaderboard" destination="l76-qy-ZvM" id="SG5-NQ-5ta"/>
                         <outlet property="options" destination="XCr-tS-ZSz" id="0be-EH-f72"/>
                         <outlet property="play" destination="ac6-GH-yAx" id="NBr-lG-fws"/>
@@ -150,7 +174,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" id="tMd-de-Dbn">
-                                <rect key="frame" x="-1" y="462" width="321" height="2"/>
+                                <rect key="frame" x="0.0" y="480" width="321" height="2"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="progressTintColor" red="0.68627452850341797" green="0.0" blue="0.85490202903747559" alpha="1" colorSpace="deviceRGB"/>
                             </progressView>
@@ -262,7 +286,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kbD-aW-0YN">
-                                <rect key="frame" x="106" y="453" width="107" height="21"/>
+                                <rect key="frame" x="106" y="455" width="107" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -279,6 +303,13 @@
                                     <action selector="showOkayCancelAlert" destination="KgB-DI-I3G" eventType="touchUpInside" id="Wmx-Lf-xk4"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+ 1 sec" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Bha-nt-Qpm">
+                                <rect key="frame" x="229" y="455" width="70" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -299,6 +330,7 @@
                         <outlet property="counterLabel" destination="kbD-aW-0YN" id="xjJ-Co-KlJ"/>
                         <outlet property="numberLabel" destination="0ur-tu-ct2" id="n3L-JT-otO"/>
                         <outlet property="progressView" destination="tMd-de-Dbn" id="hNe-Wv-XFY"/>
+                        <outlet property="punicao" destination="Bha-nt-Qpm" id="c8R-Ot-Qwa"/>
                         <segue destination="vXZ-lx-hvc" kind="modal" identifier="MainScreen" id="pcb-Ag-sUR"/>
                         <segue destination="Nhj-XE-KAE" kind="modal" identifier="Win" id="vug-sb-sRp"/>
                     </connections>
@@ -320,13 +352,13 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You Won" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="N9c-PY-rMA">
-                                <rect key="frame" x="117" y="161" width="91" height="21"/>
+                                <rect key="frame" x="0.0" y="161" width="320" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                                 <color key="textColor" red="1" green="0.2304520736" blue="0.20663938379999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="zc8-jK-1vN">
-                                <rect key="frame" x="122" y="268" width="76" height="30"/>
+                                <rect key="frame" x="0.0" y="268" width="315" height="30"/>
                                 <state key="normal" title="Next Level">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -336,7 +368,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7Qz-Fv-oBu">
-                                <rect key="frame" x="121" y="333" width="83" height="30"/>
+                                <rect key="frame" x="0.0" y="333" width="320" height="30"/>
                                 <state key="normal" title="Main Menu">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -403,7 +435,7 @@
                     </view>
                     <connections>
                         <outlet property="Effects" destination="FnN-8X-f26" id="HTE-XD-cMg"/>
-                        <outlet property="backbutton" destination="J3k-KS-zci" id="i7W-pL-dff"/>
+                        <outlet property="backbutton" destination="J3k-KS-zci" id="585-UQ-EaU"/>
                         <outlet property="fbLoginView" destination="43g-u6-bOo" id="Jyw-qD-H1w"/>
                     </connections>
                 </viewController>

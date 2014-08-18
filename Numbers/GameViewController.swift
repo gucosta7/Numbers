@@ -109,6 +109,7 @@ class GameViewController: UIViewController {
 
     
     @IBOutlet var counterLabel: UILabel!
+    @IBOutlet var punicao: UILabel!
     
     //Loading button images
     let number0 = UIImage(named: "0.png") as UIImage
@@ -165,6 +166,23 @@ class GameViewController: UIViewController {
         if (screenHeight < 500) {
             
             QuitGame.frame = CGRect(x: 16, y: 419 ,width: 53,height: 51);
+            btnGrid11.frame = CGRect(x: 30, y: 107 ,width: 70,height: 70);
+            btnGrid12.frame = CGRect(x: 119, y: 107 ,width: 70,height: 70);
+            btnGrid13.frame = CGRect(x: 210, y: 107 ,width: 70,height: 70);
+            
+            btnGrid21.frame = CGRect(x: 30, y: 185 ,width: 70,height: 70);
+            btnGrid22.frame = CGRect(x: 119, y: 185 ,width: 70,height: 70);
+            btnGrid23.frame = CGRect(x: 210, y: 185 ,width: 70,height: 70);
+        
+            btnGrid31.frame = CGRect(x: 30, y: 265 ,width: 70,height: 70);
+            btnGrid32.frame = CGRect(x: 119, y: 265 ,width: 70,height: 70);
+            btnGrid33.frame = CGRect(x: 210, y: 265 ,width: 70,height: 70);
+            
+            btnGrid41.frame = CGRect(x: 119, y: 345 ,width: 70,height: 70);
+            
+            counterLabel.frame = CGRect(x: 106, y: 420 ,width: 107,height: 21);
+            punicao.frame = CGRect(x: 229, y: 420 ,width: 70,height: 21);
+            progressView.frame = CGRect(x: 0, y: 475 ,width: 321,height: 4);
             
         } else {
             

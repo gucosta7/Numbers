@@ -21,6 +21,7 @@ class OptionsViewController: UIViewController, UIApplicationDelegate, FBLoginVie
     //Creating Outlets for the Effect and Volume Buttons
     @IBOutlet var Effects: UISwitch!
     @IBOutlet var backbutton: UIButton!
+    @IBOutlet var ChangeLevel: UIButton!
     var musicOn:Bool!
     
     
@@ -58,6 +59,7 @@ class OptionsViewController: UIViewController, UIApplicationDelegate, FBLoginVie
         if (screenHeight < 500) {
             
             backbutton.frame = CGRect(x: 14, y: 399 ,width: 106,height: 64);
+            ChangeLevel.frame = CGRect(x: 0, y: 370 ,width: 320,height: 30);
         } else {
             
             backbutton.frame = CGRect(x: 10, y: 484 ,width: 106,height: 64);
