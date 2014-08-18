@@ -11,7 +11,7 @@ import CoreData
 
 //levelmaximo - deletar depois
 
-var levelmax = 5
+var levelmax = 2
 class OptionsViewController: UIViewController, UIApplicationDelegate, FBLoginViewDelegate {
 
     
@@ -88,7 +88,7 @@ class OptionsViewController: UIViewController, UIApplicationDelegate, FBLoginVie
         
         //Create alert
         let title = NSLocalizedString("Quit", comment: "")
-        let message = NSLocalizedString("Please, choose one level /n You can't choose a level you haven't played", comment: "")
+        let message = NSLocalizedString("Please, choose one level to play", comment: "")
         let level1 = NSLocalizedString("Level 1", comment: "")
         let level2 = NSLocalizedString("Level 2", comment: "")
         let level3 = NSLocalizedString("Level 3", comment: "")
@@ -107,29 +107,38 @@ class OptionsViewController: UIViewController, UIApplicationDelegate, FBLoginVie
                 level = 1
             }
             let level2action = UIAlertAction(title: level2, style: .Default) { action in
-                if(levelmax >= 2){
-                    level = 2
-                }
+                level = 2
+
             }
             let level3action = UIAlertAction(title: level3, style: .Default) { action in
-                if(levelmax >= 2){
-                    level = 3
-                }
+                level = 3
+
             }
             let level4action = UIAlertAction(title: level4, style: .Default) { action in
+                level = 4
+
             }
             let level5action = UIAlertAction(title: level5, style: .Default) { action in
+                level = 5
             }
             //Create action of the OK button
             let OKAction = UIAlertAction(title: "Cancel", style: .Cancel) { action in
             }
             
-            // Add the actions.
+            // Add the actions
             alertController.addAction(level1action)
-            alertController.addAction(level2action)
-            alertController.addAction(level3action)
-            alertController.addAction(level4action)
-            alertController.addAction(level5action)
+            if(levelmax>=2){
+                alertController.addAction(level2action)
+            }
+            if(levelmax>=3){
+                alertController.addAction(level3action)
+            }
+            if(levelmax>=4){
+                alertController.addAction(level4action)
+                }
+            if(levelmax>=5){
+                alertController.addAction(level5action)
+                }
             
             
             presentViewController(alertController, animated: true, completion: nil)
@@ -142,10 +151,8 @@ class OptionsViewController: UIViewController, UIApplicationDelegate, FBLoginVie
             alert.delegate = self
             
         }
-        
-        
-        
     }
+
     //Creating function for alert iOS - 7
     func alertView(view :UIAlertView, clickedButtonAtIndex :Int) -> Void {
         switch clickedButtonAtIndex {
