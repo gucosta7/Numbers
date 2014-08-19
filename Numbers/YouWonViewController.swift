@@ -16,12 +16,12 @@ class YouWonViewController: UIViewController {
     //@IBOutlet var Challenge: UIButton
    // @IBOutlet var MainMenu: UIButton
     
+    @IBOutlet var Score: UIButton!
     //Outlet for the Label
     //@IBOutlet var YouWon: UILabel
         //Default Functions
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         // Do any additional setup after loading the view.
     }
     

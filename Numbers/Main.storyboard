@@ -376,9 +376,19 @@
                                     <segue destination="vXZ-lx-hvc" kind="modal" id="M3G-RE-pew"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="mjd-s2-B3A">
+                                <rect key="frame" x="95" y="205" width="134" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Score: ">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="Score" destination="mjd-s2-B3A" id="8OB-mE-XST"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N5B-pl-Qkl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -420,8 +430,8 @@
                                     <segue destination="vXZ-lx-hvc" kind="modal" id="xvD-vm-Zwq"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="TBU-59-Bzi">
-                                <rect key="frame" x="16" y="413" width="98" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="qBk-wJ-OMd">
+                                <rect key="frame" x="0.0" y="402" width="320" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Change Level">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -476,7 +486,7 @@
         </simulatedScreenMetrics>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="M3G-RE-pew"/>
         <segue reference="rgs-Fr-kl8"/>
+        <segue reference="M3G-RE-pew"/>
     </inferredMetricsTieBreakers>
 </document>
