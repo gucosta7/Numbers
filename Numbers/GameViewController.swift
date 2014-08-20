@@ -124,6 +124,17 @@ class GameViewController: UIViewController {
     let number7 = UIImage(named: "7.png") as UIImage
     let number8 = UIImage(named: "8.png") as UIImage
     let number9 = UIImage(named: "9.png") as UIImage
+    //Loading buttons for the first level
+    let rednumber0 = UIImage(named: "0red.png") as UIImage
+    let rednumber1 = UIImage(named: "1red.png") as UIImage
+    let rednumber2 = UIImage(named: "2red.png") as UIImage
+    let rednumber3 = UIImage(named: "3red.png") as UIImage
+    let rednumber4 = UIImage(named: "4red.png") as UIImage
+    let rednumber5 = UIImage(named: "5red.png") as UIImage
+    let rednumber6 = UIImage(named: "6red.png") as UIImage
+    let rednumber7 = UIImage(named: "7red.png") as UIImage
+    let rednumber8 = UIImage(named: "8red.png") as UIImage
+    let rednumber9 = UIImage(named: "9red.png") as UIImage
 
     //Sequence of numbers that the user will type
     var randNumbers: [Int] = []
@@ -361,6 +372,7 @@ class GameViewController: UIViewController {
         var sequence: [Int] = []
         var finalSequence: [Int] = []
         var images: [UIImage] = []
+        var redImages:[UIImage] = []
 
         var number: Int!
         
@@ -387,18 +399,33 @@ class GameViewController: UIViewController {
         for number in finalSequence {
             switch number {
                 
-            case 0 : images.append(number0)
-            case 1 : images.append(number1)
-            case 2 : images.append(number2)
-            case 3 : images.append(number3)
-            case 4 : images.append(number4)
-            case 5 : images.append(number5)
-            case 6 : images.append(number6)
-            case 7 : images.append(number7)
-            case 8 : images.append(number8)
-            case 9 : images.append(number9)
+                case 0 : images.append(number0)
+                case 1 : images.append(number1)
+                case 2 : images.append(number2)
+                case 3 : images.append(number3)
+                case 4 : images.append(number4)
+                case 5 : images.append(number5)
+                case 6 : images.append(number6)
+                case 7 : images.append(number7)
+                case 8 : images.append(number8)
+                case 9 : images.append(number9)
                 
             default : println("error")
+            }
+            switch number{
+                case 0 : redImages.append(rednumber0)
+                case 1 : redImages.append(rednumber1)
+                case 2 : redImages.append(rednumber2)
+                case 3 : redImages.append(rednumber3)
+                case 4 : redImages.append(rednumber4)
+                case 5 : redImages.append(rednumber5)
+                case 6 : redImages.append(rednumber6)
+                case 7 : redImages.append(rednumber7)
+                case 8 : redImages.append(rednumber8)
+                case 9 : redImages.append(rednumber9)
+                
+            default : println("error")
+            
             }
         }
         
@@ -415,10 +442,41 @@ class GameViewController: UIViewController {
         btnGrid33.setBackgroundImage(images[8], forState: UIControlState.Normal)
         
         btnGrid41.setBackgroundImage(images[9], forState: UIControlState.Normal)
-
+        
+        if(level==1){
+            if(btnGrid11 == numberLabel.text.toInt()){
+                btnGrid11.setBackgroundImage(redImages[0], forState: UIControlState.Normal)
+            }
+            else if(btnGrid12 == numberLabel.text.toInt()){
+                btnGrid12.setBackgroundImage(redImages[1], forState: UIControlState.Normal)
+            }
+            else if(btnGrid13 == numberLabel.text.toInt()){
+                btnGrid13.setBackgroundImage(redImages[2], forState: UIControlState.Normal)
+            }
+            else if(btnGrid21 == numberLabel.text.toInt()){
+                btnGrid21.setBackgroundImage(redImages[3], forState: UIControlState.Normal)
+            }
+            else if(btnGrid22 == numberLabel.text.toInt()){
+                btnGrid22.setBackgroundImage(redImages[4], forState: UIControlState.Normal)
+            }
+            else if(btnGrid23 == numberLabel.text.toInt()){
+                btnGrid23.setBackgroundImage(redImages[5], forState: UIControlState.Normal)
+            }
+            else if(btnGrid31 == numberLabel.text.toInt()){
+                btnGrid31.setBackgroundImage(redImages[6], forState: UIControlState.Normal)
+            }
+            else if(btnGrid32 == numberLabel.text.toInt()){
+                btnGrid32.setBackgroundImage(redImages[7], forState: UIControlState.Normal)
+            }
+            else if(btnGrid33 == numberLabel.text.toInt()){
+                btnGrid33.setBackgroundImage(redImages[8], forState: UIControlState.Normal)
+            }
+            else if(btnGrid41 == numberLabel.text.toInt()){
+                btnGrid41.setBackgroundImage(redImages[9], forState: UIControlState.Normal)
+            }
+            
+        }
         
        return finalSequence
     }
-    
-    
 }

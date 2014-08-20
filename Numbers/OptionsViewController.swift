@@ -11,7 +11,7 @@ import CoreData
 
 //levelmaximo - deletar depois
 
-var levelmax = 5
+var levelmax = 1
 class OptionsViewController: UIViewController, UIApplicationDelegate, FBLoginViewDelegate {
 
     
