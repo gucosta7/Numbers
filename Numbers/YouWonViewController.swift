@@ -30,7 +30,8 @@ class YouWonViewController: UIViewController, UIApplicationDelegate {
         var appDel:AppDelegate = (UIApplication.sharedApplication().delegate as AppDelegate)
         var context:NSManagedObjectContext = appDel.managedObjectContext!
         
-        var request = NSFetchRequest(entityName: "Results")
+        let myEntity: NSString = "Results"
+        var request = NSFetchRequest(entityName: myEntity)
         request.returnsObjectsAsFaults = false
         
         var results:NSArray = context.executeFetchRequest(request, error: nil)
@@ -60,7 +61,8 @@ class YouWonViewController: UIViewController, UIApplicationDelegate {
             var appDel:AppDelegate = (UIApplication.sharedApplication().delegate as AppDelegate)
             var context:NSManagedObjectContext = appDel.managedObjectContext!
             
-            var request = NSFetchRequest(entityName: "Settings")
+            let myEntity: NSString = "Settings"
+            var request = NSFetchRequest(entityName: myEntity)
             request.returnsObjectsAsFaults = false
             
             var results:NSArray = context.executeFetchRequest(request, error: nil)

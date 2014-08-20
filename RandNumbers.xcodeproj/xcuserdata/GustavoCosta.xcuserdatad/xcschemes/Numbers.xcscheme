@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "FCC2B598195CAC9900FC83E4"
-               BuildableName = "Numbers.app"
-               BlueprintName = "Numbers"
-               ReferencedContainer = "container:Numbers.xcodeproj">
+               BuildableName = "RandNumbers.app"
+               BlueprintName = "RandNumbers"
+               ReferencedContainer = "container:RandNumbers.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "FCC2B5AD195CAC9900FC83E4"
-               BuildableName = "NumbersTests.xctest"
-               BlueprintName = "NumbersTests"
-               ReferencedContainer = "container:Numbers.xcodeproj">
+               BuildableName = "RandNumbersTests.xctest"
+               BlueprintName = "RandNumbersTests"
+               ReferencedContainer = "container:RandNumbers.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FCC2B598195CAC9900FC83E4"
-            BuildableName = "Numbers.app"
-            BlueprintName = "Numbers"
-            ReferencedContainer = "container:Numbers.xcodeproj">
+            BuildableName = "RandNumbers.app"
+            BlueprintName = "RandNumbers"
+            ReferencedContainer = "container:RandNumbers.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FCC2B598195CAC9900FC83E4"
-            BuildableName = "Numbers.app"
-            BlueprintName = "Numbers"
-            ReferencedContainer = "container:Numbers.xcodeproj">
+            BuildableName = "RandNumbers.app"
+            BlueprintName = "RandNumbers"
+            ReferencedContainer = "container:RandNumbers.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -80,9 +80,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FCC2B598195CAC9900FC83E4"
-            BuildableName = "Numbers.app"
-            BlueprintName = "Numbers"
-            ReferencedContainer = "container:Numbers.xcodeproj">
+            BuildableName = "RandNumbers.app"
+            BlueprintName = "RandNumbers"
+            ReferencedContainer = "container:RandNumbers.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

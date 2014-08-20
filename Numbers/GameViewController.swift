@@ -195,7 +195,9 @@ class GameViewController: UIViewController, UIApplicationDelegate {
         var appDel:AppDelegate = (UIApplication.sharedApplication().delegate as AppDelegate)
         var context:NSManagedObjectContext = appDel.managedObjectContext!
         
-        var request = NSFetchRequest(entityName: "Settings")
+        let myEntity: NSString = "Settings"
+        
+        var request = NSFetchRequest(entityName: myEntity)
         request.returnsObjectsAsFaults = false
         
         var results:NSArray = context.executeFetchRequest(request, error: nil)
@@ -311,8 +313,8 @@ class GameViewController: UIViewController, UIApplicationDelegate {
             var appDel:AppDelegate = (UIApplication.sharedApplication().delegate as AppDelegate)
             var context:NSManagedObjectContext = appDel.managedObjectContext!
             
-            
-            var settings = NSEntityDescription.insertNewObjectForEntityForName("Results", inManagedObjectContext: context) as NSManagedObject
+            let myEntity: NSString = "Results"
+            var settings = NSEntityDescription.insertNewObjectForEntityForName(myEntity, inManagedObjectContext: context) as NSManagedObject
             
             settings.setValue(level, forKey: "level")
             settings.setValue(counterLabel.text, forKey: "score")
