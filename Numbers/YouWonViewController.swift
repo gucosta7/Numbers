@@ -75,7 +75,12 @@ class YouWonViewController: UIViewController, UIApplicationDelegate {
             }
             
         } else {
-            //#ULISSES POEM A BOSTA DO POP UP AQUI FALANDO QUE O CARA JA BROCOU E GANHOU O JOGO
+            
+            
+            
+            
+            
+    
         }
         
     }
