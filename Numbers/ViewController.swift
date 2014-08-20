@@ -67,7 +67,8 @@ class ViewController: UIViewController, UIApplicationDelegate {
         var appDel:AppDelegate = (UIApplication.sharedApplication().delegate as AppDelegate)
         var context:NSManagedObjectContext = appDel.managedObjectContext!
         
-        var request = NSFetchRequest(entityName: "Settings")
+        let myEntity: NSString = "Settings"
+        var request = NSFetchRequest(entityName: myEntity)
         request.returnsObjectsAsFaults = false
         
         var results:NSArray = context.executeFetchRequest(request, error: nil)
@@ -88,8 +89,8 @@ class ViewController: UIViewController, UIApplicationDelegate {
             var appDel:AppDelegate = (UIApplication.sharedApplication().delegate as AppDelegate)
             var context:NSManagedObjectContext = appDel.managedObjectContext!
             
-            
-            var settings = NSEntityDescription.insertNewObjectForEntityForName("Settings", inManagedObjectContext: context) as NSManagedObject
+            let myEntity: NSString = "Settings"
+            var settings = NSEntityDescription.insertNewObjectForEntityForName(myEntity, inManagedObjectContext: context) as NSManagedObject
             
             settings.setValue(true, forKey: "music")
             settings.setValue(1, forKey: "level")
