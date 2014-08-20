@@ -14,6 +14,8 @@ import CoreData
 var levelmax = 1
 class OptionsViewController: UIViewController, UIApplicationDelegate, FBLoginViewDelegate {
 
+class OptionsViewController: UIViewController, UIApplicationDelegate, FBLoginViewDelegate {
+    var levelmax: Int!
     
     //Creating Outlet for facebook login/logout
  
@@ -43,6 +45,7 @@ class OptionsViewController: UIViewController, UIApplicationDelegate, FBLoginVie
         if (results.count > 0){
             var res = results[results.count - 1] as NSManagedObject
             musicOn = res.valueForKey("music") as Bool
+            levelmax = res.valueForKey("levelMax") as Int
 
             Effects.setOn(musicOn, animated: true)
             
@@ -182,6 +185,23 @@ class OptionsViewController: UIViewController, UIApplicationDelegate, FBLoginVie
             alert.delegate = self
             
         }
+        
+        var appDel:AppDelegate = (UIApplication.sharedApplication().delegate as AppDelegate)
+        var context:NSManagedObjectContext = appDel.managedObjectContext!
+        
+        var request = NSFetchRequest(entityName: "Settings")
+        request.returnsObjectsAsFaults = false
+        
+        var results:NSArray = context.executeFetchRequest(request, error: nil)
+        
+        if (results.count > 0){
+            var res = results[results.count - 1] as NSManagedObject
+            res.setValue(level, forKey: "level")
+            
+            context.save(nil)
+            
+        }
+
     }
 
     //Creating function for alert iOS - 7
@@ -248,13 +268,6 @@ class OptionsViewController: UIViewController, UIApplicationDelegate, FBLoginVie
             
             var appDel:AppDelegate = (UIApplication.sharedApplication().delegate as AppDelegate)
             var context:NSManagedObjectContext = appDel.managedObjectContext!
-            
-            
-            //var settings = NSEntityDescription.insertNewObjectForEntityForName("Settings", inManagedObjectContext: context) as NSManagedObject
-            
-            //settings.setValue(true, forKey: "music")
-            
-            //context.save(nil)
             
             var request = NSFetchRequest(entityName: "Settings")
             request.returnsObjectsAsFaults = false

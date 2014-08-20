@@ -93,8 +93,11 @@ class ViewController: UIViewController, UIApplicationDelegate {
             
             settings.setValue(true, forKey: "music")
             settings.setValue(1, forKey: "level")
+            settings.setValue(1, forKey: "levelMax")
             
             context.save(nil)
+            
+            BackGroundMusic("WahWah", Format: "wav", Volume: 0.5)
 
             
         }

@@ -8,15 +8,20 @@
 
 import UIKit
 import AVFoundation
+import CoreData
 
 
 var level : CGFloat = 1
 
-class GameViewController: UIViewController {
+class GameViewController: UIViewController, UIApplicationDelegate {
     //Creating outlets to quit game button
     @IBOutlet var QuitGame: UIButton!
     @IBOutlet var PunishLabel: UILabel!
     var punish = 0
+    
+    //Game Levels
+    
+    var rounds = level*5 + 5
     
     
     //Creating function for the quit button
@@ -25,9 +30,6 @@ class GameViewController: UIViewController {
     @IBAction func showOkayCancelAlert() {
         //Stop Timer
         timer.invalidate()
-        
-        
-        
         
         
         //Create alert
@@ -160,15 +162,7 @@ class GameViewController: UIViewController {
             
         timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateTimer"), userInfo: nil, repeats: true)
 
-        //else {
-            
-            //for (var i:Int = 1; i>level;++i) {
-//randNumbers.append(Int(arc4random_uniform(10)))
-           //     numberLabel.text = String(randNumbers[randNumbers.count - 1])
-           // }
-            
-           // timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateTimer"), userInfo: nil, //repeats: true)
-       // }
+        
         
         let screenSize: CGRect = UIScreen.mainScreen().bounds
         
@@ -206,6 +200,22 @@ class GameViewController: UIViewController {
         keypadNumbers = updateKeyPad()
         
         progressView.setProgress(progress, animated: true)
+        
+        //gettting user's level
+        
+        var appDel:AppDelegate = (UIApplication.sharedApplication().delegate as AppDelegate)
+        var context:NSManagedObjectContext = appDel.managedObjectContext!
+        
+        var request = NSFetchRequest(entityName: "Settings")
+        request.returnsObjectsAsFaults = false
+        
+        var results:NSArray = context.executeFetchRequest(request, error: nil)
+        
+        if (results.count > 0){
+            var res = results[results.count - 1] as NSManagedObject
+            level = res.valueForKey("level") as CGFloat
+            
+        }
         
     }
     
@@ -305,11 +315,21 @@ class GameViewController: UIViewController {
     //Updating keypad and score
     func btnPressed (btnNumber : Int){
         
-        //Game Levels
         
-        var rounds = level*5 + 5
         if (RoundsCounter >= rounds){
             timer.invalidate()
+            
+            var appDel:AppDelegate = (UIApplication.sharedApplication().delegate as AppDelegate)
+            var context:NSManagedObjectContext = appDel.managedObjectContext!
+            
+            
+            var settings = NSEntityDescription.insertNewObjectForEntityForName("Results", inManagedObjectContext: context) as NSManagedObject
+            
+            settings.setValue(level, forKey: "level")
+            settings.setValue(counterLabel.text, forKey: "score")
+            
+            context.save(nil)
+
             
             //Go to the YouWon view
             self.performSegueWithIdentifier("Win", sender: UIButton())

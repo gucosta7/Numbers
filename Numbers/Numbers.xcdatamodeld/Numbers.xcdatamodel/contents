@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6220.8" systemVersion="13E28" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Results" syncable="YES">
+        <attribute name="level" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="score" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <entity name="Settings" syncable="YES">
         <attribute name="level" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="levelMax" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="music" optional="YES" attributeType="Boolean" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Settings" positionX="-54" positionY="-9" width="128" height="75"/>
+        <element name="Settings" positionX="-54" positionY="-9" width="128" height="90"/>
+        <element name="Results" positionX="-54" positionY="18" width="128" height="75"/>
     </elements>
 </model>

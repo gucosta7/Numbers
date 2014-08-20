@@ -303,8 +303,8 @@
                                     <action selector="showOkayCancelAlert" destination="KgB-DI-I3G" eventType="touchUpInside" id="Wmx-Lf-xk4"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+ 1 sec" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Bha-nt-Qpm">
-                                <rect key="frame" x="229" y="455" width="70" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+ 1 sec" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Bha-nt-Qpm">
+                                <rect key="frame" x="202" y="455" width="118" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -377,18 +377,19 @@
                                     <segue destination="vXZ-lx-hvc" kind="modal" id="M3G-RE-pew"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="mjd-s2-B3A">
-                                <rect key="frame" x="95" y="205" width="134" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NFH-PL-z7q">
+                                <rect key="frame" x="0.0" y="217" width="320" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Score: ">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="Score" destination="mjd-s2-B3A" id="8OB-mE-XST"/>
+                        <outlet property="Score" destination="NFH-PL-z7q" id="m7Z-rY-APV"/>
+                        <outlet property="YouWon" destination="N9c-PY-rMA" id="bTc-W9-5Cd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N5B-pl-Qkl" userLabel="First Responder" sceneMemberID="firstResponder"/>
