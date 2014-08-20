@@ -200,7 +200,7 @@ class OptionsViewController: UIViewController, UIApplicationDelegate, FBLoginVie
             presentViewController(alertController, animated: true, completion: nil)
             
         } else {
-            self.view.backgroundColor = UIColor.blackColor()
+            
             var alert: UIAlertView = UIAlertView (title: title, message: message, delegate: self, cancelButtonTitle: "Cancel")
             alert.addButtonWithTitle("Level 1")
             if(levelmax>=2){

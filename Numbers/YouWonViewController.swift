@@ -52,9 +52,34 @@ class YouWonViewController: UIViewController, UIApplicationDelegate {
     }
     //other functions
     @IBAction func NextLevel(sender: UIButton){
-        self.performSegueWithIdentifier("NextLevel", sender: UIButton())
         
-        if (level < 10) {
+
+        if(level >= 10) {
+            
+            var versao = UIDevice.currentDevice().systemVersion;
+            if(versao == "8.0"){
+                var alertController = UIAlertController(title: title, message: "You Won All the Levels!", preferredStyle: .Alert)
+                
+                // Create the actions.
+                //Create action of the cancel button
+                
+                let OKaction = UIAlertAction(title: "OK", style: .Default) { action in
+                    self.performSegueWithIdentifier("NextLevel", sender: UIButton())
+                }
+
+                
+                // Add the actions
+                
+                alertController.addAction(OKaction)
+                
+                
+                
+                presentViewController(alertController, animated: true, completion: nil)
+            }
+        }
+
+        
+        else{
             
             level = level + 1
             
@@ -75,16 +100,8 @@ class YouWonViewController: UIViewController, UIApplicationDelegate {
                 context.save(nil)
                 
             }
-            
-        } else {
-            
-            
-            
-            
-            
-    
+            self.performSegueWithIdentifier("NextLevel", sender: UIButton())
         }
-        
     }
     
 }
