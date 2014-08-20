@@ -94,21 +94,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Leaderboard" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nav-c0-k9C">
-                                <rect key="frame" x="94" y="30" width="132" height="21"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="YouWon" id="HCU-HS-SdZ">
+                                <rect key="frame" x="-3" y="0.0" width="326" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="bottomLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="WIB-uD-jxv">
-                                <rect key="frame" x="51" y="495" width="46" height="30"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="bottomLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="nPZ-ET-ZY1">
+                                <rect key="frame" x="23" y="486" width="61" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Back">
+                                <state key="normal" backgroundImage="Back button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="vXZ-lx-hvc" kind="modal" id="h9E-Jv-KGi"/>
+                                    <segue destination="vXZ-lx-hvc" kind="modal" id="XbN-Ql-VBQ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -117,7 +114,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QuP-V4-mpW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="81" y="-721"/>
+            <point key="canvasLocation" x="193" y="-721"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Foz-dT-4hp">
@@ -488,7 +485,7 @@
         </simulatedScreenMetrics>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="pcb-Ag-sUR"/>
-        <segue reference="jKc-dv-n3U"/>
+        <segue reference="XbN-Ql-VBQ"/>
+        <segue reference="rgs-Fr-kl8"/>
     </inferredMetricsTieBreakers>
 </document>
