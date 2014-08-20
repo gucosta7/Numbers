@@ -11,8 +11,6 @@ import CoreData
 
 //levelmaximo - deletar depois
 
-var levelmax = 1
-class OptionsViewController: UIViewController, UIApplicationDelegate, FBLoginViewDelegate {
 
 class OptionsViewController: UIViewController, UIApplicationDelegate, FBLoginViewDelegate {
     var levelmax: Int!
@@ -112,6 +110,11 @@ class OptionsViewController: UIViewController, UIApplicationDelegate, FBLoginVie
         let level3 = NSLocalizedString("Level 3", comment: "")
         let level4 = NSLocalizedString("Level 4", comment: "")
         let level5 = NSLocalizedString("Level 5", comment: "")
+        let level6 = NSLocalizedString("Level 6", comment: "")
+        let level7 = NSLocalizedString("Level 7", comment: "")
+        let level8 = NSLocalizedString("Level 8", comment: "")
+        let level9 = NSLocalizedString("Level 9", comment: "")
+        let level10 = NSLocalizedString("Level 10", comment: "")
         var versao = UIDevice.currentDevice().systemVersion;
         
         if (versao == "8.0"){
@@ -141,6 +144,21 @@ class OptionsViewController: UIViewController, UIApplicationDelegate, FBLoginVie
             let level5action = UIAlertAction(title: level5, style: .Default) { action in
                 level = 5
             }
+            let level6action = UIAlertAction(title: level6, style: .Default) { action in
+                level = 6
+            }
+            let level7action = UIAlertAction(title: level7, style: .Default) { action in
+                level = 7
+            }
+            let level8action = UIAlertAction(title: level8, style: .Default) { action in
+                level = 8
+            }
+            let level9action = UIAlertAction(title: level9, style: .Default) { action in
+                level = 9
+            }
+            let level10action = UIAlertAction(title: level10, style: .Default) { action in
+                level = 10
+            }
             //Create action of the OK button
             let OKAction = UIAlertAction(title: "Cancel", style: .Cancel) { action in
             }
@@ -161,6 +179,21 @@ class OptionsViewController: UIViewController, UIApplicationDelegate, FBLoginVie
             if(levelmax>=5){
                 alertController.addAction(level5action)
                 }
+            if(levelmax>=6){
+                alertController.addAction(level6action)
+            }
+            if(levelmax>=7){
+                alertController.addAction(level7action)
+            }
+            if(levelmax>=8){
+                alertController.addAction(level8action)
+            }
+            if(levelmax>=9){
+                alertController.addAction(level9action)
+            }
+            if(levelmax>=10){
+                alertController.addAction(level10action)
+            }
             
             
             presentViewController(alertController, animated: true, completion: nil)
@@ -180,6 +213,21 @@ class OptionsViewController: UIViewController, UIApplicationDelegate, FBLoginVie
             }
             if(levelmax>=5){
                 alert.addButtonWithTitle("Level 5")
+            }
+            if(levelmax>=6){
+                alert.addButtonWithTitle("Level 6")
+            }
+            if(levelmax>=7){
+                alert.addButtonWithTitle("Level 7")
+            }
+            if(levelmax>=8){
+                alert.addButtonWithTitle("Level 8")
+            }
+            if(levelmax>=9){
+                alert.addButtonWithTitle("Level 9")
+            }
+            if(levelmax>=10){
+                alert.addButtonWithTitle("Level 10")
             }
             alert.show()
             alert.delegate = self
@@ -221,6 +269,21 @@ class OptionsViewController: UIViewController, UIApplicationDelegate, FBLoginVie
             break;
         case 5:
             level = 5
+            break;
+        case 6:
+            level = 6
+            break;
+        case 7:
+            level = 7
+            break;
+        case 8:
+            level = 8
+            break;
+        case 9:
+            level = 9
+            break;
+        case 10:
+            level = 10
             break;
         default:
             break;

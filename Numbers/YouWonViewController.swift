@@ -53,7 +53,7 @@ class YouWonViewController: UIViewController, UIApplicationDelegate {
     @IBAction func NextLevel(sender: UIButton){
         self.performSegueWithIdentifier("NextLevel", sender: UIButton())
         
-        if (level < 5) {
+        if (level < 10) {
             
             level = level + 1
             

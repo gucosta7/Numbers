@@ -126,6 +126,8 @@ class GameViewController: UIViewController, UIApplicationDelegate {
     let number7 = UIImage(named: "7.png") as UIImage
     let number8 = UIImage(named: "8.png") as UIImage
     let number9 = UIImage(named: "9.png") as UIImage
+    
+    
     //Loading buttons for the first level
     let rednumber0 = UIImage(named: "0red.png") as UIImage
     let rednumber1 = UIImage(named: "1red.png") as UIImage
@@ -137,6 +139,7 @@ class GameViewController: UIViewController, UIApplicationDelegate {
     let rednumber7 = UIImage(named: "7red.png") as UIImage
     let rednumber8 = UIImage(named: "8red.png") as UIImage
     let rednumber9 = UIImage(named: "9red.png") as UIImage
+    
 
     //Sequence of numbers that the user will type
     var randNumbers: [Int] = []
@@ -432,7 +435,7 @@ class GameViewController: UIViewController, UIApplicationDelegate {
                 
             default : println("error")
             }
-            switch number{
+           switch number{
                 case 0 : redImages.append(rednumber0)
                 case 1 : redImages.append(rednumber1)
                 case 2 : redImages.append(rednumber2)
@@ -463,36 +466,48 @@ class GameViewController: UIViewController, UIApplicationDelegate {
         
         btnGrid41.setBackgroundImage(images[9], forState: UIControlState.Normal)
         
+        println(numberLabel.text)
+        
         if(level==1){
-            if(btnGrid11 == numberLabel.text.toInt()){
+            if(finalSequence[0] == numberLabel.text.toInt()){
                 btnGrid11.setBackgroundImage(redImages[0], forState: UIControlState.Normal)
+                println("entrou")
             }
-            else if(btnGrid12 == numberLabel.text.toInt()){
+            else if(finalSequence[1] == numberLabel.text.toInt()){
                 btnGrid12.setBackgroundImage(redImages[1], forState: UIControlState.Normal)
+                println("entrou")
             }
-            else if(btnGrid13 == numberLabel.text.toInt()){
+            else if(finalSequence[2] == numberLabel.text.toInt()){
                 btnGrid13.setBackgroundImage(redImages[2], forState: UIControlState.Normal)
+                println("entrou")
             }
-            else if(btnGrid21 == numberLabel.text.toInt()){
+            else if(finalSequence[3] == numberLabel.text.toInt()){
                 btnGrid21.setBackgroundImage(redImages[3], forState: UIControlState.Normal)
+                println("entrou")
             }
-            else if(btnGrid22 == numberLabel.text.toInt()){
+            else if(finalSequence[4] == numberLabel.text.toInt()){
                 btnGrid22.setBackgroundImage(redImages[4], forState: UIControlState.Normal)
+                println("entrou")
             }
-            else if(btnGrid23 == numberLabel.text.toInt()){
+            else if(finalSequence[5] == numberLabel.text.toInt()){
                 btnGrid23.setBackgroundImage(redImages[5], forState: UIControlState.Normal)
+                println("entrou")
             }
-            else if(btnGrid31 == numberLabel.text.toInt()){
+            else if(finalSequence[6] == numberLabel.text.toInt()){
                 btnGrid31.setBackgroundImage(redImages[6], forState: UIControlState.Normal)
+                println("entrou")
             }
-            else if(btnGrid32 == numberLabel.text.toInt()){
+            else if(finalSequence[7] == numberLabel.text.toInt()){
                 btnGrid32.setBackgroundImage(redImages[7], forState: UIControlState.Normal)
+                println("entrou")
             }
-            else if(btnGrid33 == numberLabel.text.toInt()){
+            else if(finalSequence[8] == numberLabel.text.toInt()){
                 btnGrid33.setBackgroundImage(redImages[8], forState: UIControlState.Normal)
+                println("entrou")
             }
-            else if(btnGrid41 == numberLabel.text.toInt()){
+            else if(finalSequence[9] == numberLabel.text.toInt()){
                 btnGrid41.setBackgroundImage(redImages[9], forState: UIControlState.Normal)
+                println("entrou")
             }
             
         }
