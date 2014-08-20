@@ -30,12 +30,6 @@
 		FC6FA2171992D39C002B6971 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC6FA2161992D39C002B6971 /* UIKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		FC6FA2191992D432002B6971 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC6FA2181992D432002B6971 /* AVFoundation.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		FC7577F819A4B91D008FE329 /* Numbers.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = FCC2B5A0195CAC9900FC83E4 /* Numbers.xcdatamodeld */; };
-		FCAF38FB196B569300AAB0B1 /* facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = FCAF38F9196B569300AAB0B1 /* facebook.png */; };
-		FCAF38FC196B569300AAB0B1 /* twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = FCAF38FA196B569300AAB0B1 /* twitter.png */; };
-		FCAF38FE196B57F800AAB0B1 /* sound.png in Resources */ = {isa = PBXBuildFile; fileRef = FCAF38FD196B57F800AAB0B1 /* sound.png */; };
-		FCAF3900196B58A200AAB0B1 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = FCAF38FF196B58A200AAB0B1 /* back.png */; };
-		FCAF3902196B59B800AAB0B1 /* blending_polygon_shapes.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCAF3901196B59B800AAB0B1 /* blending_polygon_shapes.jpg */; };
-		FCB26139195CC4C5003C6DB5 /* media-playback-pause-2.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB26138195CC4C5003C6DB5 /* media-playback-pause-2.png */; };
 		FCC2B59F195CAC9900FC83E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC2B59E195CAC9900FC83E4 /* AppDelegate.swift */; };
 		FCC2B5A2195CAC9900FC83E4 /* Numbers.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FCC2B5A0195CAC9900FC83E4 /* Numbers.xcdatamodeld */; };
 		FCC2B5A4195CAC9900FC83E4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC2B5A3195CAC9900FC83E4 /* ViewController.swift */; };
@@ -80,12 +74,6 @@
 		FC6FA2131992D344002B6971 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FC6FA2161992D39C002B6971 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FC6FA2181992D432002B6971 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		FCAF38F9196B569300AAB0B1 /* facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = facebook.png; path = Images/facebook.png; sourceTree = "<group>"; };
-		FCAF38FA196B569300AAB0B1 /* twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = twitter.png; path = Images/twitter.png; sourceTree = "<group>"; };
-		FCAF38FD196B57F800AAB0B1 /* sound.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sound.png; path = Images/sound.png; sourceTree = "<group>"; };
-		FCAF38FF196B58A200AAB0B1 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = back.png; path = Images/back.png; sourceTree = "<group>"; };
-		FCAF3901196B59B800AAB0B1 /* blending_polygon_shapes.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = blending_polygon_shapes.jpg; path = Images/blending_polygon_shapes.jpg; sourceTree = "<group>"; };
-		FCB26138195CC4C5003C6DB5 /* media-playback-pause-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "media-playback-pause-2.png"; path = "Images/media-playback-pause-2.png"; sourceTree = "<group>"; };
 		FCC2B599195CAC9900FC83E4 /* RandNumbers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RandNumbers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCC2B59D195CAC9900FC83E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCC2B59E195CAC9900FC83E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -157,12 +145,6 @@
 		FCB26135195CC2E9003C6DB5 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				FCAF38FF196B58A200AAB0B1 /* back.png */,
-				FCAF3901196B59B800AAB0B1 /* blending_polygon_shapes.jpg */,
-				FCAF38FD196B57F800AAB0B1 /* sound.png */,
-				FCAF38FA196B569300AAB0B1 /* twitter.png */,
-				FCAF38F9196B569300AAB0B1 /* facebook.png */,
-				FCB26138195CC4C5003C6DB5 /* media-playback-pause-2.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -171,8 +153,8 @@
 			isa = PBXGroup;
 			children = (
 				FC401524197461E500B21748 /* Frameworks */,
-				FCC2B59B195CAC9900FC83E4 /* Numbers */,
-				FCC2B5B1195CAC9900FC83E4 /* NumbersTests */,
+				FCC2B59B195CAC9900FC83E4 /* RandNumbers */,
+				FCC2B5B1195CAC9900FC83E4 /* RandNumbersTests */,
 				FCC2B59A195CAC9900FC83E4 /* Products */,
 				FC401525197462AF00B21748 /* Numbers-Bridging-Header.h */,
 			);
@@ -187,7 +169,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		FCC2B59B195CAC9900FC83E4 /* Numbers */ = {
+		FCC2B59B195CAC9900FC83E4 /* RandNumbers */ = {
 			isa = PBXGroup;
 			children = (
 				BF20DA0019992C6C00FD4B75 /* Main.storyboard */,
@@ -204,6 +186,7 @@
 				FCC2B5A0195CAC9900FC83E4 /* Numbers.xcdatamodeld */,
 				FCC2B59C195CAC9900FC83E4 /* Supporting Files */,
 			);
+			name = RandNumbers;
 			path = Numbers;
 			sourceTree = "<group>";
 		};
@@ -218,12 +201,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		FCC2B5B1195CAC9900FC83E4 /* NumbersTests */ = {
+		FCC2B5B1195CAC9900FC83E4 /* RandNumbersTests */ = {
 			isa = PBXGroup;
 			children = (
 				FCC2B5B4195CAC9900FC83E4 /* NumbersTests.swift */,
 				FCC2B5B2195CAC9900FC83E4 /* Supporting Files */,
 			);
+			name = RandNumbersTests;
 			path = NumbersTests;
 			sourceTree = "<group>";
 		};
@@ -325,16 +309,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC7577F819A4B91D008FE329 /* Numbers.xcdatamodeld in Resources */,
-				FCAF38FE196B57F800AAB0B1 /* sound.png in Resources */,
 				BFF6BB18196C459200118366 /* WahWah.wav in Resources */,
-				FCAF38FB196B569300AAB0B1 /* facebook.png in Resources */,
-				FCAF38FC196B569300AAB0B1 /* twitter.png in Resources */,
-				FCAF3900196B58A200AAB0B1 /* back.png in Resources */,
 				BF20DA0119992C6C00FD4B75 /* Main.storyboard in Resources */,
 				FCC2B5A9195CAC9900FC83E4 /* Images.xcassets in Resources */,
-				FCB26139195CC4C5003C6DB5 /* media-playback-pause-2.png in Resources */,
 				BFB687CB196C096800F34637 /* beep-02.wav in Resources */,
-				FCAF3902196B59B800AAB0B1 /* blending_polygon_shapes.jpg in Resources */,
 				BFF4F22E196C391C000D3A63 /* button-4.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
