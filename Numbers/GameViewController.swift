@@ -207,8 +207,7 @@ class GameViewController: UIViewController, UIApplicationDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //Initialise time
-        InitialTime()
+
         //Inititilaise label
         PunishLabel.text = " "
         //Create sequence of numbers
@@ -280,35 +279,31 @@ class GameViewController: UIViewController, UIApplicationDelegate {
     }
     func InitialTime(){
         if(level == 1){
-            counter = 40
+            counter = 12
         }
         else if(level == 2){
-            counter = 45
-        }
-        else if(level == 3){
-            counter = 50
-        }
-        else if(level == 4){
-            min = 1
-            counter = 0
-        }
-        else if(level == 5){
-            min = 1
             counter = 20
         }
+        else if(level == 3){
+            counter = 25
+        }
+        else if(level == 4){
+            counter = 30
+        }
+        else if(level == 5){
+            counter = 40
+        }
         else if(level == 6){
-            min = 1
-            counter = 10
+            counter = 40
         }
         else if(level == 7){
-            min = 1
-            counter = 0
+            counter = 45
         }
         else if(level == 8){
-            counter = 55
+            counter = 47
         }
         else if(level == 9){
-            counter = 50
+            counter = 45
         }
         else if(level == 10){
             counter = 45

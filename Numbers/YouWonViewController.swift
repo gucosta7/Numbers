@@ -64,7 +64,7 @@ class YouWonViewController: UIViewController, UIApplicationDelegate {
                 //Create action of the cancel button
                 
                 let OKaction = UIAlertAction(title: "OK", style: .Default) { action in
-                    self.performSegueWithIdentifier("NextLevel", sender: UIButton())
+                    self.performSegueWithIdentifier("MainMenu", sender: UIButton())
                 }
 
                 
@@ -77,11 +77,10 @@ class YouWonViewController: UIViewController, UIApplicationDelegate {
                 presentViewController(alertController, animated: true, completion: nil)
             }
             else{
-                var alert: UIAlertView = UIAlertView (title: "Congratulations!", message: "You Won All the Levels", delegate: self, cancelButtonTitle: "Cancel")
+                var alert: UIAlertView = UIAlertView (title: "Congratulations!", message: "You Won All the Levels", delegate: self, cancelButtonTitle: nil)
                 alert.addButtonWithTitle("OK")
                 alert.show()
                 alert.delegate = self
-            
             }
         }
 
@@ -112,8 +111,8 @@ class YouWonViewController: UIViewController, UIApplicationDelegate {
     }
     func alertView(view :UIAlertView, clickedButtonAtIndex :Int) -> Void {
         switch clickedButtonAtIndex {
-        case 1:
-            self.performSegueWithIdentifier("NextLevel", sender: UIButton())
+        case 0:
+            self.performSegueWithIdentifier("MainMenu", sender: UIButton())
             break;
         default:
             break;
