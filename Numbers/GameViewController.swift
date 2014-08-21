@@ -97,7 +97,7 @@ class GameViewController: UIViewController, UIApplicationDelegate {
         else if (auxiliar == 2){
             switch clickedButtonAtIndex{
             case 0:
-                performSegueWithIdentifier("Play", sender: UIButton())
+                performSegueWithIdentifier("MainScreen", sender: UIButton())
                 break;
             case 1:
                 self.performSegueWithIdentifier("MainScreen", sender: UIButton())
@@ -292,6 +292,7 @@ class GameViewController: UIViewController, UIApplicationDelegate {
             } else {
                 min = 0
                 counter = 0
+                timer.invalidate()
                 alertTimeOut()
             }
             
@@ -605,8 +606,8 @@ class GameViewController: UIViewController, UIApplicationDelegate {
             presentViewController(alertController, animated: true, completion: nil)
             
         } else {
-            
-            var alert: UIAlertView = UIAlertView (title: "Time Out!", message: "You Lost!", delegate: self, cancelButtonTitle: "Cancel")
+            auxiliar = 2
+            var alert: UIAlertView = UIAlertView (title: "Time Out!", message: "You Lost!", delegate: self, cancelButtonTitle: nil)
             //alert.addButtonWithTitle("Try Again")
             alert.addButtonWithTitle("Main Menu")
             alert.show()
