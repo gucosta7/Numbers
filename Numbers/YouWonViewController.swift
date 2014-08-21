@@ -25,8 +25,11 @@ class YouWonViewController: UIViewController, UIApplicationDelegate {
     
         //Default Functions
     override func viewDidLoad() {
+        
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view.
+        
         var appDel:AppDelegate = (UIApplication.sharedApplication().delegate as AppDelegate)
         var context:NSManagedObjectContext = appDel.managedObjectContext!
         

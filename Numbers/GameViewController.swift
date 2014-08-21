@@ -282,10 +282,10 @@ class GameViewController: UIViewController, UIApplicationDelegate {
     }
     func InitialTime(){
         if(level == 1){
-            counter = 12
+            counter = 20
         }
         else if(level == 2){
-            counter = 20
+            counter = 23
         }
         else if(level == 3){
             counter = 25
@@ -331,20 +331,6 @@ class GameViewController: UIViewController, UIApplicationDelegate {
             }
             
         }
-            
-        /*if(counter == 60){
-                if (min == 60){
-                    hor++
-                    min = 0
-                    counter = 0
-                    
-                } else {
-                    min++
-                    counter = 0
-                }
-        
-        }
-        */
 
         if (hor < 10){
             if (min < 10){
@@ -466,9 +452,9 @@ class GameViewController: UIViewController, UIApplicationDelegate {
                 //Error Sound Effect
                 Music("beep-02", Format:"wav")
                 self.view.backgroundColor = UIColor.redColor()
-                punish = punish + Int(level)
+                punish = punish + 1
                 PunishLabel.text = "- \(punish) sec"
-                counter = counter - Int(level)
+                counter = counter - 1
                 
                 //updating the numbers of the keypad
                 keypadNumbers = updateKeyPad(false)
@@ -639,8 +625,6 @@ class GameViewController: UIViewController, UIApplicationDelegate {
         btnGrid33.setBackgroundImage(images[8], forState: UIControlState.Normal)
         
         btnGrid41.setBackgroundImage(images[9], forState: UIControlState.Normal)
-        
-        println(numberLabel.text)
         
         if(level==1){
             if(finalSequence[0] == numberLabel.text.toInt()){
