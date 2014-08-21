@@ -76,6 +76,13 @@ class YouWonViewController: UIViewController, UIApplicationDelegate {
                 
                 presentViewController(alertController, animated: true, completion: nil)
             }
+            else{
+                var alert: UIAlertView = UIAlertView (title: "Congratulations!", message: "You Won All the Levels", delegate: self, cancelButtonTitle: "Cancel")
+                alert.addButtonWithTitle("OK")
+                alert.show()
+                alert.delegate = self
+            
+            }
         }
 
         
@@ -103,5 +110,15 @@ class YouWonViewController: UIViewController, UIApplicationDelegate {
             self.performSegueWithIdentifier("NextLevel", sender: UIButton())
         }
     }
+    func alertView(view :UIAlertView, clickedButtonAtIndex :Int) -> Void {
+        switch clickedButtonAtIndex {
+        case 1:
+            self.performSegueWithIdentifier("NextLevel", sender: UIButton())
+            break;
+        default:
+            break;
+        }
+    }
+
     
 }

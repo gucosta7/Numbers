@@ -18,7 +18,7 @@ class GameViewController: UIViewController, UIApplicationDelegate {
     @IBOutlet var QuitGame: UIButton!
     @IBOutlet var PunishLabel: UILabel!
     var punish = 0
-    
+    var auxiliar = 0 //Variable to set which alert the program is running
     //Game Levels
     
     var rounds = level*5 + 5
@@ -67,6 +67,7 @@ class GameViewController: UIViewController, UIApplicationDelegate {
             presentViewController(alertController, animated: true, completion: nil)
             
         } else {
+            auxiliar = 1
             self.view.backgroundColor = UIColor.blackColor()
             var alert: UIAlertView = UIAlertView (title: title, message: message, delegate: self, cancelButtonTitle: cancelButtonTitle)
             alert.addButtonWithTitle("OK")
@@ -78,20 +79,34 @@ class GameViewController: UIViewController, UIApplicationDelegate {
     }
     //Creating function for alert iOS - 7
     func alertView(view :UIAlertView, clickedButtonAtIndex :Int) -> Void {
-        switch clickedButtonAtIndex {
+        if(auxiliar == 1){
+            switch clickedButtonAtIndex {
             
-        case 0:
-            self.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateTimer"), userInfo: nil, repeats: true)
-            self.view.backgroundColor = UIColor.whiteColor()
+            case 0:
+                self.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateTimer"), userInfo: nil, repeats: true)
             break;
-        case 1:
-            NSLog("Dismiss");
-            self.performSegueWithIdentifier("MainScreen", sender: UIButton())
+            case 1:
+                self.performSegueWithIdentifier("MainScreen", sender: UIButton())
             break;
-        default:
-            NSLog("Default");
-            self.view.backgroundColor = UIColor.blackColor()
+            default:
+                NSLog("Default");
             break;
+            
+            }
+        }
+        else if (auxiliar == 2){
+            switch clickedButtonAtIndex{
+            case 0:
+                performSegueWithIdentifier("Play", sender: UIButton())
+                break;
+            case 1:
+                self.performSegueWithIdentifier("MainScreen", sender: UIButton())
+                break;
+                
+            default:
+                break;
+            }
+        
         }
     }
 
@@ -159,7 +174,11 @@ class GameViewController: UIViewController, UIApplicationDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Initialise time
+        InitialTime()
+        //Inititilaise label
         PunishLabel.text = " "
+        //Create sequence of numbers
         randNumbers.append(Int(arc4random_uniform(10)))
         numberLabel.text = String(randNumbers[randNumbers.count - 1])
             
@@ -223,23 +242,75 @@ class GameViewController: UIViewController, UIApplicationDelegate {
         }
         
     }
+    func InitialTime(){
+        if(level == 1){
+            counter = 40
+        }
+        else if(level == 2){
+            counter = 45
+        }
+        else if(level == 3){
+            counter = 50
+        }
+        else if(level == 4){
+            min = 1
+            counter = 0
+        }
+        else if(level == 5){
+            min = 1
+            counter = 20
+        }
+        else if(level == 6){
+            min = 1
+            counter = 10
+        }
+        else if(level == 7){
+            min = 1
+            counter = 0
+        }
+        else if(level == 8){
+            counter = 55
+        }
+        else if(level == 9){
+            counter = 50
+        }
+        else if(level == 10){
+            counter = 45
+        }
+    
+    }
     
     //Function to update the timer on the screen and to paint the background
     func updateTimer(){
-        counter++
         
-        if (counter == 60){
-            if (min == 60){
-                hor++
-                min = 0
-                counter = 0
+        counter--
+        while(counter < 0){
+            if (min > 0){
+                min--
+                counter = 60 + counter
                 
             } else {
-                min++
+                min = 0
                 counter = 0
+                alertTimeOut()
             }
             
         }
+            
+        /*if(counter == 60){
+                if (min == 60){
+                    hor++
+                    min = 0
+                    counter = 0
+                    
+                } else {
+                    min++
+                    counter = 0
+                }
+        
+        }
+        */
+
         if (hor < 10){
             if (min < 10){
                 if(counter < 10){
@@ -364,8 +435,8 @@ class GameViewController: UIViewController, UIApplicationDelegate {
                 Music("beep-02", Format:"wav")
                 self.view.backgroundColor = UIColor.redColor()
                 punish = punish + Int(level)
-                PunishLabel.text = "+ \(punish) sec"
-                
+                PunishLabel.text = "- \(punish) sec"
+                counter = counter - Int(level)
                /* if(counter <= 60 - Int(level)){
                     counter = counter + Int(level)
                 }
@@ -473,47 +544,74 @@ class GameViewController: UIViewController, UIApplicationDelegate {
         if(level==1){
             if(finalSequence[0] == numberLabel.text.toInt()){
                 btnGrid11.setBackgroundImage(redImages[0], forState: UIControlState.Normal)
-                println("entrou")
             }
             else if(finalSequence[1] == numberLabel.text.toInt()){
                 btnGrid12.setBackgroundImage(redImages[1], forState: UIControlState.Normal)
-                println("entrou")
             }
             else if(finalSequence[2] == numberLabel.text.toInt()){
                 btnGrid13.setBackgroundImage(redImages[2], forState: UIControlState.Normal)
-                println("entrou")
             }
             else if(finalSequence[3] == numberLabel.text.toInt()){
                 btnGrid21.setBackgroundImage(redImages[3], forState: UIControlState.Normal)
-                println("entrou")
             }
             else if(finalSequence[4] == numberLabel.text.toInt()){
                 btnGrid22.setBackgroundImage(redImages[4], forState: UIControlState.Normal)
-                println("entrou")
             }
             else if(finalSequence[5] == numberLabel.text.toInt()){
                 btnGrid23.setBackgroundImage(redImages[5], forState: UIControlState.Normal)
-                println("entrou")
             }
             else if(finalSequence[6] == numberLabel.text.toInt()){
                 btnGrid31.setBackgroundImage(redImages[6], forState: UIControlState.Normal)
-                println("entrou")
             }
             else if(finalSequence[7] == numberLabel.text.toInt()){
                 btnGrid32.setBackgroundImage(redImages[7], forState: UIControlState.Normal)
-                println("entrou")
             }
             else if(finalSequence[8] == numberLabel.text.toInt()){
                 btnGrid33.setBackgroundImage(redImages[8], forState: UIControlState.Normal)
-                println("entrou")
             }
             else if(finalSequence[9] == numberLabel.text.toInt()){
                 btnGrid41.setBackgroundImage(redImages[9], forState: UIControlState.Normal)
-                println("entrou")
             }
             
         }
         
        return finalSequence
+    }
+    func alertTimeOut(){
+    
+        var versao = UIDevice.currentDevice().systemVersion;
+        
+        if (versao == "8.0"){
+            
+
+            var alertController = UIAlertController(title: "Time Out!", message: "You Lost!", preferredStyle: .Alert)
+            
+            // Create the actions.
+
+            //Create action of the OK button
+            let MainAction = UIAlertAction(title:"Main Menu" , style: .Default) { action in
+                NSLog("The \"Okay/Cancel\" alert's other action occured.")
+                self.performSegueWithIdentifier("MainScreen", sender: UIButton())
+            }
+            
+            /*let TryAgainAction = UIAlertAction(title:"Try Again!" , style: .Default) { action in
+                NSLog("The \"Okay/Cancel\" alert's other action occured.")
+                self.performSegueWithIdentifier("NextLevel", sender: UIButton())
+            */
+            // Add the actions.
+            //alertController.addAction(TryAgainAction)
+            alertController.addAction(MainAction)
+            
+            presentViewController(alertController, animated: true, completion: nil)
+            
+        } else {
+            
+            var alert: UIAlertView = UIAlertView (title: "Time Out!", message: "You Lost!", delegate: self, cancelButtonTitle: "Cancel")
+            //alert.addButtonWithTitle("Try Again")
+            alert.addButtonWithTitle("Main Menu")
+            alert.show()
+            alert.delegate = self
+            
+        }
     }
 }

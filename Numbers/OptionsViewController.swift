@@ -9,7 +9,6 @@
 import UIKit
 import CoreData
 
-//levelmaximo - deletar depois
 
 
 class OptionsViewController: UIViewController, UIApplicationDelegate, FBLoginViewDelegate {
