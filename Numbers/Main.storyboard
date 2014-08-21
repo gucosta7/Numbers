@@ -363,7 +363,6 @@
                                 </state>
                                 <connections>
                                     <action selector="NextLevel:" destination="Nhj-XE-KAE" eventType="touchUpInside" id="pVH-2g-XBJ"/>
-                                    <segue destination="KgB-DI-I3G" kind="modal" identifier="NextLevel" id="rgs-Fr-kl8"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NFH-PL-z7q">
@@ -380,7 +379,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="vXZ-lx-hvc" kind="modal" id="M3G-RE-pew"/>
+                                    <segue destination="vXZ-lx-hvc" kind="modal" identifier="" id="M3G-RE-pew"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -389,6 +388,8 @@
                     <connections>
                         <outlet property="Score" destination="NFH-PL-z7q" id="m7Z-rY-APV"/>
                         <outlet property="YouWon" destination="N9c-PY-rMA" id="bTc-W9-5Cd"/>
+                        <segue destination="vXZ-lx-hvc" kind="modal" identifier="MainMenu" id="Vcv-CD-Gmy"/>
+                        <segue destination="KgB-DI-I3G" kind="modal" identifier="NextLevel" id="SQn-wm-FBd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N5B-pl-Qkl" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -488,7 +489,7 @@
         </simulatedScreenMetrics>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="SQn-wm-FBd"/>
         <segue reference="M3G-RE-pew"/>
-        <segue reference="rgs-Fr-kl8"/>
     </inferredMetricsTieBreakers>
 </document>
