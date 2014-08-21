@@ -44,6 +44,20 @@ class YouWonViewController: UIViewController, UIApplicationDelegate {
             
         }
         
+        let screenSize: CGRect = UIScreen.mainScreen().bounds
+        
+        let screenWidth = screenSize.width;
+        let screenHeight = screenSize.height;
+        
+        if (screenHeight < 500) {
+            
+            YouWon.frame = CGRect(x: 0, y: 161 ,width: 320,height: 21);
+            Score.frame = CGRect(x: 0, y: 161 ,width: 320,height: 90);
+
+            
+        }
+
+        
     }
     
     override func didReceiveMemoryWarning() {

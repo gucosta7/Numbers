@@ -276,6 +276,9 @@ class GameViewController: UIViewController, UIApplicationDelegate {
         keypadNumbers = updateKeyPad(false)
 
         
+        //Initialise time
+        InitialTime()
+        
     }
     func InitialTime(){
         if(level == 1){
@@ -517,11 +520,11 @@ class GameViewController: UIViewController, UIApplicationDelegate {
         if (correct == true){
             if (keyboardColor < 4){
                 keyboardColor = keyboardColor + 1
+            } else {
+                    keyboardColor = 1
             }
             
-            if (keyboardColor == 4){
-                keyboardColor = 1
-            }
+            
             
         }
         
