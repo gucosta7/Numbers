@@ -44,6 +44,7 @@ class OptionsViewController: UIViewController, UIApplicationDelegate, FBLoginVie
             var res = results[results.count - 1] as NSManagedObject
             musicOn = res.valueForKey("music") as Bool
             levelmax = res.valueForKey("levelMax") as Int
+            level = res.valueForKey("level") as CGFloat
 
             Effects.setOn(musicOn, animated: true)
             
@@ -132,33 +133,39 @@ class OptionsViewController: UIViewController, UIApplicationDelegate, FBLoginVie
             }
             let level2action = UIAlertAction(title: level2, style: .Default) { action in
                 level = 2
-
+                self.updateLevel(level)
             }
             let level3action = UIAlertAction(title: level3, style: .Default) { action in
                 level = 3
-
+                self.updateLevel(level)
             }
             let level4action = UIAlertAction(title: level4, style: .Default) { action in
                 level = 4
-
+                self.updateLevel(level)
             }
             let level5action = UIAlertAction(title: level5, style: .Default) { action in
                 level = 5
+                self.updateLevel(level)
             }
             let level6action = UIAlertAction(title: level6, style: .Default) { action in
                 level = 6
+                self.updateLevel(level)
             }
             let level7action = UIAlertAction(title: level7, style: .Default) { action in
                 level = 7
+                self.updateLevel(level)
             }
             let level8action = UIAlertAction(title: level8, style: .Default) { action in
                 level = 8
+                self.updateLevel(level)
             }
             let level9action = UIAlertAction(title: level9, style: .Default) { action in
                 level = 9
+                self.updateLevel(level)
             }
             let level10action = UIAlertAction(title: level10, style: .Default) { action in
                 level = 10
+                self.updateLevel(level)
             }
             //Create action of the OK button
             let OKAction = UIAlertAction(title: "Cancel", style: .Cancel) { action in
@@ -199,6 +206,7 @@ class OptionsViewController: UIViewController, UIApplicationDelegate, FBLoginVie
             
             presentViewController(alertController, animated: true, completion: nil)
             
+            
         } else {
             
             var alert: UIAlertView = UIAlertView (title: title, message: message, delegate: self, cancelButtonTitle: "Cancel")
@@ -235,23 +243,7 @@ class OptionsViewController: UIViewController, UIApplicationDelegate, FBLoginVie
             
         }
         
-        var appDel:AppDelegate = (UIApplication.sharedApplication().delegate as AppDelegate)
-        var context:NSManagedObjectContext = appDel.managedObjectContext!
-        
-        let myEntity: NSString = "Settings"
-        var request = NSFetchRequest(entityName: myEntity)
-        request.returnsObjectsAsFaults = false
-        
-        var results:NSArray = context.executeFetchRequest(request, error: nil)
-        
-        if (results.count > 0){
-            var res = results[results.count - 1] as NSManagedObject
-            res.setValue(level, forKey: "level")
-            
-            context.save(nil)
-            
-        }
-
+    
     }
 
     //Creating function for alert iOS - 7
@@ -259,33 +251,43 @@ class OptionsViewController: UIViewController, UIApplicationDelegate, FBLoginVie
         switch clickedButtonAtIndex {
         case 1:
             level = 1
+            self.updateLevel(level)
             break;
         case 2:
             level = 2
+            self.updateLevel(level)
             break;
         case 3:
             level = 3
+            self.updateLevel(level)
             break;
         case 4:
             level = 4
+            self.updateLevel(level)
             break;
         case 5:
             level = 5
+            self.updateLevel(level)
             break;
         case 6:
             level = 6
+            self.updateLevel(level)
             break;
         case 7:
             level = 7
+            self.updateLevel(level)
             break;
         case 8:
             level = 8
+            self.updateLevel(level)
             break;
         case 9:
             level = 9
+            self.updateLevel(level)
             break;
         case 10:
             level = 10
+            self.updateLevel(level)
             break;
         default:
             break;
@@ -380,6 +382,26 @@ class OptionsViewController: UIViewController, UIApplicationDelegate, FBLoginVie
         }
         
     }*/
+    
+    func updateLevel(level:CGFloat) {
+        var appDel:AppDelegate = (UIApplication.sharedApplication().delegate as AppDelegate)
+        var context:NSManagedObjectContext = appDel.managedObjectContext!
+        
+        let myEntity: NSString = "Settings"
+        var request = NSFetchRequest(entityName: myEntity)
+        request.returnsObjectsAsFaults = false
+        
+        var results:NSArray = context.executeFetchRequest(request, error: nil)
+        
+        if (results.count > 0){
+            var res = results[results.count - 1] as NSManagedObject
+            res.setValue(level, forKey: "level")
+            
+            context.save(nil)
+            
+        }
+
+    }
     
     
 }

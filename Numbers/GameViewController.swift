@@ -17,16 +17,8 @@ class GameViewController: UIViewController, UIApplicationDelegate {
     //Creating outlets to quit game button
     @IBOutlet var QuitGame: UIButton!
     @IBOutlet var PunishLabel: UILabel!
-    var punish = 0
-    var auxiliar = 0 //Variable to set which alert the program is running
-    //Game Levels
-    
-    var rounds = level*5 + 5
-    
     
     //Creating function for the quit button
-    
-    
     @IBAction func showOkayCancelAlert() {
         //Stop Timer
         timer.invalidate()
@@ -170,6 +162,10 @@ class GameViewController: UIViewController, UIApplicationDelegate {
 
     var progress :Float = 0.0
     
+    var punish = 0
+    var auxiliar = 0 //Variable to set which alert the program is running
+    var rounds : CGFloat = 10.0 //Game Levels
+    
     //Initializing random sequence and keypad
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -184,12 +180,11 @@ class GameViewController: UIViewController, UIApplicationDelegate {
             
         timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateTimer"), userInfo: nil, repeats: true)
 
-        
-        
         let screenSize: CGRect = UIScreen.mainScreen().bounds
         
         let screenWidth = screenSize.width;
         let screenHeight = screenSize.height;
+        
         
         if (screenHeight < 500) {
             
@@ -219,7 +214,6 @@ class GameViewController: UIViewController, UIApplicationDelegate {
         }
 
 
-        keypadNumbers = updateKeyPad()
         
         progressView.setProgress(progress, animated: true)
         
@@ -240,6 +234,11 @@ class GameViewController: UIViewController, UIApplicationDelegate {
             level = res.valueForKey("level") as CGFloat
             
         }
+        
+        rounds = level * 5 + 5
+        
+        keypadNumbers = updateKeyPad()
+
         
     }
     func InitialTime(){
@@ -419,15 +418,9 @@ class GameViewController: UIViewController, UIApplicationDelegate {
                 
                 RoundsCounter++
                 
-                //Correct Answer Sound
-                Music("button-4", Format:"wav")
-                self.view.backgroundColor = UIColor.greenColor()
-                
-                
                 var increment = Float(rounds)
                 
                 progress = progress + 1/(increment)
-                
                 
                 progressView.setProgress(progress, animated: true)
                 
@@ -438,14 +431,7 @@ class GameViewController: UIViewController, UIApplicationDelegate {
                 punish = punish + Int(level)
                 PunishLabel.text = "- \(punish) sec"
                 counter = counter - Int(level)
-               /* if(counter <= 60 - Int(level)){
-                    counter = counter + Int(level)
-                }
-                else{
-                    min++
-                    counter = counter - 60 + Int(level)
-                }
-                */
+
             }
             
             //updating the numbers of the keypad
@@ -491,7 +477,7 @@ class GameViewController: UIViewController, UIApplicationDelegate {
             
         }
         
-        println(finalSequence)
+        //println(finalSequence)
         
         for number in finalSequence {
             switch number {
