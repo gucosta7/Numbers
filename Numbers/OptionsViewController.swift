@@ -128,6 +128,7 @@ class OptionsViewController: UIViewController, UIApplicationDelegate, FBLoginVie
             }
             let level1action = UIAlertAction(title: level1, style: .Default) { action in
                 level = 1
+                
             }
             let level2action = UIAlertAction(title: level2, style: .Default) { action in
                 level = 2

@@ -244,7 +244,7 @@ class GameViewController: UIViewController, UIApplicationDelegate {
     }
     func InitialTime(){
         if(level == 1){
-            counter = 40
+            counter = 12
         }
         else if(level == 2){
             counter = 45
