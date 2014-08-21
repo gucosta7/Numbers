@@ -147,6 +147,39 @@ class GameViewController: UIViewController, UIApplicationDelegate {
     let rednumber8 = UIImage(named: "8red.png") as UIImage
     let rednumber9 = UIImage(named: "9red.png") as UIImage
     
+    let purpleNumber0 = UIImage(named: "0purple.png") as UIImage
+    let purpleNumber1 = UIImage(named: "1purple.png") as UIImage
+    let purpleNumber2 = UIImage(named: "2purple.png") as UIImage
+    let purpleNumber3 = UIImage(named: "3purple.png") as UIImage
+    let purpleNumber4 = UIImage(named: "4purple.png") as UIImage
+    let purpleNumber5 = UIImage(named: "5purple.png") as UIImage
+    let purpleNumber6 = UIImage(named: "6purple.png") as UIImage
+    let purpleNumber7 = UIImage(named: "7purple.png") as UIImage
+    let purpleNumber8 = UIImage(named: "8purple.png") as UIImage
+    let purpleNumber9 = UIImage(named: "9purple.png") as UIImage
+    
+    let blueNumber0 = UIImage(named: "0blue.png") as UIImage
+    let blueNumber1 = UIImage(named: "1blue.png") as UIImage
+    let blueNumber2 = UIImage(named: "2blue.png") as UIImage
+    let blueNumber3 = UIImage(named: "3blue.png") as UIImage
+    let blueNumber4 = UIImage(named: "4blue.png") as UIImage
+    let blueNumber5 = UIImage(named: "5blue.png") as UIImage
+    let blueNumber6 = UIImage(named: "6blue.png") as UIImage
+    let blueNumber7 = UIImage(named: "7blue.png") as UIImage
+    let blueNumber8 = UIImage(named: "8blue.png") as UIImage
+    let blueNumber9 = UIImage(named: "9blue.png") as UIImage
+    
+    let greenNumber0 = UIImage(named: "0green.png") as UIImage
+    let greenNumber1 = UIImage(named: "1green.png") as UIImage
+    let greenNumber2 = UIImage(named: "2green.png") as UIImage
+    let greenNumber3 = UIImage(named: "3green.png") as UIImage
+    let greenNumber4 = UIImage(named: "4green.png") as UIImage
+    let greenNumber5 = UIImage(named: "5green.png") as UIImage
+    let greenNumber6 = UIImage(named: "6green.png") as UIImage
+    let greenNumber7 = UIImage(named: "7green.png") as UIImage
+    let greenNumber8 = UIImage(named: "8green.png") as UIImage
+    let greenNumber9 = UIImage(named: "9green.png") as UIImage
+    
 
     //Sequence of numbers that the user will type
     var randNumbers: [Int] = []
@@ -165,6 +198,10 @@ class GameViewController: UIViewController, UIApplicationDelegate {
     var punish = 0
     var auxiliar = 0 //Variable to set which alert the program is running
     var rounds : CGFloat = 10.0 //Game Levels
+    
+    var keyboardColor = 1 //number to change the keyboard color
+    // 1 - black, 2 - purple, 3 - blue, 4 - green
+    
     
     //Initializing random sequence and keypad
     override func viewDidLoad() {
@@ -237,7 +274,7 @@ class GameViewController: UIViewController, UIApplicationDelegate {
         
         rounds = level * 5 + 5
         
-        keypadNumbers = updateKeyPad()
+        keypadNumbers = updateKeyPad(false)
 
         
     }
@@ -424,6 +461,9 @@ class GameViewController: UIViewController, UIApplicationDelegate {
                 
                 progressView.setProgress(progress, animated: true)
                 
+                //updating the numbers of the keypad
+                keypadNumbers = updateKeyPad(true)
+                
             } else {
                 //Error Sound Effect
                 Music("beep-02", Format:"wav")
@@ -431,11 +471,13 @@ class GameViewController: UIViewController, UIApplicationDelegate {
                 punish = punish + Int(level)
                 PunishLabel.text = "- \(punish) sec"
                 counter = counter - Int(level)
+                
+                //updating the numbers of the keypad
+                keypadNumbers = updateKeyPad(false)
 
             }
             
-            //updating the numbers of the keypad
-            keypadNumbers = updateKeyPad()
+            
             
             
         }
@@ -451,7 +493,7 @@ class GameViewController: UIViewController, UIApplicationDelegate {
     }
     
     //Generate random keyboard and set the correct image to the buttons
-    func updateKeyPad () -> [Int]{
+    func updateKeyPad (correct:Bool) -> [Int]{
         var sequence: [Int] = []
         var finalSequence: [Int] = []
         var images: [UIImage] = []
@@ -477,11 +519,24 @@ class GameViewController: UIViewController, UIApplicationDelegate {
             
         }
         
-        //println(finalSequence)
+        if (correct == true){
+            if (keyboardColor < 4){
+                keyboardColor = keyboardColor + 1
+            }
+            
+            if (keyboardColor == 4){
+                keyboardColor = 1
+            }
+            
+        }
         
         for number in finalSequence {
-            switch number {
+            
+            switch keyboardColor {
+            case 1:
                 
+                switch number {
+                    
                 case 0 : images.append(number0)
                 case 1 : images.append(number1)
                 case 2 : images.append(number2)
@@ -492,9 +547,70 @@ class GameViewController: UIViewController, UIApplicationDelegate {
                 case 7 : images.append(number7)
                 case 8 : images.append(number8)
                 case 9 : images.append(number9)
+                    
+                default : println("error")
+                }
+                
+            case 2:
+                
+                switch number {
+                    
+                case 0 : images.append(purpleNumber0)
+                case 1 : images.append(purpleNumber1)
+                case 2 : images.append(purpleNumber2)
+                case 3 : images.append(purpleNumber3)
+                case 4 : images.append(purpleNumber4)
+                case 5 : images.append(purpleNumber5)
+                case 6 : images.append(purpleNumber6)
+                case 7 : images.append(purpleNumber7)
+                case 8 : images.append(purpleNumber8)
+                case 9 : images.append(purpleNumber9)
+                    
+                default : println("error")
+                }
+                
+            case 3:
+                
+                switch number {
+                    
+                case 0 : images.append(blueNumber0)
+                case 1 : images.append(blueNumber1)
+                case 2 : images.append(blueNumber2)
+                case 3 : images.append(blueNumber3)
+                case 4 : images.append(blueNumber4)
+                case 5 : images.append(blueNumber5)
+                case 6 : images.append(blueNumber6)
+                case 7 : images.append(blueNumber7)
+                case 8 : images.append(blueNumber8)
+                case 9 : images.append(blueNumber9)
+                    
+                default : println("error")
+                }
+                
+            case 4:
+                
+                switch number {
+                    
+                case 0 : images.append(greenNumber0)
+                case 1 : images.append(greenNumber1)
+                case 2 : images.append(greenNumber2)
+                case 3 : images.append(greenNumber3)
+                case 4 : images.append(greenNumber4)
+                case 5 : images.append(greenNumber5)
+                case 6 : images.append(greenNumber6)
+                case 7 : images.append(greenNumber7)
+                case 8 : images.append(greenNumber8)
+                case 9 : images.append(greenNumber9)
+                    
+                default : println("error")
+                }
+
+                
                 
             default : println("error")
             }
+            
+            
            switch number{
                 case 0 : redImages.append(rednumber0)
                 case 1 : redImages.append(rednumber1)
